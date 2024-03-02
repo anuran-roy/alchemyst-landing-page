@@ -6,15 +6,35 @@ import bgimg from '../../public/assets/frame7.png'
 import section2img from '../../public/assets/frame2.png'
 import section3img from '../../public/assets/frame3.png'
 import section4img from '../../public/assets/frame4.png'
-import maya from '../../public/assets/maya.png'
-import moh from '../../public/assets/moh.png'
 
 import { teamsData } from '../../public/data/teamsData'
 import { artisans } from '../../public/data/artisans'
+import Brands from './(components)/Brands'
 
 const Home = () => {
   return (
+    <>
+    
     <div className='font-league bg-bg-primary'>
+
+      <div className='w-full flex justify-center items-center py-6 text-white text-semibold text-xl border-b-[1px] border-b-gray-500'>
+        <div className='navbar__inner__section  w-[90%] flex justify-between px-20 items-center gap-5'>
+          <div>
+            AI
+          </div>
+
+          <ul className='flex justify-center items-center gap-8'>
+            <li>Home</li>
+            <li>Products</li>
+            <li>Team</li>
+          </ul>
+
+            <div className=''>
+              <button className='py-2 px-6 rounded-md bg-bg-yellow text-white'>Say Hello</button>
+            </div>
+        </div>
+      </div>
+      
       <div className='landing__section__1 w-full min-h-max py-5 px-5 flex justify-center items-center flex-col bg-bg-primary relative backdrop-blur-sm bg-opacity-30' >
         <div className='absolute top-[10rem] left-0 w-[15rem] h-[15rem] bg-gradient-to-r from-orange-500 to-orange-400 rounded-full blur-[10rem] -z-10'></div>
         {/* <div className='absolute top-[14rem] right-[20rem] w-[10rem] h-[10rem] bg-gradient-to-r from-orange-500 to-orange-400 rounded-full blur-[10rem] -z-10'></div> */}
@@ -55,47 +75,46 @@ const Home = () => {
         </div>
       </div>
 
-        <div className='artisans__section w-full min-h-max py-10 px-5 flex justify-center items-center flex-col bg-bg-primary relative backdrop-blur-sm bg-opacity-30 mt-16'>
-          <div className='absolute top-[10rem] -left-[10rem] w-[20rem] h-[20rem] bg-gradient-to-r from-orange-500 to-orange-400 rounded-full blur-[20rem] -z-10'></div>
-          
-          <div className='artisans__inner__section w-[80%] flex justify-center items-center gap-8'>
+      <div className='artisans__section w-full min-h-max py-10 px-5 flex justify-center items-center flex-col bg-bg-primary relative backdrop-blur-sm bg-opacity-30 mt-16'>
+        <div className='absolute top-[10rem] -left-[10rem] w-[20rem] h-[20rem] bg-gradient-to-r from-orange-500 to-orange-400 rounded-full blur-[20rem] -z-10'></div>
+        
+        <div className='artisans__inner__section w-[80%] flex justify-center items-center gap-8'>
 
-            {
-              artisans.map((artisan, index) => {
-                return (
-                <div key={artisan.id} className='rounded-xl w-[30rem] h-[38rem] bg-gradient-to-t from-[#313b45] to-[#43424c] p-5 flex justify-around items-baseline flex-col gap-6 relative backdrop-blur-sm bg-opacity-30'>
+          {
+            artisans.map((artisan, index) => {
+              return (
+              <div key={artisan.id} className='rounded-xl w-[30rem] h-[38rem] bg-gradient-to-t from-[#313b45] to-[#43424c] p-5 flex justify-around items-baseline flex-col gap-6 relative backdrop-blur-sm bg-opacity-30'>
 
-                  <div className='w-full flex justify-center items-center'>
-                    <Image src={artisan.face} alt='landing__image__two' width={200} height={200} />
-                  </div>
-
-                  <div className='text-white font-semibold '>
-                    <p className='text-4xl'>{artisan.name}</p>
-                    <p className='text-xl'>{artisan.role}</p>
-                  </div>
-
-                  <ul className='text-white font-semibold list-disc flex flex-col justify-center items-center gap-6'>
-
-                    {
-                      artisan.capabilities.map((capability, ind) => (
-                        <li key={capability.id}>{capability.value}</li>
-                      ))
-                    }
-                  </ul>
-
-                  <div className='w-full px-5 py-2 mt-4 flex justify-center items-center'>
-                    <button className='py-2 px-6 rounded-md bg-bg-yellow text-white'>{artisan.button_text}</button>
-                  </div>
-                  
+                <div className='w-full flex justify-center items-center'>
+                  <Image src={artisan.face} alt='landing__image__two' width={200} height={200} />
                 </div>
-                )
-              })
-            }
-            
-          </div>
+
+                <div className='text-white font-semibold '>
+                  <p className='text-4xl'>{artisan.name}</p>
+                  <p className='text-xl'>{artisan.role}</p>
+                </div>
+
+                <ul className='text-white font-semibold list-disc flex flex-col justify-center items-center gap-6'>
+
+                  {
+                    artisan.capabilities.map((capability, ind) => (
+                      <li key={capability.id}>{capability.value}</li>
+                    ))
+                  }
+                </ul>
+
+                <div className='w-full px-5 py-2 mt-4 flex justify-center items-center'>
+                  <button className='py-2 px-6 rounded-md bg-bg-yellow text-white'>{artisan.button_text}</button>
+                </div>
+                
+              </div>
+              )
+            })
+          }
           
         </div>
-
+        
+      </div>
 
       <div className='chat__with__ease__section w-full min-h-max py-5 flex justify-center items-center px-5 bg-bg-primary backdrop-blur-sm bg-opacity-30'>
         <div className='absolute top-0 right-0 w-[15rem] h-[15rem] bg-gradient-to-r from-orange-500 to-orange-400 rounded-full blur-[15rem] -z-10'></div>
@@ -202,7 +221,7 @@ const Home = () => {
         <div className='text-white font-semibold text-5xl'>
           Meet our <span className='bg-gradient-to-br from-teal-500 to-white bg-clip-text text-transparent'>Team</span>
         </div>
-        <div className='meet__our__team__inner w-[80%] flex justify-center items-center flex-wrap py-10 px-10 gap-6' >
+        <div className='meet__our__team__inner w-[80%] grid grid-cols-2 grid-rows-2 py-10 px-10 gap-6' >
           
           {
             teamsData.map((team,ind) => {
@@ -232,7 +251,16 @@ const Home = () => {
           }
         </div>
       </div>
+
+      <div>
+        <Brands />
+      </div>
+
+      <div className='footer__section'>
+
+      </div>
     </div>
+    </>
   )
 }
 
