@@ -15,6 +15,9 @@ const config: Config = {
       textColor: {
         'text-yellow' : '#F1A334',
       },
+      fontFamily:{
+        'league' : 'League Spartan',
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
