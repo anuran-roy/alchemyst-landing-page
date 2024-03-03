@@ -64,8 +64,8 @@ const Home = () => {
         <div className='absolute top-[10rem] left-0 w-[18rem] h-[18rem] bg-gradient-to-r from-orange-500 to-orange-400 rounded-full blur-[10rem] -z-10 glow-animation'></div>
         {/* <div className='absolute top-[14rem] right-[20rem] w-[10rem] h-[10rem] bg-gradient-to-r from-orange-500 to-orange-400 rounded-full blur-[10rem] -z-10'></div> */}
         <div className='section-1 flex-1 w-[85%] flex justify-center items-center py-10 my-16'>
-
-          <div className='landing__text__one flex-1 pl-10 backdrop-blur-sm bg-bg-primary/30'>
+{/* backdrop-blur-sm bg-bg-primary/30 */}
+          <div className='landing__text__one flex-1 pl-10 '>
 
             <div className='px-4 text-7xl font-bold text-white'>
               <p>Introducing <span className='bg-gradient-to-br from-teal-500 to-white text-transparent bg-clip-text'>Maya,</span></p>
@@ -89,7 +89,7 @@ const Home = () => {
 
         </div>
 
-        <Image src={bgwave} alt='landing__image__one' className='absolute filter w-full h-[75rem] -z-50 top-[7rem] bg-clip-content bg-opacity-10 backdrop-blur-md'/>
+        <Image src={bgwave} alt='landing__image__one' className='absolute w-full h-[75rem] -z-50 top-[7rem] bg-clip-content bg-opacity-0 backdrop-blur-sm'/>
 
 
         <div className='section-2 flex-1 w-full flex justify-start pt-10 items-center flex-col mt-28'>
