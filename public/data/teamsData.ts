@@ -31,7 +31,7 @@ export const teamsData = [
     {
         id: 2,
         name : 'Anuran Roy',
-        position : 'Chief Executive Officer',
+        position : 'Chief Technology Officer',
         profileimg : anuran,
         achievements : [
             {
