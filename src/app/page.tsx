@@ -326,7 +326,7 @@ const Home = () => {
           <p>Terms of use</p>
           <p>Privacy Policy</p>
           </div>
-          <p className='text-xl bg-gradient-to-br from-teal-500 to-white text-transparent bg-clip-text'>© 2023 Artisans. All rights reserved</p>
+          <p className='text-xl bg-gradient-to-br from-teal-500 to-white text-transparent bg-clip-text'>© 2023 Alchemyst AI. All rights reserved</p>
           <p className='bg-gradient-to-br from-teal-500 to-white text-transparent bg-clip-text text-xl'>Made with <span className='text-red-600'>❤️</span> from India <span className=' flex justify-end items-center'><Image src={imageicon} alt='someimage' width={30}/></span> </p>
         </div>
       </div>
