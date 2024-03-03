@@ -295,8 +295,8 @@ const Home = () => {
         </div>
         <div className='text-white text-xl w-full flex justify-start items-baseline flex-row gap-2'>
           <div className=''>
-            <p className='my-5 text-xl'>
-              We are creatin highly advanced sigital workers,<br /> called artisans , using cutting edge AI technolodgy
+            <p className='my-5'>
+              We are creating highly advanced digital workers,<br /> called artisans , using cutting edge AI technolodgy
             </p>
             <p>
               someemail@gmail.com
