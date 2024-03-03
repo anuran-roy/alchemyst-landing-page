@@ -299,7 +299,7 @@ const Home = () => {
             Building Next Gen AI Digital Employees.<br /> Spearheading the next Industrial Revolution in India.
             </p>
             <p>
-              someemail@gmail.com
+              getalchemystai@gmail.com
             </p>
             <ul className='flex justify-start items-center gap-4 text-white text-2xl mt-4 my-8'>
               <li className='border-2 flex justify-center items-center border-white rounded-full w-[3rem] h-[3rem]'><TbBrandTwitterFilled /></li>
