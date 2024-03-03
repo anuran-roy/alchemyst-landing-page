@@ -1,7 +1,12 @@
-import uttaran from  '../assets/team/uttaran.png';
-import anuran from  '../assets/team/anuran.png';
-import rish from '../assets/team/rish.png';
-import pani from '../assets/team/pani.png';
+// import uttaran from  '../assets/team/uttaran.png';
+// import anuran from  '../assets/team/anuran.png';
+// import rish from '../assets/team/rish.png';
+// import pani from '../assets/team/pani.png';
+
+import uttaran from '../assets/uttaran.jpg';
+import anuran from '../assets/anuran.png';
+import rish from '../assets/rish.jpeg';
+import pani from '../assets/pani.jpeg';
 
 export const teamsData = [
     {
@@ -20,7 +25,7 @@ export const teamsData = [
             },
             {
                 id :3,
-                value : `National Entrepreneurship <br />Summit Winner \'21 and \'23`
+                value : `National Entrepreneurship Summit Winner \'21 and \'23`
             },
             {
                 id: 4,

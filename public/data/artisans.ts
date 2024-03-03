@@ -29,6 +29,10 @@ export const artisans = [
                 id: 1,
                 value : 'Alchemysts can become integral members of your buisness and start-up teams'
             },
+            {
+                id :2 ,
+                value : 'dknvdf vkdnfvdkjf vksnfv kdjfvndkjfvnd fvjdfv kdjvn dsfkvjd fvkjdvndkfjvndkfv dkjfv'
+            }
         ],
         button_text : 'Join Waitlist'
     },
@@ -42,6 +46,10 @@ export const artisans = [
                 id: 1,
                 value : 'Alchemysts can become integral members of your buisness and start-up teams'
             },
+            {
+                id :2 ,
+                value : 'dknvdf vkdnfvdkjf vksnfv kdjfvndkjfvnd fvjdfv kdjvn dsfkvjd fvkjdvndkfjvndkfv dkjfv'
+            }
         ],
         button_text : 'Join Waitlist'
     }

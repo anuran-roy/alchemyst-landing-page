@@ -11,6 +11,7 @@ import section4img from '../../public/assets/frame4.png'
 import imgborder from '../../public/assets/frame5.png'
 import logo from '../../public/assets/AI.png'
 import wave from '../../public/assets/waveremove.png'
+import imageicon from '../../public/assets/india.png'
 
 import { teamsData } from '../../public/data/teamsData'
 import { artisans } from '../../public/data/artisans'
@@ -18,7 +19,7 @@ import Brands from './(components)/Brands'
 
 //icons
 import { TbBrandInstagram, TbBrandTwitterFilled, TbBrandFacebookFilled, TbBrandLinkedin, TbBrandDiscordFilled } from "react-icons/tb";
-
+import { FaHeart } from "react-icons/fa6";
 
 const Home = () => {
 
@@ -30,9 +31,9 @@ const Home = () => {
     <div className='font-league bg-bg-primary'>
 
       <div className='w-full flex justify-center items-center py-6 text-white text-semibold text-xl border-b-[1px] border-b-gray-500'>
-        <div className='navbar__inner__section  w-[90%] flex justify-between px-20 items-center gap-5'>
+        <div className='navbar__inner__section w-full flex justify-between px-10 items-center gap-4'>
           <div>
-            <Image src={logo} alt='logo' width={40} height={40} />
+            <Image src={logo} alt='logo' width={180} className='' />
           </div>
 
           <ul className='flex justify-center items-center gap-12 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-[#414770] to-[#41477000] py-2 px-28 rounded-2xl'>
@@ -50,7 +51,7 @@ const Home = () => {
       <div className='landing__section__1 w-full min-h-max py-5 px-5 flex justify-center items-center flex-col bg-bg-primary relative backdrop-blur-sm bg-opacity-30' >
         <div className='absolute top-[10rem] left-0 w-[18rem] h-[18rem] bg-gradient-to-r from-orange-500 to-orange-400 rounded-full blur-[10rem] -z-10 glow-animation'></div>
         {/* <div className='absolute top-[14rem] right-[20rem] w-[10rem] h-[10rem] bg-gradient-to-r from-orange-500 to-orange-400 rounded-full blur-[10rem] -z-10'></div> */}
-        <div className='section-1 flex-1 w-[80%] flex justify-center items-center py-10 my-16'>
+        <div className='section-1 flex-1 w-[85%] flex justify-center items-center py-10 my-16'>
 
           <div className='landing__text__one flex-1 pl-10 backdrop-blur-sm bg-bg-primary/30'>
 
@@ -93,13 +94,13 @@ const Home = () => {
       <div className='artisans__section w-full min-h-max py-16 px-5 flex justify-center items-center flex-col bg-bg-primary relative backdrop-blur-sm bg-opacity-30 mt-16'>
         <div className={`absolute top-[10rem] -left-[10rem] w-[20rem] h-[20rem] bg-gradient-to-r from-orange-500 to-orange-400 rounded-full blur-[20rem] -z-10`}></div>
         
-        <div className='artisans__inner__section w-[80%] flex justify-center items-center gap-8'>
+        <div className='artisans__inner__section w-[90%] flex justify-center items-center gap-8'>
 
           {
             artisans.map((artisan, index) => {
               return (
-                <div key={artisan.id} className='w-[30rem] h-[38rem] p-[3px] rounded-xl bg-gradient-to-b from-[#82D6D2] to-[#82D6D200]'>
-                  <div className='rounded-xl w-full h-full p-5 bg-gradient-to-t from-[#313b45] to-[#43424c] flex justify-around items-baseline flex-col gap-6 relative backdrop-blur-sm bg-opacity-30 px-8'>
+                <div key={artisan.id} className='w-[30rem] h-[40rem] p-[3px] rounded-xl bg-gradient-to-b from-[#82D6D2] to-[#82D6D200] '>
+                  <div className='rounded-xl w-full h-full p-5 bg-gradient-to-t from-[#313b45] to-[#43424c] flex justify-start items-baseline flex-col gap-8 relative backdrop-blur-sm bg-opacity-30 px-8 relative'>
 
                     <div className='w-full flex justify-center items-center'>
                       <Image src={artisan.face} alt='landing__image__two' width={200} height={200} />
@@ -119,7 +120,7 @@ const Home = () => {
                       }
                     </ul>
 
-                    <div className='w-full px-5 py-2 mt-4 flex justify-center items-center'>
+                    <div className='w-full px-5 py-2 flex justify-center items-center self-end absolute bottom-5 left-0'>
                       <button className='py-2 px-6 rounded-md bg-bg-yellow text-white text-lg font-semibold'>{artisan.button_text}</button>
                     </div>
                     
@@ -140,7 +141,7 @@ const Home = () => {
       }}>
         <div className={'absolute top-0 right-0 w-[15rem] h-[15rem] bg-gradient-to-r from-orange-500 to-orange-400 rounded-full blur-[15rem] -z-10 hover:blur-[30rem]'}></div>
 
-        <div className='section__2__inner__container w-[80%] flex justify-center items-center gap-2 my-16'>
+        <div className='section__2__inner__container w-[85%] flex justify-center items-center gap-10 my-16 py-4'>
           <div className='section__2__image__container flex-1 flex justify-end items-center'>
             <Image src={section2img} alt='landing__image__two' width={500} height={500} />
           </div>
@@ -217,7 +218,7 @@ const Home = () => {
 
         <div className='absolute -bottom-[5rem] w-[25rem] h-[25rem] bg-gradient-to-r from-orange-500 to-orange-400 rounded-full blur-[20rem] -z-10'></div>
 
-        <div className='p-[2.5px] rounded-2xl w-[70%]'>
+        <div className='p-[2.5px] rounded-2xl w-[80%]'>
           <div className=' landing__section__5__card w-[100%] bg-bg-primary flex justify-center items-center flex-col py-16 gap-10 rounded-xl bg-gradient-to-t backdrop-blur-sm bg-opacity-0 from-[#1F9C9A1A] to-[#F8F8F81A]'>
             
             <div className='w-full text-white font-semibold text-4xl text-center'>
@@ -241,21 +242,21 @@ const Home = () => {
 
       <div className='meet__our__team__section w-full min-h-max py-5 flex justify-center items-center px-5 bg-bg-primary flex-col relative backdrop-blur-sm bg-opacity-0'>
         <div className='absolute bottom-0 left-0 w-[20rem] h-[20rem] bg-gradient-to-r from-orange-500 to-orange-400 rounded-full blur-[10rem] -z-10'></div>
-        <div className='text-white font-semibold text-5xl'>
-          Meet our <span className='bg-gradient-to-br from-teal-500 to-white bg-clip-text text-transparent'>Team</span>
+        <div className='text-white font-semibold text-5xl w-full flex justify-center items-center mb-10'>
+          Meet our  <span className='bg-gradient-to-br from-teal-500 to-white bg-clip-text text-transparent'> Team</span>
         </div>
-        <div className='meet__our__team__inner w-[60%] grid grid-cols-2 grid-rows-2 py-10 px-10 gap-y-10 ' >
+        <div className='meet__our__team__inner w-[70%] grid grid-cols-2 grid-rows-2 py-10 gap-y-8'>
           
           {
             teamsData.map((team,ind) => {
               return(
                 <div key={team.id} className='flex justify-center items-center'>
-                  <div className=' rounded-2xl overflow-hidden w-[25rem] self-end relative border-2 border-teal-800'>
-                    <div className='bg-gradient-to-t from-[#1F9C9A1A] to-[#F8F8F81A] backdrop-blur-sm bg-opacity-100 py-10 px-12 relative overflow-hidden'>
-                      <div className='absolute -bottom-[2rem] -right-[1rem] flex'>
-                        <Image src={team.profileimg} alt='team__image' width={200} height={200} className='rounded-full' />
+                  <div className=' rounded-2xl overflow-hidden self-center relative border-2 border-teal-800 w-[95%]'>
+                    <div className='bg-gradient-to-t from-[#1F9C9A1A] to-[#F8F8F81A] backdrop-blur-sm bg-opacity-100 py-10 px-5 relative overflow-hidden flex justify-center items-center flex-col'>
+                      <div className='w-full flex justify-center items-center mb-4'>
+                        <Image src={team.profileimg} alt='team__image' width={200} className='rounded-full' />
                       </div>
-                      <div className='text-white font-semibold text-xl text-wrap'>
+                      <div className='text-white font-semibold text-xl text-wrap text-center'>
                         <p>{team.name}</p>
                         <p className='text-text-yellow'>{team.position}</p>
                       </div>
@@ -281,24 +282,26 @@ const Home = () => {
       </div>
 
       <div className='w-full flex justify-center items-center'>
-      <div className='w-[80%]' >
+      <div className='w-[80%] py-10' >
         <Brands />
       </div>
       </div>
 
-      <div className='footer__section__grid__container py-10 px-28 flex justify-start gap-10 w-full items-center flex-col border-gray-600 border-t-2 bg-gradient-to-t from-[#1F9C9A4D] to-[#F8F8F84D] backdrop-blur-sm bg-opacity-35'>
+      <div className='footer__section__grid__container overflow-hidden flex justify-start gap-6 w-full items-center flex-col border-gray-600 border-t-2 bg-gradient-to-t from-[#1F9C9A4D] to-[#F8F8F84D] backdrop-blur-lg bg-opacity-30 rounded-t-2xl'>
+
+      <div className='bg-white/10 backdrop-blur-lg w-full py-10 px-20'>
         <div className='w-full flex justify-start'>
-          <Image src={logo} alt='logo' width={40} height={40} />
+          <Image src={logo} alt='logo' width={200}/>
         </div>
         <div className='text-white text-xl w-full flex justify-start items-baseline flex-row gap-2'>
           <div className=''>
-            <p className='my-5'>
+            <p className='my-5 text-xl'>
               We are creatin highly advanced sigital workers,<br /> called artisans , using cutting edge AI technolodgy
             </p>
             <p>
               someemail@gmail.com
             </p>
-            <ul className='flex justify-start items-center gap-4 text-white text-2xl mt-4'>
+            <ul className='flex justify-start items-center gap-4 text-white text-2xl mt-4 my-8'>
               <li className='border-2 flex justify-center items-center border-white rounded-full w-[3rem] h-[3rem]'><TbBrandTwitterFilled /></li>
               <li className='border-2 flex justify-center items-center border-white rounded-full w-[3rem] h-[3rem]'><TbBrandFacebookFilled /></li>
               <li className='border-2 flex justify-center items-center border-white rounded-full w-[3rem] h-[3rem]'><TbBrandDiscordFilled /></li>
@@ -318,15 +321,18 @@ const Home = () => {
           </div> */}
         </div>
 
-        <div className='w-full flex justify-between items-center gap-8 text-white font-medium text-md'>
+        <div className='w-full flex justify-between items-center gap-6 text-white font-medium text-md mt-10'>
           <div className='flex justify-center items-center gap-6 text-xl'>
           <p>Terms of use</p>
           <p>Privacy Policy</p>
           </div>
           <p className='text-xl bg-gradient-to-br from-teal-500 to-white text-transparent bg-clip-text'>© 2023 Artisans. All rights reserved</p>
-          <p className='bg-gradient-to-br from-teal-500 to-white text-transparent bg-clip-text text-xl'>Made with love in India</p>
+          <p className='bg-gradient-to-br from-teal-500 to-white text-transparent bg-clip-text text-xl'>Made with <span className='text-red-600'>❤️</span> from India <span className=' flex justify-end items-center'><Image src={imageicon} alt='someimage' width={30}/></span> </p>
         </div>
       </div>
+
+      </div>
+
     </div>
     </>
   )
