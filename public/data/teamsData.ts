@@ -20,11 +20,11 @@ export const teamsData = [
             },
             {
                 id :3,
-                value : `Asia Pacific Global Hackathon Winner ‘23`
+                value : `Asia Pacific Global Hackathon Winner '23`
             },
             {
                 id: 4,
-                value : 'TEDx Speaker, upcoming Josh Talks speaker '
+                value : 'TEDx Speaker, upcoming Josh Talks speaker'
             }
         ]
     },

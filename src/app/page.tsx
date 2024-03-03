@@ -55,13 +55,13 @@ const Home = () => {
           <div className='landing__text__one flex-1 pl-10 backdrop-blur-sm bg-bg-primary/30'>
 
             <div className='px-4 text-7xl font-bold text-white'>
-              <p>The <span className='bg-gradient-to-br from-teal-500 to-white text-transparent bg-clip-text'>Future</span></p>
-              <p>of the</p>
-              <p>Workforce</p>
+              <p>Introducing <span className='bg-gradient-to-br from-teal-500 to-white text-transparent bg-clip-text'>Maya,</span></p>
+              <p>the first</p>
+              <p>Alchemyst</p>
             </div>
 
             <div className='w-full px-4 text-white font-semibold mt-3'>
-              ALchemysts can become integral members of your <br />buisness and startup teams
+            Maya is India’s first digital employee,  <br />designed to automate your sales.
             </div>
 
             <div className='w-full px-5 py-2 mt-16'>
