@@ -35,30 +35,6 @@ export const teamsData = [
     },
     {
         id: 2,
-        name : 'Anuran Roy',
-        position : 'Chief Technology Officer',
-        profileimg : anuran,
-        achievements : [
-            {
-                id: 1,
-                value : 'Ex - AI Engineering Team @AI4Bharat'
-            },
-            {
-                id : 2,
-                value : 'Deep Learning & AI Research Intern, @Google DeepMind'
-            },
-            {
-                id :3,
-                value : 'Ex- Founding AI Engineering team, @Quantum Leap AI'
-            },
-            {
-                id: 4,
-                value : 'Full Stack AI Engineer, Memorang'
-            }
-        ]
-    },
-    {
-        id: 3,
         name : 'Rishita Shaw',
         position : 'Head of Technical Research',
         profileimg : rish,
@@ -78,6 +54,30 @@ export const teamsData = [
             {
                 id: 4,
                 value : 'Economic Times & Unstop Competitive Leader ‘23'
+            }
+        ]
+    },
+    {
+        id: 3,
+        name : 'Anuran Roy',
+        position : 'Chief Technology Officer',
+        profileimg : anuran,
+        achievements : [
+            {
+                id: 1,
+                value : 'Ex - AI Engineering Team @AI4Bharat'
+            },
+            {
+                id : 2,
+                value : 'Deep Learning & AI Research Intern, @Google DeepMind'
+            },
+            {
+                id :3,
+                value : 'Ex- Founding AI Engineering team, @Quantum Leap AI'
+            },
+            {
+                id: 4,
+                value : 'Full Stack AI Engineer, Memorang'
             }
         ]
     },
