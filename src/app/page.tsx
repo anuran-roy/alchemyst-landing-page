@@ -253,8 +253,8 @@ const Home = () => {
 
       <div id='teamsSection' className='meet__our__team__section w-full min-h-max py-5 flex justify-center items-center px-5 bg-bg-primary flex-col relative backdrop-blur-sm bg-opacity-0'>
         <div className='absolute bottom-0 left-0 w-[20rem] h-[20rem] bg-gradient-to-r from-orange-500 to-orange-400 rounded-full blur-[10rem] -z-10'></div>
-        <div className='text-white font-semibold text-5xl w-full flex justify-center items-center mb-10'>
-          Meet our  <span className='bg-gradient-to-br from-teal-500 to-white bg-clip-text text-transparent'> Team</span>
+        <div className='text-white font-semibold text-5xl w-full flex justify-center items-center mb-10 gap-2'>
+          Meet our <span className='inline-block bg-gradient-to-br from-teal-500 to-white bg-clip-text text-transparent'> Team</span>
         </div>
         <div className='meet__our__team__inner w-[70%] grid grid-cols-2 grid-rows-2 py-10 gap-y-8'>
           
