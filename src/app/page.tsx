@@ -23,6 +23,16 @@ import { FaHeart } from "react-icons/fa6";
 const Home = () => {
 
   const [isHovered, setIsHovered] = useState(false)
+
+  const scrollToSection = (sectionId: string) => {
+    const targetSection = document.getElementById(sectionId);
+    if (targetSection) {
+      window.scrollTo({
+        top: targetSection.offsetTop,
+        behavior: 'smooth',
+      });
+    }
+  };
   
   return (
     <>
@@ -38,7 +48,9 @@ const Home = () => {
           <ul className='text-lg flex justify-center items-center gap-12 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-[#414770] to-[#41477000] py-2 px-28 rounded-2xl'>
             <li className='text-text-yellow cursor-pointer'>Home</li>
             <li className='cursor-pointer'>Products</li>
-            <li className='cursor-pointer'>Team</li>
+            <li className='cursor-pointer' onClick={() => scrollToSection('teamsSection')}>
+              Team
+            </li>
           </ul>
 
             <div className='text-lg'>
@@ -239,7 +251,7 @@ const Home = () => {
         
       </div>
 
-      <div className='meet__our__team__section w-full min-h-max py-5 flex justify-center items-center px-5 bg-bg-primary flex-col relative backdrop-blur-sm bg-opacity-0'>
+      <div id='teamsSection' className='meet__our__team__section w-full min-h-max py-5 flex justify-center items-center px-5 bg-bg-primary flex-col relative backdrop-blur-sm bg-opacity-0'>
         <div className='absolute bottom-0 left-0 w-[20rem] h-[20rem] bg-gradient-to-r from-orange-500 to-orange-400 rounded-full blur-[10rem] -z-10'></div>
         <div className='text-white font-semibold text-5xl w-full flex justify-center items-center mb-10'>
           Meet our  <span className='bg-gradient-to-br from-teal-500 to-white bg-clip-text text-transparent'> Team</span>
