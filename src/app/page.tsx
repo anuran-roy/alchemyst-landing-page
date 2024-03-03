@@ -236,32 +236,34 @@ const Home = () => {
         <div className='text-white font-semibold text-5xl'>
           Meet our <span className='bg-gradient-to-br from-teal-500 to-white bg-clip-text text-transparent'>Team</span>
         </div>
-        <div className='meet__our__team__inner w-[60%] grid grid-cols-2 grid-rows-2 py-10 px-10 gap-y-10' >
+        <div className='meet__our__team__inner w-[60%] grid grid-cols-2 grid-rows-2 py-10 px-10 gap-y-10 ' >
           
           {
             teamsData.map((team,ind) => {
               return(
-                <div key={team.id} className='p-[2px] flex justify-center items-center'>
-                  <div className='py-6 px-3 rounded-lg w-[25rem] bg-opacity-30 backdrop-blur-sm bg-gradient-to-t from-[#1F9C9A1A] to-[#F8F8F81A] self-end relative overflow-hidden'>
-                    <div className='absolute -bottom-[2rem] -right-[1rem]'>
-                      <Image src={team.profileimg} alt='team__image' width={200} height={200} className='rounded-full' />
-                    </div>
-                    <div className='text-white font-semibold text-xl text-wrap'>
-                      <p>{team.name}</p>
-                      <p className='text-text-yellow'>{team.position}</p>
-                    </div>
+                <div key={team.id} className='flex justify-center items-center'>
+                  <div className=' rounded-2xl overflow-hidden w-[25rem] self-end relative border-2 border-teal-800'>
+                    <div className='bg-gradient-to-t from-[#1F9C9A1A] to-[#F8F8F81A] backdrop-blur-sm bg-opacity-100 py-10 px-12 relative overflow-hidden'>
+                      <div className='absolute -bottom-[2rem] -right-[1rem] flex'>
+                        <Image src={team.profileimg} alt='team__image' width={200} height={200} className='rounded-full' />
+                      </div>
+                      <div className='text-white font-semibold text-xl text-wrap'>
+                        <p>{team.name}</p>
+                        <p className='text-text-yellow'>{team.position}</p>
+                      </div>
 
-                    <ul>
-                      {
-                        team.achievements.map((item,ind) => {
-                          return(
-                            <li key={item.id} className='text-white font-normal text-lg pb-3'>
-                              <p>{item.value}</p>
-                            </li>
-                          )
-                        })
-                      }
-                    </ul>
+                      <ul>
+                        {
+                          team.achievements.map((item,ind) => {
+                            return(
+                              <li key={item.id} className='text-white font-normal text-lg pb-3'>
+                                <p>{item.value}</p>
+                              </li>
+                            )
+                          })
+                        }
+                      </ul>
+                    </div>
                   </div>
                 </div>
               )
@@ -276,11 +278,11 @@ const Home = () => {
       </div>
       </div>
 
-      <div className='footer__section__grid__container py-10 px-28 flex justify-start gap-10 w-full items-center flex-col'>
+      <div className='footer__section__grid__container py-10 px-28 flex justify-start gap-10 w-full items-center flex-col border-gray-600 border-t-2 '>
         <div className='w-full flex justify-start'>
           <Image src={logo} alt='logo' width={40} height={40} />
         </div>
-        <div className='text-white text-lg w-full flex justify-start items-baseline flex-row gap-2'>
+        <div className='text-white text-xl w-full flex justify-start items-baseline flex-row gap-2'>
           <div className=''>
             <p className='my-5'>
               We are creatin highly advanced sigital workers,<br /> called artisans , using cutting edge AI technolodgy
@@ -289,11 +291,11 @@ const Home = () => {
               someemail@gmail.com
             </p>
             <ul className='flex justify-start items-center gap-4 text-white text-2xl mt-4'>
-              <li><TbBrandTwitterFilled /></li>
-              <li><TbBrandFacebookFilled /></li>
-              <li><TbBrandDiscordFilled /></li>
-              <li><TbBrandInstagram /></li>
-              <li><TbBrandLinkedin /></li>
+              <li className='border-2 flex justify-center items-center border-white rounded-full w-[3rem] h-[3rem]'><TbBrandTwitterFilled /></li>
+              <li className='border-2 flex justify-center items-center border-white rounded-full w-[3rem] h-[3rem]'><TbBrandFacebookFilled /></li>
+              <li className='border-2 flex justify-center items-center border-white rounded-full w-[3rem] h-[3rem]'><TbBrandDiscordFilled /></li>
+              <li className='border-2 flex justify-center items-center border-white rounded-full w-[3rem] h-[3rem]'><TbBrandInstagram /></li>
+              <li className='border-2 flex justify-center items-center border-white rounded-full w-[3rem] h-[3rem]'><TbBrandLinkedin /></li>
             </ul>
           </div>
 
@@ -309,12 +311,12 @@ const Home = () => {
         </div>
 
         <div className='w-full flex justify-between items-center gap-8 text-white font-medium text-md'>
-          <div className='flex justify-center items-center gap-6'>
+          <div className='flex justify-center items-center gap-6 text-xl'>
           <p>Terms of use</p>
           <p>Privacy Policy</p>
           </div>
-          <p>© 2023 Artisans. All rights reserved</p>
-          <p>Made with love in India</p>
+          <p className='text-xl bg-gradient-to-br from-teal-500 to-white text-transparent bg-clip-text'>© 2023 Artisans. All rights reserved</p>
+          <p className='bg-gradient-to-br from-teal-500 to-white text-transparent bg-clip-text text-xl'>Made with love in India</p>
         </div>
       </div>
     </div>
