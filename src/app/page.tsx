@@ -6,6 +6,7 @@ import bgimg from '../../public/assets/frame7.png'
 import section2img from '../../public/assets/frame2.png'
 import section3img from '../../public/assets/frame3.png'
 import section4img from '../../public/assets/frame4.png'
+import imgborder from '../../public/assets/frame5.png'
 
 import { teamsData } from '../../public/data/teamsData'
 import { artisans } from '../../public/data/artisans'
@@ -162,8 +163,9 @@ const Home = () => {
             </div>
           </div>
 
-          <div className='section__3__image__container flex-1'>
-            <Image src={section3img} alt='landing__image__two' width={500} height={500} />
+          <div className='section__3__image__container flex-1 flex justify-center items-center relative h-[25rem]'>
+              <Image src={imgborder} alt='landing__image__two' width={500} height={500} className='absolute'/>
+              <Image src={section3img} alt='landing__image__two' width={800} height={800} className='z-20'/>
           </div>
           
         </div>
@@ -173,8 +175,9 @@ const Home = () => {
       <div className='additional__info__section w-full min-h-max py-5 flex justify-center items-center px-5 bg-bg-primary'>
 
         <div className='section__4__inner__container w-[80%] flex justify-center items-center gap-2 my-20'>
-          <div className='section__4__image__container flex-1'>
-            <Image src={section4img} alt='landing__image__two' width={500} height={500} />
+          <div className='section__4__image__container flex-1 flex justify-center items-center relative h-[25rem]'>
+              <Image src={imgborder} alt='landing__image__two' width={500} height={500} className='absolute'/>
+            <Image src={section4img} alt='landing__image__two' width={500} height={500} className='z-20'/>
           </div>
           <div className='section__4__text__container flex-1 self-start pt-12 ml-10'>
             <div className=' text-white text-5xl font-semibold'>
