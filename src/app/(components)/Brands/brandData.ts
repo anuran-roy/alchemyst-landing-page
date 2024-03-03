@@ -1,10 +1,17 @@
+// import amazon from '../../../../public/assets/brands/brand1.png';
+// import mandiri from '../../../../public/assets/brands/brand2.png';
+// import nike from '../../../../public/assets/brands/brand3.png';
+// import amd from '../../../../public/assets/brands/brand4.png';
+// import dropcam from '../../../../public/assets/brands/brand5.png';
+// import logitech from '../../../../public/assets/brands/brand6.png';
+
+
 import amazon from '../../../../public/assets/brands/amazon.svg';
 import mandiri from '../../../../public/assets/brands/mandiri.svg';
 import nike from '../../../../public/assets/brands/nike.svg';
 import amd from '../../../../public/assets/brands/amd.svg';
 import dropcam from '../../../../public/assets/brands/dropcam.svg';
 import logitech from '../../../../public/assets/brands/logitech.svg';
-
 
 const brandData = [
   {

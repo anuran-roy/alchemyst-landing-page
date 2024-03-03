@@ -64,7 +64,7 @@ const Home = () => {
         <div className='absolute top-[10rem] left-0 w-[18rem] h-[18rem] bg-gradient-to-r from-orange-500 to-orange-400 rounded-full blur-[10rem] -z-10 glow-animation'></div>
         {/* <div className='absolute top-[14rem] right-[20rem] w-[10rem] h-[10rem] bg-gradient-to-r from-orange-500 to-orange-400 rounded-full blur-[10rem] -z-10'></div> */}
         <div className='section-1 flex-1 w-[85%] flex justify-center items-center py-10 my-16'>
-{/* backdrop-blur-sm bg-bg-primary/30 */}
+          {/* backdrop-blur-sm bg-bg-primary/30 */}
           <div className='landing__text__one flex-1 pl-10 '>
 
             <div className='px-4 text-7xl font-bold text-white'>
@@ -89,7 +89,7 @@ const Home = () => {
 
         </div>
 
-        <Image src={bgwave} alt='landing__image__one' className='absolute w-full h-[75rem] -z-50 top-[7rem] bg-clip-content bg-opacity-0 backdrop-blur-sm'/>
+        {/* <Image src={bgwave} alt='landing__image__one' className='absolute w-full h-[75rem] -z-50 top-[7rem] bg-clip-content bg-opacity-0 backdrop-blur-sm'/> */}
 
 
         <div className='section-2 flex-1 w-full flex justify-start pt-10 items-center flex-col mt-28'>
@@ -283,6 +283,7 @@ const Home = () => {
                             )
                           })
                         }
+                        
                       </ul>
                     </div>
                   </div>
@@ -293,10 +294,10 @@ const Home = () => {
         </div>
       </div>
 
-      <div className='w-full flex justify-center items-center'>
-      <div className='w-[80%] py-10' >
+      <div className='w-full flex justify-center items-center '>
+      {/* <div className='w-[85%] py-10 ' > */}
         <Brands />
-      </div>
+      {/* </div> */}
       </div>
 
       <div className='footer__section__grid__container overflow-hidden flex justify-start gap-6 w-full items-center flex-col border-gray-600 border-t-2 bg-gradient-to-t from-[#1F9C9A4D] to-[#F8F8F84D] backdrop-blur-lg bg-opacity-30 rounded-t-2xl'>

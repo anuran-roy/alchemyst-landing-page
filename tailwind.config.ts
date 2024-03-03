@@ -8,6 +8,19 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      animation:{
+        "infinite-scroll" :"infinite-scroll 10s linear infinite",
+      },
+      keyframes:{
+        "infinite-scroll" : {
+          "0%": {
+            transform: "translateX(0)",
+          },
+          "100%": {
+            transform: "translateX(-100%)",
+          },
+        },
+      },
       backgroundColor: {
         'bg-primary' : '#24273C',
         'bg-yellow' : '#F1A334'
