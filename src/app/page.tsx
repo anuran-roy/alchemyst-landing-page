@@ -7,10 +7,17 @@ import section2img from '../../public/assets/frame2.png'
 import section3img from '../../public/assets/frame3.png'
 import section4img from '../../public/assets/frame4.png'
 import imgborder from '../../public/assets/frame5.png'
+import logo from '../../public/assets/AI.png'
+import wave from '../../public/assets/waveremove.png'
 
 import { teamsData } from '../../public/data/teamsData'
 import { artisans } from '../../public/data/artisans'
 import Brands from './(components)/Brands'
+import { log } from 'console'
+
+//icons
+import { TbBrandInstagram, TbBrandTwitterFilled, TbBrandFacebookFilled, TbBrandLinkedin, TbBrandDiscordFilled } from "react-icons/tb";
+
 
 const Home = () => {
   return (
@@ -21,13 +28,13 @@ const Home = () => {
       <div className='w-full flex justify-center items-center py-6 text-white text-semibold text-xl border-b-[1px] border-b-gray-500'>
         <div className='navbar__inner__section  w-[90%] flex justify-between px-20 items-center gap-5'>
           <div>
-            AI
+            <Image src={logo} alt='logo' width={40} height={40} />
           </div>
 
-          <ul className='flex justify-center items-center gap-8'>
-            <li>Home</li>
-            <li>Products</li>
-            <li>Team</li>
+          <ul className='flex justify-center items-center gap-12 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-[#414770] to-[#41477000] py-2 px-28 rounded-2xl'>
+            <li className='text-text-yellow cursor-pointer'>Home</li>
+            <li className='cursor-pointer'>Products</li>
+            <li className='cursor-pointer'>Team</li>
           </ul>
 
             <div className=''>
@@ -64,6 +71,9 @@ const Home = () => {
           </div>
 
         </div>
+
+            <Image src={wave} alt='landing__image__one' className='absolute filter grayscale w-full h-[75rem] -z-10 top-[7rem]'/>
+
 
         <div className='section-2 flex-1 w-full flex justify-start pt-10 items-center flex-col mt-28'>
           <div className='landing__text__section__2 text-white text-5xl font-semibold my-3 flex justify-center items-center text-center tracking-wide mb-10'>
@@ -226,14 +236,17 @@ const Home = () => {
         <div className='text-white font-semibold text-5xl'>
           Meet our <span className='bg-gradient-to-br from-teal-500 to-white bg-clip-text text-transparent'>Team</span>
         </div>
-        <div className='meet__our__team__inner w-[60%] grid grid-cols-2 grid-rows-2 py-10 px-10' >
+        <div className='meet__our__team__inner w-[60%] grid grid-cols-2 grid-rows-2 py-10 px-10 gap-y-10' >
           
           {
             teamsData.map((team,ind) => {
               return(
                 <div key={team.id} className='p-[2px] flex justify-center items-center'>
-                  <div className='py-8 px-5 rounded-lg w-[25rem] bg-opacity-30 backdrop-blur-sm bg-gradient-to-t from-[#1F9C9A1A] to-[#F8F8F81A] self-end'>
-                    <div className='text-white font-semibold text-xl'>
+                  <div className='py-6 px-3 rounded-lg w-[25rem] bg-opacity-30 backdrop-blur-sm bg-gradient-to-t from-[#1F9C9A1A] to-[#F8F8F81A] self-end relative overflow-hidden'>
+                    <div className='absolute -bottom-[2rem] -right-[1rem]'>
+                      <Image src={team.profileimg} alt='team__image' width={200} height={200} className='rounded-full' />
+                    </div>
+                    <div className='text-white font-semibold text-xl text-wrap'>
                       <p>{team.name}</p>
                       <p className='text-text-yellow'>{team.position}</p>
                     </div>
@@ -257,12 +270,52 @@ const Home = () => {
         </div>
       </div>
 
-      <div>
+      <div className='w-full flex justify-center items-center'>
+      <div className='w-[80%]' >
         <Brands />
       </div>
+      </div>
 
-      <div className='footer__section'>
+      <div className='footer__section__grid__container py-10 px-28 flex justify-start gap-10 w-full items-center flex-col'>
+        <div className='w-full flex justify-start'>
+          <Image src={logo} alt='logo' width={40} height={40} />
+        </div>
+        <div className='text-white text-lg w-full flex justify-start items-baseline flex-row gap-2'>
+          <div className=''>
+            <p className='my-5'>
+              We are creatin highly advanced sigital workers,<br /> called artisans , using cutting edge AI technolodgy
+            </p>
+            <p>
+              someemail@gmail.com
+            </p>
+            <ul className='flex justify-start items-center gap-4 text-white text-2xl mt-4'>
+              <li><TbBrandTwitterFilled /></li>
+              <li><TbBrandFacebookFilled /></li>
+              <li><TbBrandDiscordFilled /></li>
+              <li><TbBrandInstagram /></li>
+              <li><TbBrandLinkedin /></li>
+            </ul>
+          </div>
 
+          {/* <div className=' w-[50%]'>
+            <p className='text-center text-white font-semibold text-2xl'>Stay Connected To Us</p>
+
+            <div className='flex justify-center items-center flex-col gap-4 w-full  px-6'>
+            <input type="text" placeholder='Enter Your Name' className='w-full bg-inherit border-2 border-gray-800 border-solid rounded-lg py-2 px-5 text-xl'/>
+            <input type="text" placeholder='Enter our Email' className='w-full bg-inherit border-2 border-gray-800 border-solid rounded-lg py-2 px-5 text-xl'/>
+            <button>Connect</button>
+            </div>
+          </div> */}
+        </div>
+
+        <div className='w-full flex justify-between items-center gap-8 text-white font-medium text-md'>
+          <div className='flex justify-center items-center gap-6'>
+          <p>Terms of use</p>
+          <p>Privacy Policy</p>
+          </div>
+          <p>© 2023 Artisans. All rights reserved</p>
+          <p>Made with love in India</p>
+        </div>
       </div>
     </div>
     </>
