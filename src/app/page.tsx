@@ -1,4 +1,6 @@
-import React from 'react'
+"use client";
+
+import React, { useState } from 'react'
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
 
@@ -13,13 +15,15 @@ import wave from '../../public/assets/waveremove.png'
 import { teamsData } from '../../public/data/teamsData'
 import { artisans } from '../../public/data/artisans'
 import Brands from './(components)/Brands'
-import { log } from 'console'
 
 //icons
 import { TbBrandInstagram, TbBrandTwitterFilled, TbBrandFacebookFilled, TbBrandLinkedin, TbBrandDiscordFilled } from "react-icons/tb";
 
 
 const Home = () => {
+
+  const [isHovered, setIsHovered] = useState(false)
+  
   return (
     <>
     
@@ -72,7 +76,7 @@ const Home = () => {
 
         </div>
 
-            <Image src={wave} alt='landing__image__one' className='absolute filter grayscale w-full h-[75rem] -z-10 top-[7rem]'/>
+            {/* <Image src={wave} alt='landing__image__one' className='absolute filter grayscale w-full h-[75rem] -z-10 top-[7rem]'/> */}
 
 
         <div className='section-2 flex-1 w-full flex justify-start pt-10 items-center flex-col mt-28'>
@@ -86,8 +90,8 @@ const Home = () => {
         </div>
       </div>
 
-      <div className='artisans__section w-full min-h-max py-10 px-5 flex justify-center items-center flex-col bg-bg-primary relative backdrop-blur-sm bg-opacity-30 mt-16'>
-        <div className='absolute top-[10rem] -left-[10rem] w-[20rem] h-[20rem] bg-gradient-to-r from-orange-500 to-orange-400 rounded-full blur-[20rem] -z-10'></div>
+      <div className='artisans__section w-full min-h-max py-16 px-5 flex justify-center items-center flex-col bg-bg-primary relative backdrop-blur-sm bg-opacity-30 mt-16'>
+        <div className={`absolute top-[10rem] -left-[10rem] w-[20rem] h-[20rem] bg-gradient-to-r from-orange-500 to-orange-400 rounded-full blur-[20rem] -z-10`}></div>
         
         <div className='artisans__inner__section w-[80%] flex justify-center items-center gap-8'>
 
@@ -129,8 +133,12 @@ const Home = () => {
         
       </div>
 
-      <div className='chat__with__ease__section w-full min-h-max py-5 flex justify-center items-center px-5 bg-bg-primary backdrop-blur-sm bg-opacity-30'>
-        <div className='absolute top-0 right-0 w-[15rem] h-[15rem] bg-gradient-to-r from-orange-500 to-orange-400 rounded-full blur-[15rem] -z-10 hover:glow-animation'></div>
+      <div className='chat__with__ease__section w-full min-h-max py-5 flex justify-center items-center px-5 bg-bg-primary backdrop-blur-sm bg-opacity-30' onMouseOver={() => {
+        setIsHovered((state) => !state)
+      }} onMouseLeave={() => {
+        setIsHovered((state) => !state)
+      }}>
+        <div className={'absolute top-0 right-0 w-[15rem] h-[15rem] bg-gradient-to-r from-orange-500 to-orange-400 rounded-full blur-[15rem] -z-10 hover:blur-[30rem]'}></div>
 
         <div className='section__2__inner__container w-[80%] flex justify-center items-center gap-2 my-16'>
           <div className='section__2__image__container flex-1 flex justify-end items-center'>
@@ -278,7 +286,7 @@ const Home = () => {
       </div>
       </div>
 
-      <div className='footer__section__grid__container py-10 px-28 flex justify-start gap-10 w-full items-center flex-col border-gray-600 border-t-2 bg-gradient-to-t from-[#1F9C9A4D] to-[#F8F8F84D]'>
+      <div className='footer__section__grid__container py-10 px-28 flex justify-start gap-10 w-full items-center flex-col border-gray-600 border-t-2 bg-gradient-to-t from-[#1F9C9A4D] to-[#F8F8F84D] backdrop-blur-sm bg-opacity-35'>
         <div className='w-full flex justify-start'>
           <Image src={logo} alt='logo' width={40} height={40} />
         </div>
