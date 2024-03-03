@@ -11,6 +11,7 @@ import section4img from '../../public/assets/frame4.png'
 import imgborder from '../../public/assets/frame5.png'
 import logo from '../../public/assets/AI.png'
 import imageicon from '../../public/assets/india.png'
+import bgwave from '../../public/assets/wave.png'
 
 import { teamsData } from '../../public/data/teamsData'
 import { artisans } from '../../public/data/artisans'
@@ -88,7 +89,7 @@ const Home = () => {
 
         </div>
 
-            {/* <Image src={wave} alt='landing__image__one' className='absolute filter grayscale w-full h-[75rem] -z-10 top-[7rem]'/> */}
+        <Image src={bgwave} alt='landing__image__one' className='absolute filter w-full h-[75rem] -z-50 top-[7rem] bg-clip-content bg-opacity-10 backdrop-blur-md'/>
 
 
         <div className='section-2 flex-1 w-full flex justify-start pt-10 items-center flex-col mt-28'>
