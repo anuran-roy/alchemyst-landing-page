@@ -55,13 +55,13 @@ const Home = () => {
           <div className='landing__text__one flex-1 pl-10 backdrop-blur-sm bg-bg-primary/30'>
 
             <div className='px-4 text-7xl font-bold text-white'>
-              <p>The <span className='bg-gradient-to-br from-teal-500 to-white text-transparent bg-clip-text'>Future</span></p>
-              <p>of the</p>
-              <p>Workforce</p>
+              <p>Introducing <span className='bg-gradient-to-br from-teal-500 to-white text-transparent bg-clip-text'>Maya,</span></p>
+              <p>the first</p>
+              <p>Alchemyst</p>
             </div>
 
             <div className='w-full px-4 text-white font-semibold mt-3'>
-              ALchemysts can become integral members of your <br />buisness and startup teams
+            Maya is India’s first digital employee,  <br />designed to automate your sales.
             </div>
 
             <div className='w-full px-5 py-2 mt-16'>
@@ -295,10 +295,10 @@ const Home = () => {
         <div className='text-white text-xl w-full flex justify-start items-baseline flex-row gap-2'>
           <div className=''>
             <p className='my-5'>
-              We are creating highly advanced digital workers,<br /> called artisans , using cutting edge AI technolodgy
+            Building Next Gen AI Digital Employees.<br /> Spearheading the next Industrial Revolution in India.
             </p>
             <p>
-              someemail@gmail.com
+              getalchemystai@gmail.com
             </p>
             <ul className='flex justify-start items-center gap-4 text-white text-2xl mt-4 my-8'>
               <li className='border-2 flex justify-center items-center border-white rounded-full w-[3rem] h-[3rem]'><TbBrandTwitterFilled /></li>
@@ -325,7 +325,7 @@ const Home = () => {
           <p>Terms of use</p>
           <p>Privacy Policy</p>
           </div>
-          <p className='text-xl bg-gradient-to-br from-teal-500 to-white text-transparent bg-clip-text'>© 2023 Artisans. All rights reserved</p>
+          <p className='text-xl bg-gradient-to-br from-teal-500 to-white text-transparent bg-clip-text'>© 2023 Alchemyst AI. All rights reserved</p>
           <p className='bg-gradient-to-br from-teal-500 to-white text-transparent bg-clip-text text-xl'>Made with <span className='text-red-600'>❤️</span> from India <span className=' flex justify-end items-center'><Image src={imageicon} alt='someimage' width={30}/></span> </p>
         </div>
       </div>
