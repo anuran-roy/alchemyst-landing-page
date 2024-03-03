@@ -30,3 +30,20 @@
     text-wrap: balance;
   }
 }
+
+
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 0 0rem rgba(255, 165, 0, 0.7);
+  }
+  50% {
+    box-shadow: 0 0 1rem 2rem rgba(255, 165, 0, 0.7);
+  }
+  100% {
+    box-shadow: 0 0 0 4rem rgba(255, 165, 0, 0);
+  }
+}
+
+.glow-animation {
+  animation: glow 2s infinite ease-in-out;
+}

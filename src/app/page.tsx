@@ -36,7 +36,7 @@ const Home = () => {
       </div>
       
       <div className='landing__section__1 w-full min-h-max py-5 px-5 flex justify-center items-center flex-col bg-bg-primary relative backdrop-blur-sm bg-opacity-30' >
-        <div className='absolute top-[10rem] left-0 w-[15rem] h-[15rem] bg-gradient-to-r from-orange-500 to-orange-400 rounded-full blur-[10rem] -z-10'></div>
+        <div className='absolute top-[10rem] left-0 w-[18rem] h-[18rem] bg-gradient-to-r from-orange-500 to-orange-400 rounded-full blur-[10rem] -z-10 glow-animation'></div>
         {/* <div className='absolute top-[14rem] right-[20rem] w-[10rem] h-[10rem] bg-gradient-to-r from-orange-500 to-orange-400 rounded-full blur-[10rem] -z-10'></div> */}
         <div className='section-1 flex-1 w-[80%] flex justify-center items-center py-10 my-16'>
 
@@ -58,7 +58,7 @@ const Home = () => {
           </div>
 
           <div className='landing__image__container flex-1 relative flex justify-center items-center'>
-          <div className='absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] w-[20rem] h-[20rem]  bg-gradient-to-r from-orange-500 to-orange-400 rounded-full blur-[10rem] -z-10'></div>
+          <div className='absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] w-[28rem] h-[28rem]  bg-gradient-to-r from-orange-500 to-orange-400 rounded-full blur-[5rem] -z-10 glow-animation'></div>
               <Image src={bgimg} alt='landing__image__one' width={500} height={500} className='z-30' />
           </div>
 
@@ -83,31 +83,33 @@ const Home = () => {
           {
             artisans.map((artisan, index) => {
               return (
-              <div key={artisan.id} className='rounded-xl w-[30rem] h-[38rem] bg-gradient-to-t from-[#313b45] to-[#43424c] p-5 flex justify-around items-baseline flex-col gap-6 relative backdrop-blur-sm bg-opacity-30'>
+                <div key={artisan.id} className='w-[30rem] h-[38rem] p-[3px] rounded-xl bg-gradient-to-b from-[#82D6D2] to-[#82D6D200]'>
+                  <div className='rounded-xl w-full h-full p-5 bg-gradient-to-t from-[#313b45] to-[#43424c] flex justify-around items-baseline flex-col gap-6 relative backdrop-blur-sm bg-opacity-30 px-8'>
 
-                <div className='w-full flex justify-center items-center'>
-                  <Image src={artisan.face} alt='landing__image__two' width={200} height={200} />
+                    <div className='w-full flex justify-center items-center'>
+                      <Image src={artisan.face} alt='landing__image__two' width={200} height={200} />
+                    </div>
+
+                    <div className='text-white font-semibold '>
+                      <p className='text-4xl'>{artisan.name}</p>
+                      <p className='text-xl'>{artisan.role}</p>
+                    </div>
+
+                    <ul className='text-white font-semibold list-disc flex flex-col justify-center items-center gap-6'>
+
+                      {
+                        artisan.capabilities.map((capability, ind) => (
+                          <li key={capability.id}>{capability.value}</li>
+                        ))
+                      }
+                    </ul>
+
+                    <div className='w-full px-5 py-2 mt-4 flex justify-center items-center'>
+                      <button className='py-2 px-6 rounded-md bg-bg-yellow text-white text-lg font-semibold'>{artisan.button_text}</button>
+                    </div>
+                    
+                  </div>
                 </div>
-
-                <div className='text-white font-semibold '>
-                  <p className='text-4xl'>{artisan.name}</p>
-                  <p className='text-xl'>{artisan.role}</p>
-                </div>
-
-                <ul className='text-white font-semibold list-disc flex flex-col justify-center items-center gap-6'>
-
-                  {
-                    artisan.capabilities.map((capability, ind) => (
-                      <li key={capability.id}>{capability.value}</li>
-                    ))
-                  }
-                </ul>
-
-                <div className='w-full px-5 py-2 mt-4 flex justify-center items-center'>
-                  <button className='py-2 px-6 rounded-md bg-bg-yellow text-white'>{artisan.button_text}</button>
-                </div>
-                
-              </div>
               )
             })
           }
@@ -117,7 +119,7 @@ const Home = () => {
       </div>
 
       <div className='chat__with__ease__section w-full min-h-max py-5 flex justify-center items-center px-5 bg-bg-primary backdrop-blur-sm bg-opacity-30'>
-        <div className='absolute top-0 right-0 w-[15rem] h-[15rem] bg-gradient-to-r from-orange-500 to-orange-400 rounded-full blur-[15rem] -z-10'></div>
+        <div className='absolute top-0 right-0 w-[15rem] h-[15rem] bg-gradient-to-r from-orange-500 to-orange-400 rounded-full blur-[15rem] -z-10 hover:glow-animation'></div>
 
         <div className='section__2__inner__container w-[80%] flex justify-center items-center gap-2 my-16'>
           <div className='section__2__image__container flex-1 flex justify-end items-center'>
@@ -194,8 +196,8 @@ const Home = () => {
 
         <div className='absolute -bottom-[5rem] w-[25rem] h-[25rem] bg-gradient-to-r from-orange-500 to-orange-400 rounded-full blur-[20rem] -z-10'></div>
 
-        {/* <div className='p-[2.5px] rounded-2xl bg-gradient-to-br from-[#82d5d1] to-white w-[80%]'> */}
-          <div className='landing__section__5__card w-[100%] bg-bg-primary flex justify-center items-center flex-col py-16 gap-10 rounded-xl backdrop-blur-sm bg-opacity-40'>
+        <div className='p-[2.5px] rounded-2xl w-[70%]'>
+          <div className=' landing__section__5__card w-[100%] bg-bg-primary flex justify-center items-center flex-col py-16 gap-10 rounded-xl bg-gradient-to-t backdrop-blur-sm bg-opacity-0 from-[#1F9C9A1A] to-[#F8F8F81A]'>
             
             <div className='w-full text-white font-semibold text-4xl text-center'>
               <p>Ready to Hire an Alchemyst to act</p>
@@ -212,7 +214,7 @@ const Home = () => {
             </div>
             
           </div>
-        {/* </div> */}
+        </div>
         
       </div>
 
@@ -221,13 +223,13 @@ const Home = () => {
         <div className='text-white font-semibold text-5xl'>
           Meet our <span className='bg-gradient-to-br from-teal-500 to-white bg-clip-text text-transparent'>Team</span>
         </div>
-        <div className='meet__our__team__inner w-[80%] grid grid-cols-2 grid-rows-2 py-10 px-10 gap-6' >
+        <div className='meet__our__team__inner w-[60%] grid grid-cols-2 grid-rows-2 py-10 px-10' >
           
           {
             teamsData.map((team,ind) => {
               return(
-                <div key={team.id} className=' p-[2px] '>
-                  <div className='py-8 px-5 rounded-lg w-[25rem] bg-opacity-30 backdrop-blur-sm bg-gradient-to-tr from-[#283648] to-[#46444d]'>
+                <div key={team.id} className='p-[2px] flex justify-center items-center'>
+                  <div className='py-8 px-5 rounded-lg w-[25rem] bg-opacity-30 backdrop-blur-sm bg-gradient-to-t from-[#1F9C9A1A] to-[#F8F8F81A] self-end'>
                     <div className='text-white font-semibold text-xl'>
                       <p>{team.name}</p>
                       <p className='text-text-yellow'>{team.position}</p>
