@@ -278,7 +278,7 @@ const Home = () => {
       </div>
       </div>
 
-      <div className='footer__section__grid__container py-10 px-28 flex justify-start gap-10 w-full items-center flex-col border-gray-600 border-t-2 '>
+      <div className='footer__section__grid__container py-10 px-28 flex justify-start gap-10 w-full items-center flex-col border-gray-600 border-t-2 bg-gradient-to-t from-[#1F9C9A4D] to-[#F8F8F84D]'>
         <div className='w-full flex justify-start'>
           <Image src={logo} alt='logo' width={40} height={40} />
         </div>
