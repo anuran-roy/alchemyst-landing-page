@@ -9,8 +9,8 @@ const config: Config = {
   theme: {
     extend: {
       animation:{
-        "infinite-scroll" :"infinite-scroll 5s linear infinite",
-        'marquee2': 'marquee2 5s linear infinite',
+        "infinite-scroll" :"infinite-scroll 35s linear infinite",
+        'marquee2': 'marquee2 35s linear infinite',
       },
       keyframes:{
         "infinite-scroll" : {

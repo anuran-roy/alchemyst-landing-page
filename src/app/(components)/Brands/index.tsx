@@ -45,7 +45,7 @@ const Brands = () => {
           {  
               brandData.map((brand, key) => (
               <span key={key} className="inline-block mx-12 w-[10rem] h-[5rem] scale-[150%] overflow-hidden">
-                <Image key={key} src={brand.image} alt='partners' className='object-contain filter grayscale'/>
+                <Image key={key} src={brand.image} alt='partners' className='object-cover filter grayscale'/>
               </span>
             ))
           }
