@@ -27,13 +27,13 @@ const brandData = [
     image: mandiri,
     imageLight: "/images/brand/brand-dark-01.svg",
   },
-  // {
-  //   id: 2,
-  //   name: "Client",
-  //   href: "#",
-  //   image: nike,
-  //   imageLight: "/images/brand/brand-dark-02.svg",
-  // },
+  {
+    id: 2,
+    name: "Client",
+    href: "#",
+    image: nike,
+    imageLight: "/images/brand/brand-dark-02.svg",
+  },
   {
     id: 3,
     name: "Client",
