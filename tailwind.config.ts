@@ -9,7 +9,8 @@ const config: Config = {
   theme: {
     extend: {
       animation:{
-        "infinite-scroll" :"infinite-scroll 10s linear infinite",
+        "infinite-scroll" :"infinite-scroll 5s linear infinite",
+        'marquee2': 'marquee2 5s linear infinite',
       },
       keyframes:{
         "infinite-scroll" : {
@@ -19,6 +20,10 @@ const config: Config = {
           "100%": {
             transform: "translateX(-100%)",
           },
+        },
+        marquee2: {
+          '0%': { transform: 'translateX(100%)' },
+          '100%': { transform: 'translateX(0%)' },
         },
       },
       backgroundColor: {
