@@ -6,7 +6,7 @@ export const artisans = [
         id : 1,
         face : maya,
         name : 'Maya',
-        role : 'The sales Dev',
+        role : 'The Sales Dev',
         capabilities : [
             {
                 id: 1,
