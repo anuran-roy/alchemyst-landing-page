@@ -240,7 +240,7 @@ const Home = () => {
 
             <div className='w-full text-white font-normal text-xl text-center'>
                 <p>Alchemysts can become integral</p>
-                <p>members of your buisness adn start-up teams</p>
+                <p>members of your business and start-up teams</p>
             </div>
             
             <div className='w-full py-3 flex justify-center items-center'>
