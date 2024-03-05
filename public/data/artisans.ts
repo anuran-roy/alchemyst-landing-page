@@ -48,7 +48,7 @@ export const artisans = [
             },
             {
                 id :2 ,
-                value : 'Seamlessly integrating into workspaces and scheduling automated meetings with candidates as well as writing curated mails'
+                value : 'Scheduling automated meetings with candidates as well as writing curated mails'
             }
         ],
         button_text : 'Join Waitlist'
