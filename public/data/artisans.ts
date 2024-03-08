@@ -1,5 +1,6 @@
 import maya from '../assets/maya.png'
 import moh from '../assets/moh.png'
+import leela from '../assets/leela.png'
 
 export const artisans = [
     {
@@ -38,7 +39,7 @@ export const artisans = [
     },
     {
         id : 3,
-        face : moh,
+        face : leela,
         name : 'Leela',
         role : 'The Recruiter',
         capabilities : [
