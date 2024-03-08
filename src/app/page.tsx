@@ -116,46 +116,6 @@ const Home = () => {
         },
         '-=0.5'
       )
-
-    //   const tl2 = gsap.timeline()
-
-    //   tl2
-    //     .from(
-    //       elementRef.current,
-    //       {
-    //         opacity: 0,
-    //         duration: 2,
-    //         y: '40%',
-    //         ease: 'power4.out',
-    //       },
-    //     )
-
-    // ScrollTrigger.create({
-    //   animation: tl2,
-    //   trigger: elementRef.current,
-    //   start: 'top 80%',
-    //   markers: true,
-    // });
-
-    //   const tl3 = gsap.timeline()
-
-    //   tl3
-    //     .from(
-    //       section2Ref.current,
-    //       {
-    //         opacity: 0,
-    //         duration: 2,
-    //         y: '40%',
-    //         ease: 'power4.out',
-    //       },
-    //     )
-
-    // ScrollTrigger.create({
-    //   animation: tl3,
-    //   trigger: elementRef.current,
-    //   start: 'top 80%',
-    //   markers: true,
-    // });
   })
   
   return (
@@ -251,12 +211,13 @@ const Home = () => {
 
           {
             artisans.map((artisan, index) => {
+               const imageSize = index === 2 ? 230 : 200
               return (
-                <div key={artisan.id} className='w-[30rem] h-[40rem] p-[3px] rounded-xl bg-gradient-to-b from-[#82D6D2] to-[#82D6D200] '>
+                <div key={artisan.id} className='w-[30rem] h-[40rem] p-[3px] rounded-xl bg-gradient-to-b from-[#82D6D2] to-[#82D6D200]'>
                   <div className='rounded-xl w-full h-full p-5 bg-gradient-to-t from-[#313b45] to-[#43424c] flex justify-start items-baseline flex-col gap-8 relative backdrop-blur-sm bg-opacity-30 px-8'>
 
-                    <div className='w-full flex justify-center items-center'>
-                      <Image src={artisan.face} alt='landing__image__two' width={200} height={200} />
+                    <div className='w-full flex justify-center items-baseline border-2 border-red-600'>
+                      <Image src={artisan.face} alt='landing__image__two' width={imageSize} height={imageSize} />
                     </div>
 
                     <div className='text-white font-semibold '>
@@ -341,7 +302,7 @@ const Home = () => {
               transition={{duration: 0.8}}
             >
               <div className=' text-white text-5xl font-semibold'>
-                <p>Empowers Go-to-</p>
+                <p className='bg-gradient-to-br from-teal-500 to-white text-transparent bg-clip-text'>Empowers Go-to-</p>
                 <p>Market, Growth,</p>
                 <p>Marketing and</p>
                 <p>sales</p>
