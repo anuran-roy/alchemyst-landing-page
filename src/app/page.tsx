@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from 'react'
+import React, { useEffect, useLayoutEffect, useRef, useState } from 'react'
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
 
@@ -21,9 +21,65 @@ import Brands from './(components)/Brands'
 import { TbBrandInstagram, TbBrandTwitterFilled, TbBrandFacebookFilled, TbBrandLinkedin, TbBrandDiscordFilled } from "react-icons/tb";
 import { FaHeart } from "react-icons/fa6";
 
+
+//framer motion
+import { useAnimation, motion } from 'framer-motion';
+import { useInView } from 'framer-motion';
+
+//gsap
+
+import { useGSAP } from '@gsap/react';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+
 const Home = () => {
 
   const [isHovered, setIsHovered] = useState(false)
+  const [triggered, setTriggered] = useState(false);
+
+  const headingtextref= useRef(null)
+  const subheadingRef = useRef(null)
+  const sectionTwoRef = useRef(null)
+  const sectionTwoHeading = useRef(null)
+
+
+  const elementRef = useRef(null)
+  const section2Ref = useRef(null)
+  const section4Ref = useRef(null)
+  const section5Ref = useRef(null)
+  const section6Ref = useRef(null)
+  const section7Ref = useRef(null)
+
+  const controls = useAnimation()
+  const section3controls = useAnimation()
+  const section4controls = useAnimation()
+  const section5controls = useAnimation()
+  const section6controls = useAnimation()
+  const section7controls = useAnimation()
+
+  const inView= useInView(elementRef)
+  const inView2 = useInView(section2Ref)
+  const inView3 = useInView(section4Ref)
+  const inView4 = useInView(section5Ref)
+  const inView5 = useInView(section6Ref)
+  const inView6 = useInView(section7Ref)
+
+  useEffect(() => {
+    if(inView)
+       controls.start('visible')
+    if(inView2)
+      section3controls.start('visible')
+    if(inView3)
+      section4controls.start('visible') 
+    if(inView4)
+      section5controls.start('visible')
+    if(inView5)
+      section6controls.start('visible')
+    if(inView6)
+      section7controls.start('visible')
+
+  },[inView,inView2,inView3,inView4,inView5,inView6])
 
   const scrollToSection = (sectionId: string) => {
     const targetSection = document.getElementById(sectionId);
@@ -34,6 +90,73 @@ const Home = () => {
       });
     }
   };
+
+  useGSAP(()=> {
+    gsap.registerPlugin(ScrollTrigger);
+    const tl = gsap.timeline({})
+
+    tl
+    .addLabel('heading-text-animation')
+      .from (
+        headingtextref.current,
+        {
+          opacity: 0,
+          duration: 0.8,
+          y: '40%',
+          ease: 'power4.out',
+        },
+      )
+      .from(
+        subheadingRef.current,
+        {
+          opacity: 0,
+          duration: 0.8,
+          y: '40%',
+          ease: 'power4.out',
+        },
+        '-=0.5'
+      )
+
+    //   const tl2 = gsap.timeline()
+
+    //   tl2
+    //     .from(
+    //       elementRef.current,
+    //       {
+    //         opacity: 0,
+    //         duration: 2,
+    //         y: '40%',
+    //         ease: 'power4.out',
+    //       },
+    //     )
+
+    // ScrollTrigger.create({
+    //   animation: tl2,
+    //   trigger: elementRef.current,
+    //   start: 'top 80%',
+    //   markers: true,
+    // });
+
+    //   const tl3 = gsap.timeline()
+
+    //   tl3
+    //     .from(
+    //       section2Ref.current,
+    //       {
+    //         opacity: 0,
+    //         duration: 2,
+    //         y: '40%',
+    //         ease: 'power4.out',
+    //       },
+    //     )
+
+    // ScrollTrigger.create({
+    //   animation: tl3,
+    //   trigger: elementRef.current,
+    //   start: 'top 80%',
+    //   markers: true,
+    // });
+  })
   
   return (
     <>
@@ -64,16 +187,20 @@ const Home = () => {
         <div className='absolute top-[10rem] left-0 w-[18rem] h-[18rem] bg-gradient-to-r from-orange-500 to-orange-400 rounded-full blur-[10rem] -z-10 glow-animation'></div>
         {/* <div className='absolute top-[14rem] right-[20rem] w-[10rem] h-[10rem] bg-gradient-to-r from-orange-500 to-orange-400 rounded-full blur-[10rem] -z-10'></div> */}
         <div className='section-1 flex-1 w-[85%] flex justify-center items-center py-10 my-16'>
-          {/* backdrop-blur-sm bg-bg-primary/30 */}
           <div className='landing__text__one flex-1 pl-10 '>
 
-            <div className='px-4 text-7xl font-bold text-white'>
+            <div className='overflow-hidden'>
+            <div
+             className='px-4 text-7xl font-bold text-white'>
               <p>Introducing <span className='bg-gradient-to-br from-teal-500 to-white text-transparent bg-clip-text'>Maya,</span></p>
               <p>the first</p>
               <p>Alchemyst</p>
             </div>
+            </div>
 
-            <div className='w-full px-4 text-white font-semibold mt-3'>
+            <div 
+            // ref={subheadingRef}
+            className='w-full px-4 text-white font-semibold mt-3'>
             Maya is India’s first digital employee,  <br />designed to automate your sales.
             </div>
 
@@ -92,9 +219,23 @@ const Home = () => {
         {/* <Image src={bgwave} alt='landing__image__one' className='absolute w-full h-[75rem] -z-50 top-[7rem] bg-clip-content bg-opacity-0 backdrop-blur-sm'/> */}
 
 
-        <div className='section-2 flex-1 w-full flex justify-start pt-10 items-center flex-col mt-28'>
-          <div className='landing__text__section__2 text-white text-5xl font-semibold my-3 flex justify-center items-center text-center tracking-wide mb-10'>
-            <p><span className='bg-gradient-to-br from-teal-500 to-white text-transparent bg-clip-text'>First Indian </span> Human-Like AI <br/> Employees</p>
+        <div
+         className='section-2 flex-1 w-full flex justify-start pt-10 items-center flex-col mt-28'>
+          <div
+           className='landing__text__section__2 text-white text-5xl font-semibold my-3 flex justify-center items-center text-center tracking-wide mb-10 overflow-hidden '>
+            <motion.div 
+            variants={{
+              visible: {opacity: 1, y: 0},
+              hidden: {opacity: 0, y: '40%'}
+            }}
+            initial='hidden'
+            animate={controls}
+            transition={{duration: 0.8}}
+            ref={elementRef}
+
+            className='py-2'>
+              <p><span className='bg-gradient-to-br from-teal-500 to-white text-transparent bg-clip-text'>First Indian </span> Human-Like AI <br/> Employees</p>
+            </motion.div>
           </div>
 
           <div className='landing__text__section__subconten  text-white text-xl font-normal my-3t text-center'>
@@ -112,7 +253,7 @@ const Home = () => {
             artisans.map((artisan, index) => {
               return (
                 <div key={artisan.id} className='w-[30rem] h-[40rem] p-[3px] rounded-xl bg-gradient-to-b from-[#82D6D2] to-[#82D6D200] '>
-                  <div className='rounded-xl w-full h-full p-5 bg-gradient-to-t from-[#313b45] to-[#43424c] flex justify-start items-baseline flex-col gap-8 relative backdrop-blur-sm bg-opacity-30 px-8 relative'>
+                  <div className='rounded-xl w-full h-full p-5 bg-gradient-to-t from-[#313b45] to-[#43424c] flex justify-start items-baseline flex-col gap-8 relative backdrop-blur-sm bg-opacity-30 px-8'>
 
                     <div className='w-full flex justify-center items-center'>
                       <Image src={artisan.face} alt='landing__image__two' width={200} height={200} />
@@ -158,10 +299,21 @@ const Home = () => {
             <Image src={section2img} alt='landing__image__two' width={500} height={500} />
           </div>
           <div className='section__2__text__container flex-1 self-start pt-12 ml-8'>
-            <div className=' text-white text-5xl font-semibold'>
-              <p><span className='bg-gradient-to-br from-teal-500 to-white text-transparent bg-clip-text'>Chat</span> with ease</p>
-              <p>with our</p>
-              <p>Alchemyst</p>
+            <div className='overflow-hidden'>
+              <motion.div 
+              ref={section2Ref} 
+              variants={{
+                visible: {opacity: 1, y: 0},
+                hidden: {opacity: 0, y: '40%'}
+              }}
+              initial='hidden'
+              animate={section3controls}
+              transition={{duration: 0.8}}
+              className=' text-white text-5xl font-semibold'>
+                <p><span className='bg-gradient-to-br from-teal-500 to-white text-transparent bg-clip-text'>Chat</span> with ease</p>
+                <p>with our</p>
+                <p>Alchemyst</p>
+              </motion.div>
             </div>
 
             <div className='text-white mt-5 text-xl'>
@@ -178,12 +330,23 @@ const Home = () => {
         <div className='absolute top-0 left-0 w-[20rem] h-[20rem] bg-gradient-to-r from-orange-500 to-orange-400 rounded-full blur-[15rem] -z-10'></div>
         <div className='section__3__inner__container w-[80%] flex justify-center items-center gap-2 my-20'>
           <div className='section__3__text__container flex-1 self-start pt-12'>
-            <div className=' text-white text-5xl font-semibold'>
-              <p>Empowers Go-to-</p>
-              <p>Market, Growth,</p>
-              <p>Marketing and</p>
-              <p>sales</p>
-            </div>
+            <motion.div
+              ref={section4Ref} 
+              variants={{
+                visible: {opacity: 1, y: 0},
+                hidden: {opacity: 0, y: '40%'}
+              }}
+              initial='hidden'
+              animate={section4controls}
+              transition={{duration: 0.8}}
+            >
+              <div className=' text-white text-5xl font-semibold'>
+                <p>Empowers Go-to-</p>
+                <p>Market, Growth,</p>
+                <p>Marketing and</p>
+                <p>sales</p>
+              </div>
+            </motion.div>
 
             <div className='text-white mt-5 text-xl'>
               <div>
@@ -211,9 +374,20 @@ const Home = () => {
             <Image src={section4img} alt='landing__image__two' width={500} height={500} className='z-20'/>
           </div>
           <div className='section__4__text__container flex-1 self-start pt-12 ml-10'>
-            <div className=' text-white text-5xl font-semibold'>
-              <p><span className='bg-gradient-to-br from-teal-500 to-white text-transparent bg-clip-text'>Additional </span>Info (if</p>
-              <p>required)</p>
+            <div className='overflow-hidden'>
+              <motion.div 
+              ref={section5Ref} 
+              variants={{
+                visible: {opacity: 1, y: 0},
+                hidden: {opacity: 0, y: '40%'}
+              }}
+              initial='hidden'
+              animate={section5controls}
+              transition={{duration: 0.8}}
+              className=' text-white text-5xl font-semibold '>
+                <p><span className='bg-gradient-to-br from-teal-500 to-white text-transparent bg-clip-text'>Additional </span>Info (if</p>
+                <p>required)</p>
+              </motion.div>
             </div>
 
             <div className='text-white mt-5 text-xl'>
@@ -233,9 +407,20 @@ const Home = () => {
         <div className='p-[2.5px] rounded-2xl w-[80%]'>
           <div className=' landing__section__5__card w-[100%] bg-bg-primary flex justify-center items-center flex-col py-16 gap-10 rounded-xl bg-gradient-to-t backdrop-blur-sm bg-opacity-0 from-[#1F9C9A1A] to-[#F8F8F81A]'>
             
-            <div className='w-full text-white font-semibold text-4xl text-center'>
-              <p>Ready to Hire an Alchemyst to act</p>
-              <p>as a Catalyst for your Team ?</p>
+            <div>
+              <motion.div 
+              ref={section7Ref} 
+              variants={{
+                visible: {opacity: 1, y: 0},
+                hidden: {opacity: 0, y: '40%'}
+              }}
+              initial='hidden'
+              animate={section7controls}
+              transition={{duration: 1}}
+              className='w-full text-white font-semibold text-4xl text-center'>
+                <p>Ready to Hire an Alchemyst to act</p>
+                <p>as a Catalyst for your Team ?</p>
+              </motion.div>
             </div>
 
             <div className='w-full text-white font-normal text-xl text-center'>
@@ -254,8 +439,19 @@ const Home = () => {
 
       <div id='teamsSection' className='meet__our__team__section w-full min-h-max py-5 flex justify-center items-center px-5 bg-bg-primary flex-col relative backdrop-blur-sm bg-opacity-0'>
         <div className='absolute bottom-0 left-0 w-[20rem] h-[20rem] bg-gradient-to-r from-orange-500 to-orange-400 rounded-full blur-[10rem] -z-10'></div>
-        <div className='text-white font-semibold text-5xl w-full flex justify-center items-center mb-10 gap-2'>
-          Meet our <span className='inline-block bg-gradient-to-br from-teal-500 to-white bg-clip-text text-transparent'> Team</span>
+        <div className='overflow-hidden'>
+          <motion.div 
+              ref={section6Ref} 
+              variants={{
+                visible: {opacity: 1, y: 0},
+                hidden: {opacity: 0, y: '40%'}
+              }}
+              initial='hidden'
+              animate={section6controls}
+              transition={{duration: 1}}
+          className='text-white font-semibold text-5xl w-full flex justify-center items-center mb-10 gap-2'>
+            Meet our <span className='inline-block bg-gradient-to-br from-teal-500 to-white bg-clip-text text-transparent'> Team</span>
+          </motion.div>
         </div>
         <div className='meet__our__team__inner w-[70%] grid grid-cols-2 grid-rows-2 py-10 gap-y-8'>
           
