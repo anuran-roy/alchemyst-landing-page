@@ -14,6 +14,7 @@ import brand3 from '../../../../public/assets/brands/brand3.png'
 import brand4 from '../../../../public/assets/brands/brand4.png'
 import brand5 from '../../../../public/assets/brands/brand5.png'
 import brand6 from '../../../../public/assets/brands/brand6.png'
+import brand7 from '../../../../public/assets/brand7.png'
 
 const Brands = () => {
 

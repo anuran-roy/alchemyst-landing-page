@@ -18,6 +18,8 @@ import mandiri from '../../../../public/assets/brands/logo2.png';
 import nike from '../../../../public/assets/brands/logo3.png';
 import amd from '../../../../public/assets/brands/logo4.png';
 import dropcam from '../../../../public/assets/brands/logo5.png';
+import deepmind from '../../../../public/assets/brand7.png'
+import { image } from '@nextui-org/react';
 
 const brandData = [
   {
@@ -35,21 +37,28 @@ const brandData = [
     imageLight: "/images/brand/brand-dark-02.svg",
   },
   {
-    id: 3,
+    id : 3,
+    name : 'Client',
+    href : '#',
+    image : deepmind,
+    // imageLight : '/images/brand/brand-dark-03.svg'
+  },
+  {
+    id: 4,
     name: "Client",
     href: "#",
     image: amazon,
     imageLight: "/images/brand/brand-dark-03.svg",
   },
   {
-    id: 4,
+    id: 5,
     name: "Client",
     href: "#",
     image: amd,
     imageLight: "/images/brand/brand-dark-04.svg",
   },
   {
-    id: 5,
+    id: 6,
     name: "Client",
     href: "#",
     image: dropcam,
