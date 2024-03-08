@@ -216,7 +216,7 @@ const Home = () => {
                 <div key={artisan.id} className='w-[30rem] h-[40rem] p-[3px] rounded-xl bg-gradient-to-b from-[#82D6D2] to-[#82D6D200]'>
                   <div className='rounded-xl w-full h-full p-5 bg-gradient-to-t from-[#313b45] to-[#43424c] flex justify-start items-baseline flex-col gap-8 relative backdrop-blur-sm bg-opacity-30 px-8'>
 
-                    <div className='w-full flex justify-center items-baseline border-2 border-red-600'>
+                    <div className='w-full flex justify-center items-baseline'>
                       <Image src={artisan.face} alt='landing__image__two' width={imageSize} height={imageSize} />
                     </div>
 
