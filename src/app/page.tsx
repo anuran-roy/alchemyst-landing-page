@@ -3,6 +3,7 @@
 import React, { useEffect, useLayoutEffect, useRef, useState } from 'react'
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
+import Link from 'next/link';
 
 import bgimg from '../../public/assets/frame7.png'
 import section2img from '../../public/assets/frame2.png'
@@ -131,7 +132,7 @@ const Home = () => {
 
           <ul className='text-lg flex justify-center items-center gap-12 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-[#414770] to-[#41477000] py-2 px-28 rounded-2xl'>
             <li className='text-text-yellow cursor-pointer'>Home</li>
-            <li className='cursor-pointer'>Products</li>
+            <Link href='/product' className='cursor-pointer'>Products</Link>
             <li className='cursor-pointer' onClick={() => scrollToSection('teamsSection')}>
               Team
             </li>
@@ -301,7 +302,7 @@ const Home = () => {
               transition={{duration: 0.8}}
             >
               <div className=' text-white text-5xl font-semibold'>
-                <p className='bg-gradient-to-br from-teal-500 to-white text-transparent bg-clip-text'>Empowers Go-to-</p>
+                <p>Empowers Go-to-</p>
                 <p>Market, Growth,</p>
                 <p>Marketing and</p>
                 <p>sales</p>
@@ -418,10 +419,10 @@ const Home = () => {
           {
             teamsData.map((team,ind) => {
               return(
-                <div key={team.id} className='flex justify-center items-center'>
-                  <div className=' rounded-2xl overflow-hidden self-center relative border-2 border-teal-800 w-[95%]'>
-                    <div className='bg-gradient-to-t from-[#1F9C9A1A] to-[#F8F8F81A] backdrop-blur-sm bg-opacity-100 py-10 px-5 relative overflow-hidden flex justify-center items-center flex-col'>
-                      <div className='w-full flex justify-center items-center mb-4'>
+                <div key={team.id} className='flex justify-center items-center '>
+                  <div className=' rounded-2xl overflow-hidden self-center relative h-[100%] w-[95%]'>
+                    <div className='bg-gradient-to-t from-[#1F9C9A1A] to-[#F8F8F81A] backdrop-blur-sm bg-opacity-100 py-10 px-5 relative overflow-hidden flex justify-center items-center flex-col h-[100%]'>
+                      <div className='w-full flex justify-center items-center'>
                         <Image src={team.profileimg} alt='team__image' width={200} className='rounded-full' />
                       </div>
                       <div className='text-white font-semibold text-xl text-wrap text-center'>
