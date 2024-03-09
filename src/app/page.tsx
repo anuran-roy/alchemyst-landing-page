@@ -301,11 +301,7 @@ const Home = () => {
               transition={{duration: 0.8}}
             >
               <div className=' text-white text-5xl font-semibold'>
-<<<<<<< HEAD
                 <p className='bg-gradient-to-br from-teal-500 to-white text-transparent bg-clip-text'>Empowers Go-to-</p>
-=======
-                <p className='bg-gradient-to-br from-teal-500 to-white text-transparent bg-clip-text'>Empowers Go-to-</p>
->>>>>>> 6b2914a9ff771210b8300f8fb10d55a42993a2d2
                 <p>Market, Growth,</p>
                 <p>Marketing and</p>
                 <p>sales</p>
