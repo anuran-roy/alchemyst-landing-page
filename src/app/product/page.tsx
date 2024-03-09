@@ -1,6 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
-
+import Link from 'next/link'
 
 import section1img from  '../../../public/assets/products/Group 49.png'
 import section2img from '../../../public/assets/products/Frame 22.png'
@@ -9,6 +9,7 @@ import cardimg1 from '../../../public/assets/products/Frame 16.png';
 import cardimg2 from '../../../public/assets/products/Frame 17.png';
 import cardimg3 from '../../../public/assets/products/Frame 18.png';
 import cardimg4 from '../../../public/assets/products/Frame 19.png';
+import logo from '../../../public/assets/AI.png'
 
 const deployementCard = [
   {
@@ -36,6 +37,26 @@ const deployementCard = [
 const Product = () => {
   return (
     <div className='font-league bg-bg-primary max-h-min'>
+
+      <div className='w-full flex justify-center items-center py-6 text-white text-semibold text-xl border-b-[1px] border-b-gray-500'>
+        <div className='navbar__inner__section w-full flex justify-between px-10 items-center gap-4'>
+          <div>
+            <Image src={logo} alt='logo' width={230} className='' />
+          </div>
+
+          <ul className='text-lg flex justify-center items-center gap-12 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-[#414770] to-[#41477000] py-2 px-28 rounded-2xl'>
+            <li className='text-text-yellow cursor-pointer'>Home</li>
+            <Link href='/product' className='cursor-pointer'>Products</Link>
+            <li className='cursor-pointer'>
+              Team
+            </li>
+          </ul>
+
+            <div className='text-lg'>
+              <button className='py-2 px-6 rounded-md bg-bg-yellow text-white'>Say Hello</button>
+            </div>
+        </div>
+      </div>
       
       <div className='products__section__1 w-full min-h-max py-5 px-5 flex justify-center items-center flex-col bg-bg-primary relative backdrop-blur-sm bg-opacity-30'>
 
@@ -74,10 +95,10 @@ const Product = () => {
       </div>
 
       <div className='products__section__2 py-20 px-20 relative backdrop-blur-sm bg-opacity-30 overflow-hidden'>
-      <div className='absolute top-0 left-[50%] w-[20rem] h-[20rem] bg-gradient-to-r from-orange-500 to-orange-400 rounded-full blur-[25rem] -z-10'></div>
-        <div>
-          <Image src={section2img} alt='section2' className='object-cover w-full'/>
-        </div>
+        <div className='absolute top-0 left-[50%] w-[20rem] h-[20rem] bg-gradient-to-r from-orange-500 to-orange-400 rounded-full blur-[25rem] -z-10'></div>
+          <div>
+            <Image src={section2img} alt='section2' className='object-cover w-full'/>
+          </div>
       </div>
 
        <div className='section3 w-full min-h-max py-5 flex justify-center items-center px-5 bg-bg-primary backdrop-blur-sm bg-opacity-30'>
