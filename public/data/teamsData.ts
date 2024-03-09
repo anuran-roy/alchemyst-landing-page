@@ -35,30 +35,6 @@ export const teamsData = [
     },
     {
         id: 2,
-        name : 'Rishita Shaw',
-        position : 'Head of Technical Research',
-        profileimg : rish,
-        achievements : [
-            {
-                id: 1,
-                value : 'Open Source Summit Speaker, Japan ‘23'
-            },
-            {
-                id : 2,
-                value : 'Microsoft Imagine Cup winner ‘22'
-            },
-            {
-                id :3,
-                value : 'Research Papers on DevOps, Cloud  & Security'
-            },
-            {
-                id: 4,
-                value : 'Economic Times & Unstop Competitive Leader ‘23'
-            }
-        ]
-    },
-    {
-        id: 3,
         name : 'Anuran Roy',
         position : 'Chief Technology Officer',
         profileimg : anuran,
@@ -78,6 +54,30 @@ export const teamsData = [
             {
                 id: 4,
                 value : 'Full Stack AI Engineer, Memorang'
+            }
+        ]
+    },
+    {
+        id: 3,
+        name : 'Rishita Shaw',
+        position : 'Head of Technical Research',
+        profileimg : rish,
+        achievements : [
+            {
+                id: 1,
+                value : 'Open Source Summit Speaker, Japan ‘23'
+            },
+            {
+                id : 2,
+                value : 'Microsoft Imagine Cup winner ‘22'
+            },
+            {
+                id :3,
+                value : 'Research Papers on DevOps, Cloud  & Security'
+            },
+            {
+                id: 4,
+                value : 'Economic Times & Unstop Competitive Leader ‘23'
             }
         ]
     },

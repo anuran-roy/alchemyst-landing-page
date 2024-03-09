@@ -341,7 +341,7 @@ const Home = () => {
               transition={{duration: 0.8}}
             >
               <div className=' text-white text-5xl font-semibold'>
-                <p>Empowers Go-to-</p>
+                <p className='bg-gradient-to-br from-teal-500 to-white text-transparent bg-clip-text'>Empowers Go-to-</p>
                 <p>Market, Growth,</p>
                 <p>Marketing and</p>
                 <p>sales</p>
