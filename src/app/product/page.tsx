@@ -25,22 +25,22 @@ const deployementCard = [
   {
     id:1,
     image : cardimg1,
-    description : 'Lorem ipsum dolor sit. amet consectetur adipisicing elit.'
+    description : 'Maya Engages Prospects on Multiple Channels to Book Meetings.'
   },
   {
     id:2,
     image : cardimg2,
-    description : 'Lorem ipsum dolor sit. amet consectetur adipisicing elit.'
+    description : 'Maya empowers your entire Go-To-Market, Growth, Marketing.'
   },
   {
     id:3,
     image : cardimg3,
-    description : 'Lorem ipsum dolor sit. amet consectetur adipisicing elit.'
+    description : 'Stop prospecting, Start connecting.'
   },
   {
     id:4,
     image : cardimg4,
-    description : 'Lorem ipsum dolor sit. amet consectetur adipisicing elit.'
+    description : 'Maya Personalizes Outreach to Drive Conversions'
   }
 ]
 
