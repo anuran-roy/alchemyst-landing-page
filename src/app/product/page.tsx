@@ -5,6 +5,8 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useRouter } from 'next/router'
+import { useRef, useEffect } from 'react'
+import { useAnimation, useInView, motion } from 'framer-motion'
 
 import section1img from  '../../../public/assets/products/Group 49.png'
 import section2img from '../../../public/assets/products/Frame 22.png'
@@ -45,6 +47,50 @@ const deployementCard = [
 const Product = () => {
 
   const pathname = usePathname()
+
+  const headingtextref= useRef(null)
+  const subheadingRef = useRef(null)
+  const sectionTwoRef = useRef(null)
+  const sectionTwoHeading = useRef(null)
+
+
+  const elementRef = useRef(null)
+  const section2Ref = useRef(null)
+  const section4Ref = useRef(null)
+  const section5Ref = useRef(null)
+  const section6Ref = useRef(null)
+  const section7Ref = useRef(null)
+
+  const controls = useAnimation()
+  const section3controls = useAnimation()
+  const section4controls = useAnimation()
+  const section5controls = useAnimation()
+  const section6controls = useAnimation()
+  const section7controls = useAnimation()
+
+  const inView= useInView(elementRef)
+  const inView2 = useInView(section2Ref)
+  const inView3 = useInView(section4Ref)
+  const inView4 = useInView(section5Ref)
+  const inView5 = useInView(section6Ref)
+  const inView6 = useInView(section7Ref)
+
+  useEffect(() => {
+    if(inView)
+       controls.start('visible')
+    if(inView2)
+      section3controls.start('visible')
+    if(inView3)
+      section4controls.start('visible') 
+    if(inView4)
+      section5controls.start('visible')
+    if(inView5)
+      section6controls.start('visible')
+    if(inView6)
+      section7controls.start('visible')
+
+  },[inView,inView2,inView3,inView4,inView5,inView6])
+
   
   return (
     <div className='font-league bg-bg-primary max-h-min'>
@@ -86,19 +132,19 @@ const Product = () => {
          className='section-2 flex-1 w-full flex justify-start pt-10 items-center flex-col'>
           <div
            className='products__text__section__2 text-white text-5xl font-semibold my-3 flex justify-center items-center text-center tracking-wide mb-10 overflow-hidden '>
-            <div 
-            // variants={{
-            //   visible: {opacity: 1, y: 0},
-            //   hidden: {opacity: 0, y: '40%'}
-            // }}
-            // initial='hidden'
-            // animate={controls}
-            // transition={{duration: 0.8}}
-            // ref={elementRef}
+            <motion.div 
+            variants={{
+              visible: {opacity: 1, y: 0},
+              hidden: {opacity: 0, y: '40%'}
+            }}
+            initial='hidden'
+            animate={controls}
+            transition={{duration: 0.8}}
+            ref={elementRef}
 
             className='py-2'>
               <p className='text-6xl'><span className='bg-gradient-to-br from-teal-500 to-white text-transparent bg-clip-text text-6xl'>First Indian </span> Human-Like AI <br/> Employees</p>
-            </div>
+            </motion.div>
           </div>
 
           <div className='landing__text__section__subconten  text-white font-normal my-3t text-center text-2xl'>
@@ -109,37 +155,49 @@ const Product = () => {
 
       <div className='products__section__2 py-20 px-20 relative backdrop-blur-sm bg-opacity-30 overflow-hidden'>
         <div className='absolute top-0 left-[50%] w-[20rem] h-[20rem] bg-gradient-to-r from-orange-500 to-orange-400 rounded-full blur-[25rem] -z-10'></div>
-
-        <div className='w-full text-6xl text-white flex justify-center items-center py-5 font-semibold'>
-          <p>All <span className='bg-gradient-to-br from-teal-500 to-white text-transparent bg-clip-text text-6xl'>Sales</span> Complexities</p>
-        </div>
+          <div className='overflow-hidden'>
+            <motion.div className='w-full text-6xl text-white flex justify-center items-center py-5 font-semibold'
+              variants={{
+                visible: {opacity: 1, y: 0},
+                hidden: {opacity: 0, y: '40%'}
+              }}
+              initial='hidden'
+              animate={section3controls}
+              transition={{duration: 0.8}}
+              ref={section2Ref}
+              >
+              <p>All <span className='bg-gradient-to-br from-teal-500 to-white text-transparent bg-clip-text text-6xl'>Sales</span> Complexities</p>
+            </motion.div>
+          </div>
         
           <div>
             <Image src={section2img} alt='section2' className='object-cover w-full'/>
           </div>
       </div>
 
-       <div className='section3 w-full min-h-max py-5 flex justify-center items-center px-5 bg-bg-primary backdrop-blur-sm bg-opacity-30'>
+       <div className='section3 w-full min-h-max py-5 flex justify-center items-center px-2 bg-bg-primary backdrop-blur-sm bg-opacity-30'>
         <div className={'absolute top-0 right-0 w-[15rem] h-[15rem] bg-gradient-to-r from-orange-500 to-orange-400 rounded-full blur-[15rem] -z-10 hover:blur-[30rem]'}></div>
 
-        <div className='section__2__inner__container w-[85%] flex justify-center items-center gap-10 my-16 py-4'>
+        <div className='section__2__inner__container w-[85%] flex justify-center items-center gap-10 my-16 py-4 '>
           <div className='section__2__image__container flex-1 flex justify-end items-center min-h-min'>
             <Image src={section4img} alt='landing__image__two' width={700} height={700} className='w-full h-full scale-[1.6] bg-center'/>
           </div>
-          <div className='section__2__text__container flex-1 self-start pt-12 ml-8'>
-            <div className='overflow-hidden'>
-              <div 
-              // ref={section2Ref} 
-              // variants={{
-              //   visible: {opacity: 1, y: 0},
-              //   hidden: {opacity: 0, y: '40%'}
-              // }}
-              // initial='hidden'
-              // animate={section3controls}
-              // transition={{duration: 0.8}}
-              className=' text-white font-semibold text-6xl'>
-                <p><span className='bg-gradient-to-br from-teal-500 to-white text-transparent bg-clip-text'>Discovers</span> Best fit</p>
-                <p>for Customers</p>
+          <div className='section__2__text__container flex-1 self-start pt-12'>
+            <div>
+              <div className='overflow-hidden'>
+                <motion.div 
+                ref={section4Ref} 
+                variants={{
+                  visible: {opacity: 1, y: 0},
+                  hidden: {opacity: 0, y: '40%'}
+                }}
+                initial='hidden'
+                animate={section4controls}
+                transition={{duration: 0.8}}
+                className=' text-white font-semibold text-6xl'>
+                  <p><span className='bg-gradient-to-br from-teal-500 to-white text-transparent bg-clip-text'>Discovers</span> Best fit</p>
+                  <p>for Customers</p>
+                </motion.div>
               </div>
             </div>
 
@@ -155,8 +213,19 @@ const Product = () => {
       
       <div className='section4 py-2 px-5'>
         <div>
-          <div className=' text-center py-10 text-white font-semibold text-4xl w-full flex justify-center items-center mb-10 gap-2'>
-            <p className='text-5xl'>An Efficient <span className='text-text-yellow'>Sales Deployer</span></p>
+          <div className='overflow-hidden'>
+            <motion.div 
+            variants={{
+              visible: {opacity: 1, y: 0},
+              hidden: {opacity: 0, y: '40%'}
+            }}
+            initial='hidden'
+            animate={section5controls}
+            transition={{duration: 0.8}}
+            ref={section5Ref}
+            className=' text-center py-10 text-white font-semibold text-4xl w-full flex justify-center items-center mb-10 gap-2'>
+              <p className='text-5xl'>An Efficient <span className='text-text-yellow'>Sales Deployer</span></p>
+            </motion.div>
           </div>
 
           <div>
