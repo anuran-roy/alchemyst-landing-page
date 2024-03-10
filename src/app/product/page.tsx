@@ -40,7 +40,7 @@ const deployementCard = [
   {
     id:4,
     image : cardimg4,
-    description : 'Maya Personalizes Outreach to Drive Conversions'
+    description : 'Maya Personalizes Outreach to Drive Conversions.'
   }
 ]
 
