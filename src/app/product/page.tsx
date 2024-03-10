@@ -1,15 +1,23 @@
+"use client"
+
 import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
+import { useRouter } from 'next/router'
 
 import section1img from  '../../../public/assets/products/Group 49.png'
 import section2img from '../../../public/assets/products/Frame 22.png'
+import section4img from '../../../public/assets/products/Frame 14.png';
 
 import cardimg1 from '../../../public/assets/products/Frame 16.png';
 import cardimg2 from '../../../public/assets/products/Frame 17.png';
 import cardimg3 from '../../../public/assets/products/Frame 18.png';
 import cardimg4 from '../../../public/assets/products/Frame 19.png';
 import logo from '../../../public/assets/AI.png'
+
+import { TbBrandInstagram, TbBrandTwitterFilled, TbBrandFacebookFilled, TbBrandLinkedin, TbBrandDiscordFilled } from "react-icons/tb";
+import imageicon from '../../../public/assets/india.png'
 
 const deployementCard = [
   {
@@ -35,21 +43,24 @@ const deployementCard = [
 ]
 
 const Product = () => {
+
+  const pathname = usePathname()
+  
   return (
     <div className='font-league bg-bg-primary max-h-min'>
 
       <div className='w-full flex justify-center items-center py-6 text-white text-semibold text-xl border-b-[1px] border-b-gray-500'>
         <div className='navbar__inner__section w-full flex justify-between px-10 items-center gap-4'>
           <div>
-            <Image src={logo} alt='logo' width={230} className='' />
+            <Link href={'/'} ><Image src={logo} alt='logo' width={230} className='' /></Link>
           </div>
 
-          <ul className='text-lg flex justify-center items-center gap-12 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-[#414770] to-[#41477000] py-2 px-28 rounded-2xl'>
-            <li className='text-text-yellow cursor-pointer'>Home</li>
-            <Link href='/product' className='cursor-pointer'>Products</Link>
-            <li className='cursor-pointer'>
+          <ul className='text-lg flex justify-center items-center gap-8 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-[#414770] to-[#41477000] py-2 px-28 rounded-2xl'>
+            <Link href={'/'} className='cursor-pointer'>Home</Link>
+            <Link href='/product' className='cursor-pointer text-text-yellow'>Products</Link>
+            <Link href={'/#teamsSection'} className='cursor-pointer'>
               Team
-            </li>
+            </Link>
           </ul>
 
             <div className='text-lg'>
@@ -60,12 +71,14 @@ const Product = () => {
       
       <div className='products__section__1 w-full min-h-max py-5 px-5 flex justify-center items-center flex-col bg-bg-primary relative backdrop-blur-sm bg-opacity-30'>
 
+        <div className='absolute top-[5%] left-0 w-[15rem] h-[15rem] bg-gradient-to-r from-orange-500 to-orange-400 rounded-full blur-[10rem] -z-10'></div>
+
         <div>
         <div className=' w-ful flex justify-center items-center'>
-          <Image src={section1img} alt='section1' className='object-cover w-[80%] py-5'/>
+          <Image src={section1img} alt='section1' className='object-cover w-[90%] py-5'/>
         </div>
         <div className='w-full py-3 flex justify-center items-center'>
-          <button className='bg-bg-yellow py-2 px-9 text-white rounded-lg'>Hire Maya</button>
+          <button className='bg-bg-yellow py-2 px-9 text-white rounded-lg text-2xl'>Hire Maya</button>
         </div>
         </div>
         
@@ -84,11 +97,11 @@ const Product = () => {
             // ref={elementRef}
 
             className='py-2'>
-              <p><span className='bg-gradient-to-br from-teal-500 to-white text-transparent bg-clip-text'>First Indian </span> Human-Like AI <br/> Employees</p>
+              <p className='text-6xl'><span className='bg-gradient-to-br from-teal-500 to-white text-transparent bg-clip-text text-6xl'>First Indian </span> Human-Like AI <br/> Employees</p>
             </div>
           </div>
 
-          <div className='landing__text__section__subconten  text-white text-xl font-normal my-3t text-center'>
+          <div className='landing__text__section__subconten  text-white font-normal my-3t text-center text-2xl'>
             <p>Alchemysts can become integral members of your <br/>  buisness and start-up teams</p>
           </div>
         </div>
@@ -96,6 +109,11 @@ const Product = () => {
 
       <div className='products__section__2 py-20 px-20 relative backdrop-blur-sm bg-opacity-30 overflow-hidden'>
         <div className='absolute top-0 left-[50%] w-[20rem] h-[20rem] bg-gradient-to-r from-orange-500 to-orange-400 rounded-full blur-[25rem] -z-10'></div>
+
+        <div className='w-full text-6xl text-white flex justify-center items-center py-5 font-semibold'>
+          <p>All <span className='bg-gradient-to-br from-teal-500 to-white text-transparent bg-clip-text text-6xl'>Sales</span> Complexities</p>
+        </div>
+        
           <div>
             <Image src={section2img} alt='section2' className='object-cover w-full'/>
           </div>
@@ -105,8 +123,8 @@ const Product = () => {
         <div className={'absolute top-0 right-0 w-[15rem] h-[15rem] bg-gradient-to-r from-orange-500 to-orange-400 rounded-full blur-[15rem] -z-10 hover:blur-[30rem]'}></div>
 
         <div className='section__2__inner__container w-[85%] flex justify-center items-center gap-10 my-16 py-4'>
-          <div className='section__2__image__container flex-1 flex justify-end items-center'>
-            <Image src={section2img} alt='landing__image__two' width={500} height={500} />
+          <div className='section__2__image__container flex-1 flex justify-end items-center min-h-min'>
+            <Image src={section4img} alt='landing__image__two' width={700} height={700} className='w-full h-full scale-[1.6] bg-center'/>
           </div>
           <div className='section__2__text__container flex-1 self-start pt-12 ml-8'>
             <div className='overflow-hidden'>
@@ -119,13 +137,13 @@ const Product = () => {
               // initial='hidden'
               // animate={section3controls}
               // transition={{duration: 0.8}}
-              className=' text-white text-5xl font-semibold'>
+              className=' text-white font-semibold text-6xl'>
                 <p><span className='bg-gradient-to-br from-teal-500 to-white text-transparent bg-clip-text'>Discovers</span> Best fit</p>
                 <p>for Customers</p>
               </div>
             </div>
 
-            <div className='text-white mt-5 text-xl'>
+            <div className='text-white mt-5 text-2xl'>
               <p>Alchemysts can become integral</p>
               <p>members of your buisness adn start-up</p>
               <p>teams</p>
@@ -138,7 +156,7 @@ const Product = () => {
       <div className='section4 py-2 px-5'>
         <div>
           <div className=' text-center py-10 text-white font-semibold text-4xl w-full flex justify-center items-center mb-10 gap-2'>
-            <p>An Efficient <span className='text-text-yellow'>Sales Deployer</span></p>
+            <p className='text-5xl'>An Efficient <span className='text-text-yellow'>Sales Deployer</span></p>
           </div>
 
           <div>
@@ -146,9 +164,9 @@ const Product = () => {
               {
                 deployementCard.map((card, key) => {
                   return (
-                    <div key={key} className='w-[20rem] h-[20rem] bg-bg-primary rounded-xl border-2 border-cyan-500 py-2 px-2 flex justify-start items-center flex-col gap-4'>
-                      <div className='h-[50%]  overflow-hidden flex justify-center items-center'>
-                        <Image src={card.image} alt='card' className='object-contain' width={200} height={200}/>
+                    <div key={key} className='w-[20rem] h-[30rem] bg-bg-primary rounded-xl border-2 border-cyan-500 py-2 px-2 flex justify-start items-center flex-col gap-4'>
+                      <div className='h-[60%]  overflow-hidden flex justify-center items-center'>
+                        <Image src={card.image} alt='card' className='object-cover w-full h-full' width={200} height={200}/>
                       </div>
 
                       <div className='text-xl text-white'>
@@ -201,6 +219,53 @@ const Product = () => {
         </div>
         
       </div>
+
+      <div className='footer__section__grid__container overflow-hidden flex justify-start gap-6 w-full items-center flex-col border-gray-600 border-t-2 bg-gradient-to-t from-[#1F9C9A4D] to-[#F8F8F84D] backdrop-blur-lg bg-opacity-30 rounded-t-2xl'>
+
+      <div className='bg-white/10 backdrop-blur-lg w-full py-10 px-20'>
+        <div className='w-full flex justify-start'>
+          <Image src={logo} alt='logo' width={200}/>
+        </div>
+        <div className='text-white text-xl w-full flex justify-start items-baseline flex-row gap-2'>
+          <div className=''>
+            <p className='my-5'>
+            Building Next Gen AI Digital Employees.<br /> Spearheading the next Industrial Revolution in India.
+            </p>
+            <p>
+              getalchemystai@gmail.com
+            </p>
+            <ul className='flex justify-start items-center gap-4 text-white text-2xl mt-4 my-8'>
+              <li className='border-2 flex justify-center items-center border-white rounded-full w-[3rem] h-[3rem]'><TbBrandTwitterFilled /></li>
+              <li className='border-2 flex justify-center items-center border-white rounded-full w-[3rem] h-[3rem]'><TbBrandFacebookFilled /></li>
+              <li className='border-2 flex justify-center items-center border-white rounded-full w-[3rem] h-[3rem]'><TbBrandDiscordFilled /></li>
+              <li className='border-2 flex justify-center items-center border-white rounded-full w-[3rem] h-[3rem]'><TbBrandInstagram /></li>
+              <li className='border-2 flex justify-center items-center border-white rounded-full w-[3rem] h-[3rem]'><TbBrandLinkedin /></li>
+            </ul>
+          </div>
+
+          {/* <div className=' w-[50%]'>
+            <p className='text-center text-white font-semibold text-2xl'>Stay Connected To Us</p>
+
+            <div className='flex justify-center items-center flex-col gap-4 w-full  px-6'>
+            <input type="text" placeholder='Enter Your Name' className='w-full bg-inherit border-2 border-gray-800 border-solid rounded-lg py-2 px-5 text-xl'/>
+            <input type="text" placeholder='Enter our Email' className='w-full bg-inherit border-2 border-gray-800 border-solid rounded-lg py-2 px-5 text-xl'/>
+            <button>Connect</button>
+            </div>
+          </div> */}
+        </div>
+
+        <div className='w-full flex justify-between items-center gap-6 text-white font-medium text-md mt-10'>
+          <div className='flex justify-center items-center gap-6 text-xl'>
+          <p>Terms of use</p>
+          <p>Privacy Policy</p>
+          </div>
+          <p className='text-xl bg-gradient-to-br from-teal-500 to-white text-transparent bg-clip-text'>© 2023 Alchemyst AI. All rights reserved</p>
+          <p className='bg-gradient-to-br from-teal-500 to-white text-transparent bg-clip-text text-xl relative'>Made with <span className='text-red-600'>❤️</span> from <span className='inline-block absolute -right-9'><Image src={imageicon} alt='someimage' width={30}/></span> </p>
+        </div>
+      </div>
+
+      </div>
+
     </div>
   )
 }

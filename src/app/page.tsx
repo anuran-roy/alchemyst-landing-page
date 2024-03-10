@@ -4,6 +4,7 @@ import React, { useEffect, useLayoutEffect, useRef, useState } from 'react'
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 
 import bgimg from '../../public/assets/frame7.png'
 import section2img from '../../public/assets/frame2.png'
@@ -127,10 +128,10 @@ const Home = () => {
       <div className='w-full flex justify-center items-center py-6 text-white text-semibold text-xl border-b-[1px] border-b-gray-500'>
         <div className='navbar__inner__section w-full flex justify-between px-10 items-center gap-4'>
           <div>
-            <Image src={logo} alt='logo' width={230} className='' />
+            <Link href={'/'} ><Image src={logo} alt='logo' width={230} className='' /></Link>
           </div>
 
-          <ul className='text-lg flex justify-center items-center gap-12 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-[#414770] to-[#41477000] py-2 px-28 rounded-2xl'>
+          <ul className='text-lg flex justify-center items-center gap-8 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-[#414770] to-[#41477000] py-2 px-28 rounded-2xl'>
             <li className='text-text-yellow cursor-pointer'>Home</li>
             <Link href='/product' className='cursor-pointer'>Products</Link>
             <li className='cursor-pointer' onClick={() => scrollToSection('teamsSection')}>
