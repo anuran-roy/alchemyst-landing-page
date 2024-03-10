@@ -233,17 +233,17 @@ const Product = () => {
               {
                 deployementCard.map((card, key) => {
                   return (
-                    <div key={key} className='w-[20rem] h-[30rem] bg-bg-primary rounded-xl border-2 border-cyan-500 py-2 px-2 flex justify-start items-center flex-col gap-4'>
-                      <div className='h-[60%]  overflow-hidden flex justify-center items-center'>
-                        <Image src={card.image} alt='card' className='object-cover w-full h-full' width={200} height={200}/>
-                      </div>
+                      <div key={key} className='w-[20rem] h-[30rem] bg-bg-primary backdrop-blur-md bg-opacity-20 rounded-xl border-2 border-cyan-500 py-2 px-2 flex justify-start items-center flex-col gap-4'>
+                        <div className='h-[60%]  overflow-hidden flex justify-center items-center'>
+                          <Image src={card.image} alt='card' className='object-cover w-full h-full' width={200} height={200}/>
+                        </div>
 
-                      <div className='text-xl text-white'>
-                        <p>
-                          {card.description}
-                        </p>
+                        <div className='text-xl text-white'>
+                          <p>
+                            {card.description}
+                          </p>
+                        </div>
                       </div>
-                    </div>
                   )
                 })
               }
