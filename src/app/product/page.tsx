@@ -180,7 +180,7 @@ const Product = () => {
 
         <div className='section__2__inner__container w-[85%] flex justify-center items-center gap-10 my-16 py-4 '>
           <div className='section__2__image__container flex-1 flex justify-end items-center min-h-min'>
-            <Image src={section4img} alt='landing__image__two' width={700} height={700} className='w-full h-full scale-[1.6] bg-center'/>
+            <Image src={section4img} alt='landing__image__two' width={700} height={700} className='w-full h-full scale-[1.8] bg-center'/>
           </div>
           <div className='section__2__text__container flex-1 self-start pt-12'>
             <div>
@@ -203,7 +203,7 @@ const Product = () => {
 
             <div className='text-white mt-5 text-2xl'>
               <p>Alchemysts can become integral</p>
-              <p>members of your buisness adn start-up</p>
+              <p>members of your buisness and start-up</p>
               <p>teams</p>
             </div>
           </div>
@@ -311,16 +311,6 @@ const Product = () => {
               <li className='border-2 flex justify-center items-center border-white rounded-full w-[3rem] h-[3rem]'><TbBrandLinkedin /></li>
             </ul>
           </div>
-
-          {/* <div className=' w-[50%]'>
-            <p className='text-center text-white font-semibold text-2xl'>Stay Connected To Us</p>
-
-            <div className='flex justify-center items-center flex-col gap-4 w-full  px-6'>
-            <input type="text" placeholder='Enter Your Name' className='w-full bg-inherit border-2 border-gray-800 border-solid rounded-lg py-2 px-5 text-xl'/>
-            <input type="text" placeholder='Enter our Email' className='w-full bg-inherit border-2 border-gray-800 border-solid rounded-lg py-2 px-5 text-xl'/>
-            <button>Connect</button>
-            </div>
-          </div> */}
         </div>
 
         <div className='w-full flex justify-between items-center gap-6 text-white font-medium text-md mt-10'>
