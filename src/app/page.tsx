@@ -1,10 +1,8 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 "use client";
 
 import React, { useEffect, useLayoutEffect, useRef, useState } from 'react'
 import Image from 'next/image'
-import { Inter } from 'next/font/google'
-import Link from 'next/link';
-import { useRouter } from 'next/router';
 
 import bgimg from '../../public/assets/frame7.png'
 import section2img from '../../public/assets/frame2.png'
@@ -17,7 +15,7 @@ import bgwave from '../../public/assets/wave.png'
 
 import { teamsData } from '../../public/data/teamsData'
 import { artisans } from '../../public/data/artisans'
-import Brands from './(components)/Brands'
+import Brands from './_components/Brands'
 
 //icons
 import { TbBrandInstagram, TbBrandTwitterFilled, TbBrandFacebookFilled, TbBrandLinkedin, TbBrandDiscordFilled } from "react-icons/tb";
@@ -34,6 +32,8 @@ import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
+
+gsap.registerPlugin(ScrollTrigger);
 
 const Home = () => {
 
@@ -92,67 +92,34 @@ const Home = () => {
       });
     }
   };
+ 
+  
+  const text1Ref = useRef<HTMLDivElement>(null)
 
   useGSAP(()=> {
-    gsap.registerPlugin(ScrollTrigger);
-    const tl = gsap.timeline({})
-
-    tl
-    .addLabel('heading-text-animation')
-      .from (
-        headingtextref.current,
-        {
-          opacity: 0,
-          duration: 0.8,
-          y: '40%',
-          ease: 'power4.out',
-        },
-      )
-      .from(
-        subheadingRef.current,
-        {
-          opacity: 0,
-          duration: 0.8,
-          y: '40%',
-          ease: 'power4.out',
-        },
-        '-=0.5'
-      )
-  })
+    gsap.from(
+      text1Ref.current,
+      {
+        y: '40%',
+        duration: 1,
+        ease: 'power4.out'
+      }
+    )
+  },[])
   
   return (
     <>
     
     <div className='font-league bg-bg-primary'>
-
-      <div className='w-full flex justify-center items-center py-6 text-white text-semibold text-xl border-b-[1px] border-b-gray-500'>
-        <div className='navbar__inner__section w-full flex justify-between px-10 items-center gap-4'>
-          <div>
-            <Link href={'/'} ><Image src={logo} alt='logo' width={230} className='' /></Link>
-          </div>
-
-          <ul className='text-lg flex justify-center items-center gap-8 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-[#414770] to-[#41477000] py-2 px-28 rounded-2xl'>
-            <li className='text-text-yellow cursor-pointer'>Home</li>
-            <Link href='/product' className='cursor-pointer'>Products</Link>
-            <li className='cursor-pointer' onClick={() => scrollToSection('teamsSection')}>
-              Team
-            </li>
-          </ul>
-
-            <div className='text-lg'>
-              <button className='py-2 px-6 rounded-md bg-bg-yellow text-white'>Say Hello</button>
-            </div>
-        </div>
-      </div>
       
       <div className='landing__section__1 w-full min-h-max py-5 px-5 flex justify-center items-center flex-col bg-bg-primary relative backdrop-blur-sm bg-opacity-30' >
         <div className='absolute top-[10rem] left-0 w-[18rem] h-[18rem] bg-gradient-to-r from-orange-500 to-orange-400 rounded-full blur-[10rem] -z-10 glow-animation'></div>
-        {/* <div className='absolute top-[14rem] right-[20rem] w-[10rem] h-[10rem] bg-gradient-to-r from-orange-500 to-orange-400 rounded-full blur-[10rem] -z-10'></div> */}
         <div className='section-1 flex-1 w-[85%] flex justify-center items-center py-10 my-16'>
           <div className='landing__text__one flex-1 pl-10 '>
 
             <div className='overflow-hidden'>
             <div
+             ref={text1Ref}
              className='px-4 text-7xl font-bold text-white'>
               <p>Introducing <span className='bg-gradient-to-br from-teal-500 to-white text-transparent bg-clip-text'>Maya,</span></p>
               <p>the first</p>
@@ -161,7 +128,6 @@ const Home = () => {
             </div>
 
             <div 
-            // ref={subheadingRef}
             className='w-full px-4 text-white font-semibold mt-3'>
             Maya is India’s first digital employee,  <br />designed to automate your sales.
             </div>
@@ -453,9 +419,7 @@ const Home = () => {
       </div>
 
       <div className='w-full flex justify-center items-center '>
-      {/* <div className='w-[85%] py-10 ' > */}
         <Brands />
-      {/* </div> */}
       </div>
 
       <div className='footer__section__grid__container overflow-hidden flex justify-start gap-6 w-full items-center flex-col border-gray-600 border-t-2 bg-gradient-to-t from-[#1F9C9A4D] to-[#F8F8F84D] backdrop-blur-lg bg-opacity-30 rounded-t-2xl'>
@@ -481,15 +445,6 @@ const Home = () => {
             </ul>
           </div>
 
-          {/* <div className=' w-[50%]'>
-            <p className='text-center text-white font-semibold text-2xl'>Stay Connected To Us</p>
-
-            <div className='flex justify-center items-center flex-col gap-4 w-full  px-6'>
-            <input type="text" placeholder='Enter Your Name' className='w-full bg-inherit border-2 border-gray-800 border-solid rounded-lg py-2 px-5 text-xl'/>
-            <input type="text" placeholder='Enter our Email' className='w-full bg-inherit border-2 border-gray-800 border-solid rounded-lg py-2 px-5 text-xl'/>
-            <button>Connect</button>
-            </div>
-          </div> */}
         </div>
 
         <div className='w-full flex justify-between items-center gap-6 text-white font-medium text-md mt-10'>

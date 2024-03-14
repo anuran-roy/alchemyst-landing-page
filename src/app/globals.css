@@ -1,7 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
 
 :root {
   --foreground-rgb: 0, 0, 0;
@@ -47,27 +47,3 @@
 .glow-animation {
   animation: glow 2s infinite ease-in-out;
 }
-
-/* .footer__section__grid__container {
-  display: grid;
-  gridtemplate-columns: 1fr 1fr 1fr;
-  grid-template-areas :  1fr 1fr 1fr;
-  grid-template-areas : 
-  "section1 section1 section1"
-  "section2 section2 section1"
-  "section3 section3 section3"
-}
-
-.footer__section__grid__container >div:nthchild(1) {
-  grid-area: section1;
-}
-
-.footer__section__grid__container >div:nthchild(2) {
-  grid-area: section2;
-  width : 50%;
-  border: 1px solid red;
-}
-
-.footer__section__grid__container >div:nthchild(3) {
-  grid-area: section3;
-} */
