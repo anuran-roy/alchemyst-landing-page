@@ -167,7 +167,7 @@ const Product = () => {
             </div>
           </div>
         <div className='w-full py-3 flex justify-center items-center'>
-              <Link href='/contact' className='py-4 px-6 rounded-md bg-bg-yellow text-black'>
+              <Link href='/contact' className='py-2 px-6 rounded-md bg-bg-yellow text-black'>
                 Hire Maya
               </Link>
         </div>
@@ -339,7 +339,7 @@ const Product = () => {
             </div>
             
             <div className='w-full py-3 flex justify-center items-center'>
-              <Link href='/contact' className='py-4 px-6 rounded-md bg-bg-yellow text-black'>
+              <Link href='/contact' className='py-2 px-6 rounded-md bg-bg-yellow text-black'>
                 Hire Maya
               </Link>
             </div>
