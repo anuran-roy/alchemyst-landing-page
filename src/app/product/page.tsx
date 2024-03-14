@@ -130,6 +130,9 @@ const Product = () => {
         
         <div
          className='section-2 flex-1 w-full flex justify-start pt-10 items-center flex-col'>
+      <div className="relative h-64 w-64">
+  <Image src={section1img} alt="Your Image" className="absolute inset-0 transform translate-z-[-100px] transition-transform duration-500 ease-in-out hover:translate-y-[-100px]" />
+</div>
           <div
            className='products__text__section__2 text-white text-5xl font-semibold my-3 flex justify-center items-center text-center tracking-wide mb-10 overflow-hidden '>
             <motion.div 
@@ -234,8 +237,8 @@ const Product = () => {
                 deployementCard.map((card, key) => {
                   return (
                       <div key={key} className='w-[20rem] h-[30rem] bg-bg-primary backdrop-blur-md bg-opacity-20 rounded-xl border-2 border-cyan-500 py-2 px-2 flex justify-start items-center flex-col gap-4'>
-                        <div className='h-[60%]  overflow-hidden flex justify-center items-center'>
-                          <Image src={card.image} alt='card' className='object-cover w-full h-full' width={200} height={200}/>
+                        <div className='h-[60%]  overflow-hidden flex justify-center items-center object-contain'>
+                          <Image src={card.image} alt='card' className=''/>
                         </div>
 
                         <div className='text-xl text-white'>
@@ -272,7 +275,7 @@ const Product = () => {
               className='w-full text-white font-semibold text-4xl text-center'>
                 <p>Ready to Hire an Alchemyst to act</p>
                 <p>as a Catalyst for your Team ?</p>
-              </div>
+              </div>c
             </div>
 
             <div className='w-full text-white font-normal text-xl text-center'>
