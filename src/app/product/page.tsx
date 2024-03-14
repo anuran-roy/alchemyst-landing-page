@@ -135,11 +135,6 @@ const Product = () => {
         
         <div
          className='section-2 flex-1 w-full flex justify-start pt-10 items-center flex-col'>
-        {/* 
-          <div className="relative h-64 w-64">
-            <Image src={section1img} alt="Your Image" className="absolute inset-0 transform translate-z-[-100px] transition-transform duration-500 ease-in-out hover:translate-y-[-100px]" />
-          </div> 
-        */}
           <div
            className='products__text__section__2 text-white text-5xl font-semibold my-3 flex justify-center items-center text-center tracking-wide mb-10 overflow-hidden '>
             <motion.div 
