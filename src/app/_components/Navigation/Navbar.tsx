@@ -22,8 +22,8 @@ const Navbar = () => {
   };
     
   return (
-      <div className='w-full flex justify-center items-center py-6 text-white text-semibold text-xl border-b-[1px] border-b-gray-500 bg-bg-primary'>
-        <div className='navbar__inner__section w-full flex justify-between px-10 items-center gap-4'>
+      <div className='w-full flex justify-center items-center py-4 text-white text-semibold text-xl border-b-[1px] border-b-gray-500 bg-bg-primary'>
+        <div className='navbar__inner__section w-full flex justify-between px-5 items-center'>
           <div className='flex-1'>
             <Link href={'/'} ><Image src={logo} alt='logo' width={230} className='' /></Link>
           </div>

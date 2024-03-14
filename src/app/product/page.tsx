@@ -2,11 +2,10 @@
 
 import React from 'react'
 import Image from 'next/image'
-import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { useRouter } from 'next/router'
 import { useRef, useEffect } from 'react'
 import { useAnimation, useInView, motion } from 'framer-motion'
+import styles from './style.module.css'
 
 import section1img from  '../../../public/assets/products/Group 49.png'
 import section2img from '../../../public/assets/products/Frame 22.png'
@@ -17,6 +16,8 @@ import cardimg2 from '../../../public/assets/products/Frame 17.png';
 import cardimg3 from '../../../public/assets/products/Frame 18.png';
 import cardimg4 from '../../../public/assets/products/Frame 19.png';
 import logo from '../../../public/assets/AI.png'
+
+import frameimg from '../../../public/assets/products/Frame 21.png'
 
 import { TbBrandInstagram, TbBrandTwitterFilled, TbBrandFacebookFilled, TbBrandLinkedin, TbBrandDiscordFilled } from "react-icons/tb";
 import imageicon from '../../../public/assets/india.png'
@@ -252,6 +253,16 @@ const Product = () => {
                   )
                 })
               }
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className='w-full flex justify-center items-center '>
+        <div className='w-[85%] flex justify-center items-center gap-10 my-16 p-8'>
+          <div className={styles.image__wrapper}>
+            <div className={styles.image__container}>
+                <Image src={frameimg} alt='someimage' width={1000} height={1000} className={styles.image__style}/>
             </div>
           </div>
         </div>

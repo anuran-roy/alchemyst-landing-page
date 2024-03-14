@@ -18,7 +18,7 @@ export const artisans = [
                 value : 'Maya plays the role of 10 outbound Sales Representatives in a start-up'
             }
         ],
-        button_text : 'Say Hello'
+        button_text : 'Hire Maya'
     },
     {
         id : 2,
