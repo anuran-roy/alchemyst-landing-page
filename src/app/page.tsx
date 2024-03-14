@@ -95,16 +95,39 @@ const Home = () => {
  
   
   const text1Ref = useRef<HTMLDivElement>(null)
+  const text1subRef = useRef<HTMLDivElement>(null)
 
   useGSAP(()=> {
-    gsap.from(
+
+    const tl1 = gsap.timeline({})
+
+    tl1.from(
       text1Ref.current,
       {
         y: '40%',
+        opacity: 0,
         duration: 1,
         ease: 'power4.out'
       }
     )
+    .from (
+      text1subRef.current,
+      {
+        y: '40%',
+        opacity: 0,
+        duration: 1,
+        ease: 'power4.out'
+      },
+      '-=0.5'
+    )
+    // gsap.from(
+    //   text1Ref.current,
+    //   {
+    //     y: '40%',
+    //     duration: 1,
+    //     ease: 'power4.out'
+    //   }
+    // )
   },[])
   
   return (
@@ -127,9 +150,12 @@ const Home = () => {
             </div>
             </div>
 
-            <div 
-            className='w-full px-4 text-white font-semibold mt-3'>
-            Maya is India’s first digital employee,  <br />designed to automate your sales.
+            <div className='overflow-y-hidden'>
+              <div
+              ref={text1subRef} 
+              className='w-full px-4 text-white font-semibold mt-3'>
+              Maya is India’s first digital employee,  <br />designed to automate your sales.
+              </div>
             </div>
 
             <div className='w-full px-5 py-2 mt-16'>
