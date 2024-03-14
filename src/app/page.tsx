@@ -220,7 +220,7 @@ const Home = () => {
                       <p className='text-xl'>{artisan.role}</p>
                     </div>
 
-                    <ul className='text-white font-semibold list-disc flex flex-col justify-center items-center gap-6'>
+                    <ul className='text-white font-medium list-disc flex flex-col justify-center items-center gap-6'>
 
                       {
                         artisan.capabilities.map((capability, ind) => (
@@ -230,7 +230,7 @@ const Home = () => {
                     </ul>
 
                     <div className='w-full px-5 py-2 flex justify-center items-center self-end absolute bottom-5 left-0'>
-                      <button className='py-2 px-6 rounded-md bg-bg-yellow text-white text-lg font-semibold'>{artisan.button_text}</button>
+                      <button className='py-2 px-6 rounded-md bg-bg-yellow text-black text-lg font-semibold'>{artisan.button_text}</button>
                     </div>
                     
                   </div>
