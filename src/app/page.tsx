@@ -297,10 +297,10 @@ const Home = () => {
               transition={{duration: 0.8}}
             >
               <div className=' text-white text-5xl font-semibold'>
-                <p>Empowers Go-to-</p>
-                <p>Market, Growth,</p>
-                <p>Marketing and</p>
-                <p>sales</p>
+                <p>Empowers <span className='bg-gradient-to-br from-teal-500 to-white text-transparent bg-clip-text'>Go-to-</span></p>
+                <p><span className='bg-gradient-to-br from-teal-500 to-white text-transparent bg-clip-text'>Market, Growth,</span></p>
+                <p><span className='bg-gradient-to-br from-teal-500 to-white text-transparent bg-clip-text'>Marketing </span>and</p>
+                <p><span className='bg-gradient-to-br from-teal-500 to-white text-transparent bg-clip-text'>Sales</span></p>
               </div>
             </motion.div>
 
