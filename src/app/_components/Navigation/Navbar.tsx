@@ -36,10 +36,13 @@ const Navbar = () => {
                 }}>
                 Team
                 </Link>
+                <Link href='/contact' className={`cursor-pointer hover:text-text-yellow ${pathname.split('/')[1] === 'contact' ? 'text-text-yellow' : 'text-white'}`}>Contact</Link>
             </ul>
 
                 <div className='text-lg flex-1 flex justify-end items-center'>
-                    <button className='py-2 px-6 rounded-md bg-bg-yellow text-black'>Hire Maya</button>
+                    <Link href='/contact' className='py-2 px-6 rounded-md bg-bg-yellow text-black'>
+                    Hire Maya
+                    </Link>
                 </div>
             </div>
         </div>

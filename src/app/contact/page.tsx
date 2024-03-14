@@ -1,8 +1,13 @@
+"use client";
+
 import React from 'react'
+import CalendlyEmbed from '../_components/Calendly/Calendly'
 
 const Contact = () => {
   return (
-    <div>Contact</div>
+    <div>
+        <CalendlyEmbed url='https://calendly.com/getalchemystai' />
+    </div>
   )
 }
 

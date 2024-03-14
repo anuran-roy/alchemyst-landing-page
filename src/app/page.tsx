@@ -3,24 +3,17 @@
 
 import React, { useEffect, useLayoutEffect, useRef, useState } from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
 
 import bgimg from '../../public/assets/frame7.png'
 import section2img from '../../public/assets/frame2.png'
 import section3img from '../../public/assets/frame3.png'
 import section4img from '../../public/assets/frame4.png'
 import imgborder from '../../public/assets/frame5.png'
-import logo from '../../public/assets/AI.png'
-import imageicon from '../../public/assets/india.png'
-import bgwave from '../../public/assets/wave.png'
 
 import { teamsData } from '../../public/data/teamsData'
 import { artisans } from '../../public/data/artisans'
 import Brands from './_components/Brands'
-
-//icons
-import { TbBrandInstagram, TbBrandTwitterFilled, TbBrandFacebookFilled, TbBrandLinkedin, TbBrandDiscordFilled } from "react-icons/tb";
-import { FaHeart } from "react-icons/fa6";
-
 
 //framer motion
 import { useAnimation, motion } from 'framer-motion';
@@ -161,7 +154,9 @@ const Home = () => {
             </div>
 
             <div className='w-full px-5 py-2 mt-16'>
-              <button className='py-2 px-6 rounded-md bg-bg-yellow text-black'>Hire Maya</button>
+              <Link href='/contact' className='py-4 px-6 rounded-md bg-bg-yellow text-black'>
+                Hire Maya
+              </Link>
             </div>
           </div>
 
@@ -230,7 +225,7 @@ const Home = () => {
                     </ul>
 
                     <div className='w-full px-5 py-2 flex justify-center items-center self-end absolute bottom-5 left-0'>
-                      <button className='py-2 px-6 rounded-md bg-bg-yellow text-black text-lg font-semibold'>{artisan.button_text}</button>
+                      <button className='py-2 px-6 rounded-md bg-bg-yellow text-black text-lg font-medium'>{artisan.button_text}</button>
                     </div>
                     
                   </div>
@@ -385,7 +380,9 @@ const Home = () => {
             </div>
             
             <div className='w-full py-3 flex justify-center items-center'>
-              <button className='bg-bg-yellow py-2 px-9 text-black rounded-lg'>Hire Maya</button>
+              <Link href='/contact' className='py-2 px-6 rounded-md bg-bg-yellow text-black'>
+                Hire Maya
+              </Link>
             </div>
             
           </div>
@@ -449,44 +446,6 @@ const Home = () => {
       <div className='w-full flex justify-center items-center '>
         <Brands />
       </div>
-
-      <div className='footer__section__grid__container overflow-hidden flex justify-start gap-6 w-full items-center flex-col border-gray-600 border-t-2 bg-gradient-to-t from-[#1F9C9A4D] to-[#F8F8F84D] backdrop-blur-lg bg-opacity-30 rounded-t-2xl'>
-
-      <div className='bg-white/10 backdrop-blur-lg w-full py-10 px-20'>
-        <div className='w-full flex justify-start'>
-          <Image src={logo} alt='logo' width={200}/>
-        </div>
-        <div className='text-white text-xl w-full flex justify-start items-baseline flex-row gap-2'>
-          <div className=''>
-            <p className='my-5'>
-            Building Next Gen AI Digital Employees.<br /> Spearheading the next Industrial Revolution in India.
-            </p>
-            <p>
-              getalchemystai@gmail.com
-            </p>
-            <ul className='flex justify-start items-center gap-4 text-white text-2xl mt-4 my-8'>
-              <li className='border-2 flex justify-center items-center border-white rounded-full w-[3rem] h-[3rem]'><TbBrandTwitterFilled /></li>
-              <li className='border-2 flex justify-center items-center border-white rounded-full w-[3rem] h-[3rem]'><TbBrandFacebookFilled /></li>
-              <li className='border-2 flex justify-center items-center border-white rounded-full w-[3rem] h-[3rem]'><TbBrandDiscordFilled /></li>
-              <li className='border-2 flex justify-center items-center border-white rounded-full w-[3rem] h-[3rem]'><TbBrandInstagram /></li>
-              <li className='border-2 flex justify-center items-center border-white rounded-full w-[3rem] h-[3rem]'><TbBrandLinkedin /></li>
-            </ul>
-          </div>
-
-        </div>
-
-        <div className='w-full flex justify-between items-center gap-6 text-white font-medium text-md mt-10'>
-          <div className='flex justify-center items-center gap-6 text-xl'>
-          <p>Terms of use</p>
-          <p>Privacy Policy</p>
-          </div>
-          <p className='text-xl bg-gradient-to-br from-teal-500 to-white text-transparent bg-clip-text'>© 2023 Alchemyst AI. All rights reserved</p>
-          <p className='bg-gradient-to-br from-teal-500 to-white text-transparent bg-clip-text text-xl relative'>Made with <span className='text-red-600'>❤️</span> from <span className='inline-block absolute -right-9'><Image src={imageicon} alt='someimage' width={30}/></span> </p>
-        </div>
-      </div>
-
-      </div>
-
     </div>
     </>
   )

@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 "use client"
 
 import React from 'react'
@@ -6,6 +7,7 @@ import { usePathname } from 'next/navigation'
 import { useRef, useEffect } from 'react'
 import { useAnimation, useInView, motion } from 'framer-motion'
 import styles from './style.module.css'
+import Link from 'next/link'
 
 import section1img from  '../../../public/assets/products/Group 49.png'
 import section2img from '../../../public/assets/products/Frame 22.png'
@@ -19,8 +21,8 @@ import logo from '../../../public/assets/AI.png'
 
 import frameimg from '../../../public/assets/products/Frame 21.png'
 
-import { TbBrandInstagram, TbBrandTwitterFilled, TbBrandFacebookFilled, TbBrandLinkedin, TbBrandDiscordFilled } from "react-icons/tb";
-import imageicon from '../../../public/assets/india.png'
+// import { TbBrandInstagram, TbBrandTwitterFilled, TbBrandFacebookFilled, TbBrandLinkedin, TbBrandDiscordFilled } from "react-icons/tb";
+// import imageicon from '../../../public/assets/india.png'
 
 //gsap
 
@@ -152,18 +154,22 @@ const Product = () => {
 
   
   return (
-    <div className='font-league bg-bg-primary max-h-min'>
+    <div className='font-league bg-bg-primary max-h-min overflow-x-hidden'>
       
       <div className='products__section__1 w-full min-h-max py-5 px-5 flex justify-center items-center flex-col bg-bg-primary relative backdrop-blur-sm bg-opacity-30'>
 
         <div className='absolute top-[5%] left-0 w-[15rem] h-[15rem] bg-gradient-to-r from-orange-500 to-orange-400 rounded-full blur-[10rem] -z-10'></div>
 
         <div>
-        <div className=' w-ful flex justify-center items-center overflow-y-hidden'>
-          <Image ref={productimg1Ref} src={section1img} alt='section1' className='object-cover w-[90%] py-5'/>
-        </div>
+          <div className='w-full flex justify-center items-center'>
+            <div className=' w-[80%] flex justify-center items-center overflow-y-hidden'>
+              <Image ref={productimg1Ref} src={section1img} alt='section1' className='object-cover w-[90%] py-5'/>
+            </div>
+          </div>
         <div className='w-full py-3 flex justify-center items-center'>
-          <button className='bg-bg-yellow py-2 px-9 text-black rounded-lg text-2xl'>Hire Maya</button>
+              <Link href='/contact' className='py-4 px-6 rounded-md bg-bg-yellow text-black'>
+                Hire Maya
+              </Link>
         </div>
         </div>
         
@@ -208,10 +214,13 @@ const Product = () => {
               <p>All <span className='bg-gradient-to-br from-teal-500 to-white text-transparent bg-clip-text text-6xl'>Sales</span> Complexities</p>
             </motion.div>
           </div>
-        
-          <div>
+      
+      <div className=' flex justify-center items-center'>
+          <div className=' w-[80%] '>
             <Image src={section2img} alt='section2' className='object-cover w-full'/>
           </div>
+      </div>
+      
       </div>
 
        <div className='section3 w-full min-h-max py-5 flex justify-center items-center px-2 bg-bg-primary backdrop-blur-sm bg-opacity-30'>
@@ -330,48 +339,14 @@ const Product = () => {
             </div>
             
             <div className='w-full py-3 flex justify-center items-center'>
-              <button className='bg-bg-yellow py-2 px-9 text-black rounded-lg'>Hire Maya</button>
+              <Link href='/contact' className='py-4 px-6 rounded-md bg-bg-yellow text-black'>
+                Hire Maya
+              </Link>
             </div>
             
           </div>
         </div>
         
-      </div>
-
-      <div className='footer__section__grid__container overflow-hidden flex justify-start gap-6 w-full items-center flex-col border-gray-600 border-t-2 bg-gradient-to-t from-[#1F9C9A4D] to-[#F8F8F84D] backdrop-blur-lg bg-opacity-30 rounded-t-2xl'>
-
-      <div className='bg-white/10 backdrop-blur-lg w-full py-10 px-20'>
-        <div className='w-full flex justify-start'>
-          <Image src={logo} alt='logo' width={200}/>
-        </div>
-        <div className='text-white text-xl w-full flex justify-start items-baseline flex-row gap-2'>
-          <div className=''>
-            <p className='my-5'>
-            Building Next Gen AI Digital Employees.<br /> Spearheading the next Industrial Revolution in India.
-            </p>
-            <p>
-              getalchemystai@gmail.com
-            </p>
-            <ul className='flex justify-start items-center gap-4 text-white text-2xl mt-4 my-8'>
-              <li className='border-2 flex justify-center items-center border-white rounded-full w-[3rem] h-[3rem]'><TbBrandTwitterFilled /></li>
-              <li className='border-2 flex justify-center items-center border-white rounded-full w-[3rem] h-[3rem]'><TbBrandFacebookFilled /></li>
-              <li className='border-2 flex justify-center items-center border-white rounded-full w-[3rem] h-[3rem]'><TbBrandDiscordFilled /></li>
-              <li className='border-2 flex justify-center items-center border-white rounded-full w-[3rem] h-[3rem]'><TbBrandInstagram /></li>
-              <li className='border-2 flex justify-center items-center border-white rounded-full w-[3rem] h-[3rem]'><TbBrandLinkedin /></li>
-            </ul>
-          </div>
-        </div>
-
-        <div className='w-full flex justify-between items-center gap-6 text-white font-medium text-md mt-10'>
-          <div className='flex justify-center items-center gap-6 text-xl'>
-          <p>Terms of use</p>
-          <p>Privacy Policy</p>
-          </div>
-          <p className='text-xl bg-gradient-to-br from-teal-500 to-white text-transparent bg-clip-text'>© 2023 Alchemyst AI. All rights reserved</p>
-          <p className='bg-gradient-to-br from-teal-500 to-white text-transparent bg-clip-text text-xl relative'>Made with <span className='text-red-600'>❤️</span> from <span className='inline-block absolute -right-9'><Image src={imageicon} alt='someimage' width={30}/></span> </p>
-        </div>
-      </div>
-
       </div>
 
     </div>
