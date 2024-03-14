@@ -4,9 +4,12 @@ import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import logo from '../../../../public/assets/AI.png'
+import { usePathname } from 'next/navigation'
+
 
 const Navbar = () => {
 
+    const pathname = usePathname();
 
   const scrollToSection = (sectionId: string) => {
     const targetSection = document.getElementById(sectionId);
@@ -26,8 +29,8 @@ const Navbar = () => {
           </div>
 
           <ul className='text-lg flex justify-center items-center gap-8 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-[#414770] to-[#41477000] py-2 px-28 rounded-2xl'>
-            <li className='text-text-yellow cursor-pointer'>Home</li>
-            <Link href='/product' className='cursor-pointer'>Products</Link>
+            <Link href='/' className={`cursor-pointer ${pathname.split('/')[1] === '' ? 'text-text-yellow' : 'text-white'}`}>Home</Link>
+            <Link href='/product' className={`cursor-pointer ${pathname.split('/')[1] === 'product' ? 'text-text-yellow' : 'text-white'}`}>Products</Link>
             <li className='cursor-pointer' onClick={() => {
                 scrollToSection('teamsSection');
             }}>

@@ -96,6 +96,7 @@ const Home = () => {
   
   const text1Ref = useRef<HTMLDivElement>(null)
   const text1subRef = useRef<HTMLDivElement>(null)
+  const headingImgRef  = useRef<HTMLImageElement>(null)
 
   useGSAP(()=> {
 
@@ -110,6 +111,15 @@ const Home = () => {
         ease: 'power4.out'
       }
     )
+    .from(
+      headingImgRef.current,
+      {
+        opacity: 0,
+        duration: 1,
+        ease: 'power4.out'
+      },
+      '-=0.9'
+    )
     .from (
       text1subRef.current,
       {
@@ -120,14 +130,6 @@ const Home = () => {
       },
       '-=0.5'
     )
-    // gsap.from(
-    //   text1Ref.current,
-    //   {
-    //     y: '40%',
-    //     duration: 1,
-    //     ease: 'power4.out'
-    //   }
-    // )
   },[])
   
   return (
@@ -165,7 +167,7 @@ const Home = () => {
 
           <div className='landing__image__container flex-1 relative flex justify-center items-center'>
           <div className='absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] w-[28rem] h-[28rem]  bg-gradient-to-r from-orange-500 to-orange-400 rounded-full blur-[5rem] -z-10 glow-animation'></div>
-              <Image src={bgimg} alt='landing__image__one' width={500} height={500} className='z-30' />
+              <Image ref={headingImgRef} src={bgimg} alt='landing__image__one' width={500} height={500} className='z-30' />
           </div>
 
         </div>
