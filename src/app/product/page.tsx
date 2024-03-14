@@ -3,9 +3,7 @@
 
 import React from 'react'
 import Image from 'next/image'
-import { usePathname } from 'next/navigation'
-import { useRef, useEffect } from 'react'
-import { useAnimation, useInView, motion } from 'framer-motion'
+import { useRef } from 'react'
 import styles from './style.module.css'
 import Link from 'next/link'
 

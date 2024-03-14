@@ -19,10 +19,6 @@ import { TbBrandInstagram, TbBrandTwitterFilled, TbBrandFacebookFilled, TbBrandL
 import logo from '../../public/assets/AI.png'
 import imageicon from '../../public/assets/india.png'
 
-//framer motion
-import { useAnimation, motion } from 'framer-motion';
-import { useInView } from 'framer-motion';
-
 //gsap
 
 import { useGSAP } from '@gsap/react';
@@ -48,7 +44,6 @@ const Home = () => {
   const text1Ref = useRef<HTMLDivElement>(null)
   const text1subRef = useRef<HTMLDivElement>(null)
   const headingImgRef  = useRef<HTMLImageElement>(null)
-  const section1TextRef = useRef<HTMLDivElement>(null)
   const section1SubTextRef = useRef<HTMLDivElement>(null)
   const elements = useRef<HTMLDivElement[]>([])
 
