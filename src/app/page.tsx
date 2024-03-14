@@ -385,7 +385,7 @@ const Home = () => {
             </div>
             
             <div className='w-full py-3 flex justify-center items-center'>
-              <button className='bg-bg-yellow py-2 px-9 text-white rounded-lg'>Hire Maya</button>
+              <button className='bg-bg-yellow py-2 px-9 text-black rounded-lg'>Hire Maya</button>
             </div>
             
           </div>
