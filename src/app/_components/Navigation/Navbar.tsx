@@ -39,7 +39,7 @@ const Navbar = () => {
           </ul>
 
             <div className='text-lg flex-1 flex justify-end items-center'>
-              <button className='py-2 px-6 rounded-md bg-bg-yellow text-white'>Hire Maya</button>
+              <button className='py-2 px-6 rounded-md bg-bg-yellow text-black'>Hire Maya</button>
             </div>
         </div>
       </div>

@@ -161,7 +161,7 @@ const Home = () => {
             </div>
 
             <div className='w-full px-5 py-2 mt-16'>
-              <button className='py-2 px-6 rounded-md bg-bg-yellow text-white'>Hire Maya</button>
+              <button className='py-2 px-6 rounded-md bg-bg-yellow text-black'>Hire Maya</button>
             </div>
           </div>
 

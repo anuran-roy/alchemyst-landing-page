@@ -163,7 +163,7 @@ const Product = () => {
           <Image ref={productimg1Ref} src={section1img} alt='section1' className='object-cover w-[90%] py-5'/>
         </div>
         <div className='w-full py-3 flex justify-center items-center'>
-          <button className='bg-bg-yellow py-2 px-9 text-white rounded-lg text-2xl'>Hire Maya</button>
+          <button className='bg-bg-yellow py-2 px-9 text-black rounded-lg text-2xl'>Hire Maya</button>
         </div>
         </div>
         
@@ -273,7 +273,7 @@ const Product = () => {
                 deployementCard.map((card, key) => {
                   return (
                       <div key={key} className='w-[20rem] h-[30rem] bg-bg-primary backdrop-blur-md bg-opacity-20 rounded-xl border-2 border-cyan-500 py-2 px-2 flex justify-start items-center flex-col gap-4'>
-                        <div className='h-[60%]  overflow-hidden flex justify-center items-center object-contain'>
+                        <div className='h-[60%] overflow-hidden flex justify-center items-center object-contain p-8'>
                           <Image src={card.image} alt='card' className=''/>
                         </div>
 
@@ -330,7 +330,7 @@ const Product = () => {
             </div>
             
             <div className='w-full py-3 flex justify-center items-center'>
-              <button className='bg-bg-yellow py-2 px-9 text-white rounded-lg'>Hire Maya</button>
+              <button className='bg-bg-yellow py-2 px-9 text-black rounded-lg'>Hire Maya</button>
             </div>
             
           </div>
