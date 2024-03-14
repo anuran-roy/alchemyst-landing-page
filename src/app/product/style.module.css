@@ -21,7 +21,7 @@
     transform: rotateX(70deg);
     perspective: 1200px;
     background-color: #F1A334;
-    border-radius: 2rem;
+    border-radius: 2.3rem;
 }
 
 .image__container:hover {
