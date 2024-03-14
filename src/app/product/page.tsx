@@ -27,6 +27,7 @@ import imageicon from '../../../public/assets/india.png'
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { GiSandsOfTime } from 'react-icons/gi'
 
 
 gsap.registerPlugin(ScrollTrigger);
@@ -102,6 +103,9 @@ const Product = () => {
   },[inView,inView2,inView3,inView4,inView5,inView6])
 
   const productimg1Ref = useRef<HTMLImageElement>(null)
+  const imageanimationRef = useRef<HTMLDivElement>(null)
+  const imageRef = useRef<HTMLImageElement>(null)
+  const imagecontRef = useRef<HTMLImageElement>(null)
 
   useGSAP(() => {
 
@@ -114,7 +118,36 @@ const Product = () => {
         ease: 'power3.out',
       }
     )
-    
+
+    gsap.to(
+      imagecontRef.current,
+      {
+        scrollTrigger: {
+          trigger: imageanimationRef.current,
+          start: 'top 90%',
+          end: '+=100%',
+          toggleActions: 'play none none reverse',
+          scrub: 1,
+        },
+        rotateX: 0,
+        duration: 1
+      }
+    )
+
+    gsap.to(
+      imageRef.current,
+      {
+        scrollTrigger: {
+          trigger: imageanimationRef.current,
+          start: 'top 90%',
+          end: '+=100%',
+          toggleActions: 'play none none reverse',
+          scrub: 1,
+        },
+        rotateX: 0,
+        duration: 1
+      }
+    )
   })
 
   
@@ -259,10 +292,10 @@ const Product = () => {
       </div>
 
       <div className='w-full flex justify-center items-center '>
-        <div className='w-[85%] flex justify-center items-center gap-10 my-16 p-8'>
+        <div ref={imageanimationRef} className='w-[85%] flex justify-center items-center gap-10 my-16 p-6'>
           <div className={styles.image__wrapper}>
-            <div className={styles.image__container}>
-                <Image src={frameimg} alt='someimage' width={1000} height={1000} className={styles.image__style}/>
+            <div className={styles.image__container} ref={imagecontRef}>
+                <Image ref={imageRef} src={frameimg} alt='someimage' width={1000} height={1300} className={styles.image__style}/>
             </div>
           </div>
         </div>
