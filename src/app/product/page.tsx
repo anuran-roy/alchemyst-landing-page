@@ -219,7 +219,7 @@ const Product = () => {
           </div>
 
           <div>
-            <div className=' flex flex-col md:flex-row md:flex-wrap justify-center items-center gap-4 py-2'>
+            <div className=' flex flex-col lg:flex-row justify-center items-center gap-4 py-2'>
               {
                 deployementCard.map((card, key) => {
                   return (
