@@ -4,9 +4,11 @@
 // import pani from '../assets/team/pani.png';
 
 import uttaran from '../assets/uttaran.jpg';
-import anuran from '../assets/anuran.png';
-import rish from '../assets/rish.jpeg';
-import pani from '../assets/pani.jpeg';
+import anuran from '../assets/team/anuran.png';
+import rish from '../assets/team/rishita.png';
+import pani from '../assets/team/saptarshi.png';
+import debayan from '../assets/team/debayan.png';
+import aish from '../assets/team/aishwarya.png';
 
 export const teamsData = [
     {
@@ -102,6 +104,54 @@ export const teamsData = [
             {
                 id: 4,
                 value : 'Economic Times & Unstop Competitive Leader ‘23'
+            }
+        ]
+    },
+    {
+        id: 5,
+        name : 'Debayan Pradhan',
+        position : 'Full Stack Web Developer',
+        profileimg : debayan,
+        achievements : [
+            {
+                id: 1,
+                value : 'Incubatee under Algorand Start-up Labs'
+            },
+            {
+                id : 2,
+                value : 'National Runner-Up, Hack4Bengal 2023 '
+            },
+            {
+                id :3,
+                value : 'National Finalist, Smart India Hackathon 2023'
+            },
+            {
+                id: 4,
+                value : 'Google Developers Community Lead, KGEC Kalyani'
+            }
+        ]
+    },
+    {
+        id: 2,
+        name : 'Aishwarya Daga',
+        position : 'ML Intern',
+        profileimg : aish,
+        achievements : [
+            {
+                id: 1,
+                value : ' Built Custom Chatbots, Large Language Models (LLMs)'
+            },
+            {
+                id : 2,
+                value : 'Focussed on building Prediction Models and Data Analysis'
+            },
+            {
+                id :3,
+                value : 'Ex- AI engineering Intern, Pi Data Centers'
+            },
+            {
+                id: 4,
+                value : 'Computer Science & Engineering, VIT Vellore'
             }
         ]
     }

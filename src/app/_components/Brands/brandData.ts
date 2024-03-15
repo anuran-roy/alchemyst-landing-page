@@ -4,6 +4,7 @@ import nike from '../../../../public/assets/brands/logo3.png';
 import amd from '../../../../public/assets/brands/logo4.png';
 import dropcam from '../../../../public/assets/brands/logo5.png';
 import deepmind from '../../../../public/assets/brand7.png'
+import sarvam from '../../../../public/assets/brands/brand8.png';
 
 const brandData = [
   {
@@ -29,6 +30,13 @@ const brandData = [
   {
     id: 6,
     image: dropcam,
+  },
+  {
+    id: 7,
+    name: "Client",
+    href: "#",
+    image: sarvam,
+    imageLight: "/images/brand/brand-dark-01.svg",
   },
 ];
 
