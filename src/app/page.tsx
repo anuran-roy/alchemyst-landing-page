@@ -101,11 +101,11 @@ const Home = () => {
   return (
     <>
     
-    <div className='font-league bg-bg-primary'>
+    <div className='font-league bg-bg-primary overflow-x-hidden'>
       
       <div className='landing__section__1 w-full min-h-max py-5 px-5 flex justify-center items-center flex-col bg-bg-primary relative backdrop-blur-sm bg-opacity-30' >
-        <div className='absolute top-[10rem] left-0 w-[18rem] h-[18rem] bg-gradient-to-r from-orange-500 to-orange-400 rounded-full blur-[10rem] -z-10 glow-animation'></div>
-        <div className='section-1 flex-1 w-[85%] flex justify-center items-center py-10 my-16'>
+        <div className='hidden lg:block absolute top-[10rem] left-0 w-[18rem] h-[18rem] bg-gradient-to-r from-orange-500 to-orange-400 rounded-full blur-[10rem] -z-10 glow-animation'></div>
+        <div className='section-1 flex-1 w-[85%] flex justify-center items-center py-10 my-16 flex-col lg:flex-row'>
           <div className='landing__text__one flex-1 pl-10 '>
 
             <div className='overflow-hidden'>
@@ -217,22 +217,14 @@ const Home = () => {
       <div className='chat__with__ease__section w-full min-h-max py-5 flex justify-center items-center px-5 bg-bg-primary backdrop-blur-sm bg-opacity-30'>
         <div className={'absolute top-0 right-0 w-[15rem] h-[15rem] bg-gradient-to-r from-orange-500 to-orange-400 rounded-full blur-[15rem] -z-10 hover:blur-[30rem]'}></div>
 
-        <div className='section__2__inner__container w-[85%] flex justify-center items-center gap-10 my-16 py-4'>
+        <div className='section__2__inner__container w-[85%] flex justify-center items-center gap-10 my-16 py-4 flex-col lg:flex-row'>
           <div className='section__2__image__container flex-1 flex justify-end items-center'>
             <Image src={section2img} alt='landing__image__two' width={500} height={500} />
           </div>
           <div className='section__2__text__container flex-1 self-start pt-12 ml-8'>
             <div className='overflow-hidden'>
               <div 
-              // ref={section2Ref} 
               ref={(el) => elements.current[1] = el as HTMLDivElement}
-              // variants={{
-              //   visible: {opacity: 1, y: 0},
-              //   hidden: {opacity: 0, y: '40%'}
-              // }}
-              // initial='hidden'
-              // animate={section3controls}
-              // transition={{duration: 0.8}}
               className=' text-white text-5xl font-semibold'>
                 <p><span className='bg-gradient-to-br from-teal-500 to-white text-transparent bg-clip-text'>Chat</span> with ease</p>
                 <p>with our</p>
@@ -252,18 +244,10 @@ const Home = () => {
 
       <div className='empowers__section w-full min-h-max py-5 flex justify-center items-center px-5 bg-bg-primary relative backdrop-blur-sm bg-opacity-30'>
         <div className='absolute top-0 left-0 w-[20rem] h-[20rem] bg-gradient-to-r from-orange-500 to-orange-400 rounded-full blur-[15rem] -z-10'></div>
-        <div className='section__3__inner__container w-[80%] flex justify-center items-center gap-2 my-20'>
+        <div className='section__3__inner__container w-[80%] flex justify-center items-center gap-2 my-20 flex-col lg:flex-row'>
           <div className='section__3__text__container flex-1 self-start pt-12'>
             <div
             ref={(el) => elements.current[2] = el as HTMLDivElement}
-              // ref={section4Ref} 
-              // variants={{
-              //   visible: {opacity: 1, y: 0},
-              //   hidden: {opacity: 0, y: '40%'}
-              // }}
-              // initial='hidden'
-              // animate={section4controls}
-              // transition={{duration: 0.8}}
             >
               <div className=' text-white text-5xl font-semibold'>
                 <p>Empowers <span className='bg-gradient-to-br from-teal-500 to-white text-transparent bg-clip-text'>Go-to-</span></p>
@@ -301,14 +285,6 @@ const Home = () => {
           <div className='section__4__text__container flex-1 self-start pt-12 ml-10'>
             <div className='overflow-hidden'>
               <div 
-              // ref={section5Ref} 
-              // variants={{
-              //   visible: {opacity: 1, y: 0},
-              //   hidden: {opacity: 0, y: '40%'}
-              // }}
-              // initial='hidden'
-              // animate={section5controls}
-              // transition={{duration: 0.8}}
               ref={(el) => elements.current[3] = el as HTMLDivElement}
               className=' text-white text-5xl font-semibold '>
                 <p><span className='bg-gradient-to-br from-teal-500 to-white text-transparent bg-clip-text'>Additional </span>Info (if</p>
@@ -330,21 +306,13 @@ const Home = () => {
 
         <div className='absolute -bottom-[5rem] w-[25rem] h-[25rem] bg-gradient-to-r from-orange-500 to-orange-400 rounded-full blur-[20rem] -z-10'></div>
 
-        <div className='p-[2.5px] rounded-2xl w-[80%]'>
+        <div className='p-[2.5px] rounded-2xl w-[100%] lg:w-[80%]'>
           <div className=' landing__section__5__card w-[100%] bg-bg-primary flex justify-center items-center flex-col py-16 gap-10 rounded-xl bg-gradient-to-t backdrop-blur-sm bg-opacity-0 from-[#1F9C9A1A] to-[#F8F8F81A]'>
             
             <div>
               <div 
               ref={(el) => elements.current[4] = el as HTMLDivElement}
-              // ref={section7Ref} 
-              // variants={{
-              //   visible: {opacity: 1, y: 0},
-              //   hidden: {opacity: 0, y: '40%'}
-              // }}
-              // initial='hidden'
-              // animate={section7controls}
-              // transition={{duration: 1}}
-              className='w-full text-white font-semibold text-4xl text-center'>
+              className='w-full text-white font-semibold text-3xl lg:text-4xl text-center'>
                 <p>Ready to Hire an Alchemyst to act</p>
                 <p>as a Catalyst for your Team ?</p>
               </div>
@@ -370,20 +338,11 @@ const Home = () => {
         <div className='absolute bottom-0 left-0 w-[20rem] h-[20rem] bg-gradient-to-r from-orange-500 to-orange-400 rounded-full blur-[10rem] -z-10'></div>
         <div className='overflow-hidden'>
           <div 
-            ref={(el) => elements.current[5] = el as HTMLDivElement}
-              // ref={section6Ref} 
-              // variants={{
-              //   visible: {opacity: 1, y: 0},
-              //   hidden: {opacity: 0, y: '40%'}
-              // }}
-              // initial='hidden'
-              // animate={section6controls}
-              // transition={{duration: 1}}
           className='text-white font-semibold text-5xl w-full flex justify-center items-center mb-10 gap-2'>
             Meet our <span className='inline-block bg-gradient-to-br from-teal-500 to-white bg-clip-text text-transparent'> Team</span>
           </div>
         </div>
-        <div className='meet__our__team__inner w-[70%] grid grid-cols-2 grid-rows-2 py-10 gap-y-8'>
+        <div className='meet__our__team__inner w-[100%] lg:w-[70%] grid grid-cols-1 lg:grid-cols-2 py-10 gap-y-8'>
           
           {
             teamsData.map((team,ind) => {
