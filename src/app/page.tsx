@@ -111,7 +111,7 @@ const Home = () => {
             <div className='overflow-hidden'>
             <div
              ref={text1Ref}
-             className='px-4 text-7xl font-bold text-white'>
+             className='px-4 text-5xl lg:text-7xl font-bold text-white'>
               <p>Introducing <span className='bg-gradient-to-br from-teal-500 to-white text-transparent bg-clip-text'>Maya,</span></p>
               <p>the first</p>
               <p>Alchemyst</p>
@@ -174,12 +174,12 @@ const Home = () => {
       <div className='artisans__section w-full min-h-max py-16 px-5 flex justify-center items-center flex-col bg-bg-primary relative backdrop-blur-sm bg-opacity-30 mt-16'>
         <div className={`absolute top-[10rem] -left-[10rem] w-[20rem] h-[20rem] bg-gradient-to-r from-orange-500 to-orange-400 rounded-full blur-[20rem] -z-10`}></div>
         
-        <div className='artisans__inner__section w-[90%] flex justify-center items-center gap-8'>
+        <div className='artisans__inner__section w-[90%] flex justify-center items-center gap-8 flex-col lg:flex-row'>
 
           {
             artisans.map((artisan, index) => {
               return (
-                <div key={artisan.id} className='w-[30rem] h-[40rem] p-[3px] rounded-xl bg-gradient-to-b from-[#82D6D2] to-[#82D6D200]'>
+                <div key={artisan.id} className='min-w-[25rem] h-[40rem] p-[3px] rounded-xl bg-gradient-to-b from-[#82D6D2] to-[#82D6D200]'>
                   <div className='rounded-xl w-full h-full p-5 bg-gradient-to-t from-[#313b45] to-[#43424c] flex justify-start items-baseline flex-col gap-8 relative backdrop-blur-sm bg-opacity-30 px-8'>
 
                     <div className='w-full flex justify-center items-center'>
@@ -342,7 +342,7 @@ const Home = () => {
             Meet our <span className='inline-block bg-gradient-to-br from-teal-500 to-white bg-clip-text text-transparent'> Team</span>
           </div>
         </div>
-        <div className='meet__our__team__inner w-[100%] lg:w-[70%] grid grid-cols-1 lg:grid-cols-2 py-10 gap-y-8'>
+        <div className='meet__our__team__inner w-[100%] md:w-[70%] grid grid-cols-1 lg:grid-cols-2 py-10 gap-y-8'>
           
           {
             teamsData.map((team,ind) => {
