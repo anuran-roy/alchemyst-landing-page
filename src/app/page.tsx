@@ -174,12 +174,12 @@ const Home = () => {
       <div className='artisans__section w-full min-h-max py-16 px-5 flex justify-center items-center flex-col bg-bg-primary relative backdrop-blur-sm bg-opacity-30 mt-16'>
         <div className={`absolute top-[10rem] -left-[10rem] w-[20rem] h-[20rem] bg-gradient-to-r from-orange-500 to-orange-400 rounded-full blur-[20rem] -z-10`}></div>
         
-        <div className='artisans__inner__section w-[90%] flex justify-center items-center gap-8 md:gap-4 md:flex-row md:flex-wrap flex-col sm:px-[5rem]'>
+        <div className='artisans__inner__section w-[90%] flex justify-center items-center gap-8 md:gap-4 flex-col md:flex-row  sm:px-[5rem]'>
 
           {
             artisans.map((artisan, index) => {
               return (
-                <div key={artisan.id} className='min-w-[23rem] sm:min-w-[25rem] md:min-w-[10rem] h-[40rem] p-[3px] rounded-xl bg-gradient-to-b from-[#82D6D2] to-[#82D6D200]'>
+                <div key={artisan.id} className='min-w-[23rem] sm:min-w-[25rem] md:min-w-[20rem] lg:min-w-[25rem] h-[40rem] p-[3px] rounded-xl bg-gradient-to-b from-[#82D6D2] to-[#82D6D200]'>
                   <div className='rounded-xl w-full h-full p-5 bg-gradient-to-t from-[#313b45] to-[#43424c] flex justify-start items-baseline flex-col gap-8 relative backdrop-blur-sm bg-opacity-30 px-8'>
 
                     <div className='w-full flex justify-center items-center'>
