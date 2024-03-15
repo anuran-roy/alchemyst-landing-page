@@ -33,10 +33,7 @@ const brandData = [
   },
   {
     id: 7,
-    name: "Client",
-    href: "#",
     image: sarvam,
-    imageLight: "/images/brand/brand-dark-01.svg",
   },
 ];
 
