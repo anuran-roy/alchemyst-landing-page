@@ -28,7 +28,7 @@ const Navbar = () => {
                 <Link href={'/'} ><Image src={logo} alt='logo' width={230} className='' /></Link>
             </div>
 
-            <ul className='flex-1 text-lg flex justify-center items-center gap-8 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-[#414770] to-[#41477000] py-2 px-28 rounded-2xl'>
+            <ul className='hidden flex-1 text-lg lg:flex justify-center items-center gap-8 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-[#414770] to-[#41477000] py-2 px-28 rounded-2xl'>
                 <Link href='/' className={`cursor-pointer hover:text-text-yellow ${pathname.split('/')[1] === '' ? 'text-text-yellow' : 'text-white'}`}>Home</Link>
                 <Link href='/product' className={`cursor-pointer hover:text-text-yellow ${pathname.split('/')[1] === 'product' ? 'text-text-yellow' : 'text-white'}`}>Products</Link>
                 <Link href='/' className='cursor-pointer hover:text-text-yellow' onClick={() => {
