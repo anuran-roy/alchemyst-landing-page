@@ -11,11 +11,11 @@ export const artisans = [
         capabilities : [
             {
                 id: 1,
-                value : 'Maya has 10x of the skills a human appointment setter would have but costs over 90% less'
+                value : 'Maya has 10x of the skills a human appointment setter would have but costs over 90% less.'
             },
             {
                 id : 2,
-                value : 'Maya plays the role of 10 outbound Sales Representatives in a start-up'
+                value : 'Maya plays the role of 10 outbound Sales Representatives in a start-up.'
             }
         ],
         button_text : 'Hire Maya'
@@ -28,11 +28,11 @@ export const artisans = [
         capabilities : [
             {
                 id: 1,
-                value : 'Moh creates & executes multi-channel marketing campaigns'
+                value : 'Moh creates & executes multi-channel marketing campaigns.'
             },
             {
                 id :2 ,
-                value : 'Learns from your team & builds a world model of your company, uses advanced data analytics to optimize for ROI'
+                value : 'Learns from your team & builds a world model of your company, uses advanced data analytics to optimize for ROI.'
             }
         ],
         button_text : 'Join Waitlist'
@@ -45,11 +45,11 @@ export const artisans = [
         capabilities : [
             {
                 id: 1,
-                value : 'Automates initial resume checks with ratings and scores curated for that particular role'
+                value : 'Automates initial resume checks with ratings and scores curated for that particular role.'
             },
             {
                 id :2 ,
-                value : 'Scheduling automated meetings with candidates as well as writing curated mails'
+                value : 'Scheduling automated meetings with candidates as well as writing curated mails.'
             }
         ],
         button_text : 'Join Waitlist'

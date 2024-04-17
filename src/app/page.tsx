@@ -165,7 +165,7 @@ const Home = () => {
 
           <div className='overflow-y-hidden' ref={section1SubTextRef}>
             <div className='landing__text__section__subconten  text-white text-xl font-normal my-3t text-center'>
-              <p>Alchemysts can become integral members of your <br/>  business and start-up teams</p>
+              <p>Alchemysts can become integral members of your <br/>  business and start-up teams.</p>
             </div>
           </div>
         </div>
@@ -235,7 +235,7 @@ const Home = () => {
             <div className='text-white mt-5 text-xl'>
               <p>Alchemysts can become integral</p>
               <p>members of your business and start-up</p>
-              <p>teams</p>
+              <p>teams.</p>
             </div>
           </div>
         </div>
@@ -261,7 +261,7 @@ const Home = () => {
               <div>
               <p>Alchemysts can become integral</p>
               <p>members of your business and start-up</p>
-              <p>teams</p>
+              <p>teams.</p>
               </div>
             </div>
           </div>
@@ -295,7 +295,7 @@ const Home = () => {
             <div className='text-white mt-5 text-xl'>
               <p>Alchemysts can become integral</p>
               <p>members of your business and start-up</p>
-              <p>teams</p>
+              <p>teams.</p>
             </div>
           </div>
         </div>
@@ -320,7 +320,7 @@ const Home = () => {
 
             <div className='w-full text-white font-normal text-xl text-center'>
                 <p>Alchemysts can become integral</p>
-                <p>members of your business and start-up teams</p>
+                <p>members of your business and start-up teams.</p>
             </div>
             
             <div className='w-full py-3 flex justify-center items-center'>
