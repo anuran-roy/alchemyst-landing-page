@@ -156,7 +156,7 @@ const Product = () => {
           </div>
 
           <div className='landing__text__section__subconten  text-white font-normal my-3t text-center text-2xl'>
-            <p>Alchemysts can become integral members of your <br/>  buisness and start-up teams</p>
+            <p>Alchemysts can become integral members of your <br/>  business and start-up teams.</p>
           </div>
         </div>
       </div>
@@ -200,8 +200,8 @@ const Product = () => {
 
             <div className='text-white mt-5 text-2xl'>
               <p>Alchemysts can become integral</p>
-              <p>members of your buisness and start-up</p>
-              <p>teams</p>
+              <p>members of your business and start-up</p>
+              <p>teams.</p>
             </div>
           </div>
         </div>
