@@ -174,12 +174,12 @@ const Home = () => {
       <div className='artisans__section w-full min-h-max py-16 px-5 flex justify-center items-center flex-col bg-bg-primary relative backdrop-blur-sm bg-opacity-30 mt-16'>
         <div className={`absolute top-[10rem] -left-[10rem] w-[20rem] h-[20rem] bg-gradient-to-r from-orange-500 to-orange-400 rounded-full blur-[20rem] -z-10`}></div>
         
-        <div className='artisans__inner__section w-[90%] flex justify-center items-center gap-8 flex-col lg:flex-row'>
+        <div className='artisans__inner__section w-[90%] flex justify-center items-center gap-8 md:gap-4 flex-col md:flex-row  sm:px-[5rem]'>
 
           {
             artisans.map((artisan, index) => {
               return (
-                <div key={artisan.id} className='min-w-[25rem] h-[40rem] p-[3px] rounded-xl bg-gradient-to-b from-[#82D6D2] to-[#82D6D200]'>
+                <div key={artisan.id} className='min-w-[23rem] sm:min-w-[25rem] md:min-w-[20rem] lg:min-w-[25rem] h-[40rem] p-[3px] rounded-xl bg-gradient-to-b from-[#82D6D2] to-[#82D6D200]'>
                   <div className='rounded-xl w-full h-full p-5 bg-gradient-to-t from-[#313b45] to-[#43424c] flex justify-start items-baseline flex-col gap-8 relative backdrop-blur-sm bg-opacity-30 px-8'>
 
                     <div className='w-full flex justify-center items-center'>
@@ -214,14 +214,14 @@ const Home = () => {
         
       </div>
 
-      <div className='chat__with__ease__section w-full min-h-max py-5 flex justify-center items-center px-5 bg-bg-primary backdrop-blur-sm bg-opacity-30'>
+      <div className='chat__with__ease__section w-full min-h-max lg:py-5 flex justify-center items-center px-2 lg:px-5 bg-bg-primary backdrop-blur-sm bg-opacity-30'>
         <div className={'absolute top-0 right-0 w-[15rem] h-[15rem] bg-gradient-to-r from-orange-500 to-orange-400 rounded-full blur-[15rem] -z-10 hover:blur-[30rem]'}></div>
 
-        <div className='section__2__inner__container w-[85%] flex justify-center items-center gap-10 my-16 py-4 flex-col lg:flex-row'>
+        <div className='section__2__inner__container w-[100%] lg:w-[85%] flex justify-center items-center gap-10 my-16 py-4 flex-col md:flex-row'>
           <div className='section__2__image__container flex-1 flex justify-end items-center'>
             <Image src={section2img} alt='landing__image__two' width={500} height={500} />
           </div>
-          <div className='section__2__text__container flex-1 self-start pt-12 ml-8'>
+          <div className='section__2__text__container flex-1 self-start pt-6 lg:pt-12 lg:ml-8 items-center w-[100%] text-center'>
             <div className='overflow-hidden'>
               <div 
               ref={(el) => elements.current[1] = el as HTMLDivElement}
@@ -384,13 +384,13 @@ const Home = () => {
       </div>
 
     <div className='bg-bg-primary'>
-      <div className='footer__section__grid__container overflow-hidden flex justify-start gap-6 w-full items-center flex-col border-gray-600 border-t-2 bg-gradient-to-t from-[#1F9C9A4D] to-[#F8F8F84D] backdrop-blur-lg bg-opacity-30 rounded-t-2xl'>
+      <div className='footer__section__grid__container overflow-hidden flex justify-start gap-2 lg:gap-6 w-full items-center flex-col border-gray-600 border-t-2 bg-gradient-to-t from-[#1F9C9A4D] to-[#F8F8F84D] backdrop-blur-lg bg-opacity-30 rounded-t-2xl'>
 
-      <div className='bg-white/10 backdrop-blur-lg w-full py-10 px-20'>
+      <div className='bg-white/10 backdrop-blur-lg w-full py-10 px-5 lg:px-20'>
         <div className='w-full flex justify-start'>
           <Image src={logo} alt='logo' width={200}/>
         </div>
-        <div className='text-white text-xl w-full flex justify-start items-baseline flex-row gap-2'>
+        <div className='text-white text-lg md:text-xl w-full flex justify-start items-baseline flex-row gap-2'>
           <div className=''>
             <p className='my-5'>
             Building Next Gen AI Digital Employees.<br /> Spearheading the next Industrial Revolution in India.
@@ -399,17 +399,17 @@ const Home = () => {
               getalchemystai@gmail.com
             </p>
             <ul className='flex justify-start items-center gap-4 text-white text-2xl mt-4 my-8'>
-              <li className='border-2 flex justify-center items-center border-white rounded-full w-[3rem] h-[3rem]'><TbBrandTwitterFilled /></li>
-              <li className='border-2 flex justify-center items-center border-white rounded-full w-[3rem] h-[3rem]'><TbBrandFacebookFilled /></li>
-              <li className='border-2 flex justify-center items-center border-white rounded-full w-[3rem] h-[3rem]'><TbBrandDiscordFilled /></li>
-              <li className='border-2 flex justify-center items-center border-white rounded-full w-[3rem] h-[3rem]'><TbBrandInstagram /></li>
-              <li className='border-2 flex justify-center items-center border-white rounded-full w-[3rem] h-[3rem]'><TbBrandLinkedin /></li>
+              <li className='border-[1px] flex justify-center items-center border-white rounded-full w-[2rem] h-[2rem] lg:w-[3rem] lg:h-[3rem]'><TbBrandTwitterFilled /></li>
+              <li className='border-[1px] flex justify-center items-center border-white rounded-full w-[2rem] h-[2rem] lg:w-[3rem] lg:h-[3rem]'><TbBrandFacebookFilled /></li>
+              <li className='border-[1px] flex justify-center items-center border-white rounded-full w-[2rem] h-[2rem] lg:w-[3rem] lg:h-[3rem]'><TbBrandDiscordFilled /></li>
+              <li className='border-[1px] flex justify-center items-center border-white rounded-full w-[2rem] h-[2rem] lg:w-[3rem] lg:h-[3rem]'><TbBrandInstagram /></li>
+              <li className='border-[1px] flex justify-center items-center border-white rounded-full w-[2rem] h-[2rem] lg:w-[3rem] lg:h-[3rem]'><TbBrandLinkedin /></li>
             </ul>
           </div>
         </div>
 
-        <div className='w-full flex justify-between items-center gap-6 text-white font-medium text-md mt-10'>
-          <div className='flex justify-center items-center gap-6 text-xl'>
+        <div className='w-full flex flex-col md:flex-row gap-2 justify-between items-center lg:gap-6 text-white font-medium text-md mt-10'>
+          <div className='flex justify-center items-center gap-2 md:gap-6'>
           <p>Terms of use</p>
           <p>Privacy Policy</p>
           </div>

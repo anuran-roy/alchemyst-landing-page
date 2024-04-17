@@ -132,12 +132,12 @@ const Product = () => {
 
         <div>
           <div className='w-full flex justify-center items-center'>
-            <div className=' w-[80%] flex justify-center items-center overflow-y-hidden'>
+            <div className=' w-[100%] lg:w-[80%] flex justify-center items-center overflow-y-hidden'>
               <Image ref={productimg1Ref} src={section1img} alt='section1' className='object-cover w-[90%] py-5'/>
             </div>
           </div>
         <div className='w-full py-3 flex justify-center items-center'>
-              <Link href='/contact' className='py-2 px-6 rounded-md bg-bg-yellow text-black'>
+              <Link href='/contact' className='py-1 lg:py-2 px-4 lg:px-6 rounded-md bg-bg-yellow text-black'>
                 Hire Maya
               </Link>
         </div>
@@ -148,18 +148,10 @@ const Product = () => {
           <div
            className='products__text__section__2 text-white text-5xl font-semibold my-3 flex justify-center items-center text-center tracking-wide mb-10 overflow-hidden '>
             <div 
-            // variants={{
-            //   visible: {opacity: 1, y: 0},
-            //   hidden: {opacity: 0, y: '40%'}
-            // }}
-            // initial='hidden'
-            // animate={controls}
-            // transition={{duration: 0.8}}
-            // ref={elementRef}
             ref={(el) => elements.current[0] = el as HTMLDivElement}
 
             className='py-2'>
-              <p className='text-6xl'><span className='bg-gradient-to-br from-teal-500 to-white text-transparent bg-clip-text text-6xl'>First Indian </span> Human-Like AI <br/> Employees</p>
+              <p className='text-5xl lg:text-6xl'><span className='bg-gradient-to-br from-teal-500 to-white text-transparent bg-clip-text'>First Indian </span> Human-Like AI <br/> Employees</p>
             </div>
           </div>
 
@@ -169,26 +161,18 @@ const Product = () => {
         </div>
       </div>
 
-      <div className='products__section__2 py-20 px-20 relative backdrop-blur-sm bg-opacity-30 overflow-hidden'>
+      <div className='products__section__2 py-20 text-center lg:px-20 relative backdrop-blur-sm bg-opacity-30 overflow-hidden'>
         <div className='absolute top-0 left-[50%] w-[20rem] h-[20rem] bg-gradient-to-r from-orange-500 to-orange-400 rounded-full blur-[25rem] -z-10'></div>
           <div className='overflow-hidden'>
-            <div className='w-full text-6xl text-white flex justify-center items-center py-5 font-semibold'
-              // variants={{
-              //   visible: {opacity: 1, y: 0},
-              //   hidden: {opacity: 0, y: '40%'}
-              // }}
-              // initial='hidden'
-              // animate={section3controls}
-              // transition={{duration: 0.8}}
-              // ref={section2Ref}
+            <div className='w-full text-5xl lg:text-6xl text-white flex justify-center items-center py-5 font-semibold'
               ref={(el) => elements.current[1] = el as HTMLDivElement}
               >
-              <p>All <span className='bg-gradient-to-br from-teal-500 to-white text-transparent bg-clip-text text-6xl'>Sales</span> Complexities</p>
+              <p>All <span className='bg-gradient-to-br from-teal-500 to-white text-transparent bg-clip-text'>Sales</span> Complexities</p>
             </div>
           </div>
       
       <div className=' flex justify-center items-center'>
-          <div className=' w-[80%] '>
+          <div className=' w-[100%] lg:-w[80%] scale-125 lg:scale-100'>
             <Image src={section2img} alt='section2' className='object-cover w-full'/>
           </div>
       </div>
@@ -198,24 +182,16 @@ const Product = () => {
        <div className='section3 w-full min-h-max py-5 flex justify-center items-center px-2 bg-bg-primary backdrop-blur-sm bg-opacity-30'>
         <div className={'absolute top-0 right-0 w-[15rem] h-[15rem] bg-gradient-to-r from-orange-500 to-orange-400 rounded-full blur-[15rem] -z-10 hover:blur-[30rem]'}></div>
 
-        <div className='section__2__inner__container w-[85%] flex justify-center items-center gap-10 my-16 py-4 '>
-          <div className='section__2__image__container flex-1 flex justify-end items-center min-h-min'>
-            <Image src={section4img} alt='landing__image__two' width={700} height={700} className='w-full h-full scale-[1.8] bg-center'/>
+        <div className='section__2__inner__container w-[85%] flex-col md:flex-row flex justify-center items-center gap-10 '>
+          <div className='section__2__image__container flex-1 flex justify-center md:justify-end items-center'>
+            <Image src={section4img} alt='landing__image__two' className='w-full h-full scale-[1.8]'/>
           </div>
           <div className='section__2__text__container flex-1 self-start pt-12'>
             <div>
               <div className='overflow-hidden'>
                 <div 
                 ref={(el) => elements.current[2] = el as HTMLDivElement}
-                // ref={section4Ref} 
-                // variants={{
-                //   visible: {opacity: 1, y: 0},
-                //   hidden: {opacity: 0, y: '40%'}
-                // }}
-                // initial='hidden'
-                // animate={section4controls}
-                // transition={{duration: 0.8}}
-                className=' text-white font-semibold text-6xl'>
+                className=' text-white font-semibold text-5xl lg:text-6xl'>
                   <p><span className='bg-gradient-to-br from-teal-500 to-white text-transparent bg-clip-text'>Discovers</span> Best fit</p>
                   <p>for Customers</p>
                 </div>
@@ -236,26 +212,18 @@ const Product = () => {
         <div>
           <div className='overflow-hidden'>
             <div 
-            // variants={{
-            //   visible: {opacity: 1, y: 0},
-            //   hidden: {opacity: 0, y: '40%'}
-            // }}
-            // initial='hidden'
-            // animate={section5controls}
-            // transition={{duration: 0.8}}
-            // ref={section5Ref}
             ref={(el) => elements.current[3] = el as HTMLDivElement}
-            className=' text-center py-10 text-white font-semibold text-4xl w-full flex justify-center items-center mb-10 gap-2'>
-              <p className='text-5xl'>An Efficient <span className='text-text-yellow'>Sales Deployer</span></p>
+            className=' text-center py-10 text-white font-semibold w-full flex justify-center items-center mb-10 gap-2'>
+              <p className='text-5xl lg:text-6xl'>An Efficient <span className='text-text-yellow'>Sales Deployer</span></p>
             </div>
           </div>
 
           <div>
-            <div className=' flex justify-center items-center gap-4 py-2'>
+            <div className=' flex flex-col lg:flex-row justify-center items-center gap-4 py-2'>
               {
                 deployementCard.map((card, key) => {
                   return (
-                      <div key={key} className='w-[20rem] h-[30rem] bg-gradient-to-t from-[#1F9C9A1A] to-[#F8F8F81A] backdrop-blur-sm bg-opacity-100 rounded-xl border-2 border-cyan-500 py-2 px-2 flex justify-start items-center flex-col gap-4'>
+                      <div key={key} className='w-[22rem] lg:w-[20rem] h-[30rem] bg-gradient-to-t from-[#1F9C9A1A] to-[#F8F8F81A] backdrop-blur-sm bg-opacity-100 rounded-xl border-2 border-cyan-500 py-2 px-2 flex justify-start items-center flex-col gap-4'>
                         <div className='h-[60%] overflow-hidden flex justify-center items-center object-contain p-8'>
                           <Image src={card.image} alt='card' className=''/>
                         </div>
@@ -284,24 +252,16 @@ const Product = () => {
         </div>
       </div>
       
-      <div className='ready__to__hire__section w-full min-h-max py-20 flex justify-center items-center px-5 bg-bg-primary backdrop-blur-sm bg-opacity-30'>
+      <div className='ready__to__hire__section w-full min-h-max py-20 flex justify-center items-center lg:px-5 bg-bg-primary backdrop-blur-sm bg-opacity-30'>
 
         <div className='absolute -bottom-[5rem] w-[25rem] h-[25rem] bg-gradient-to-r from-orange-500 to-orange-400 rounded-full blur-[20rem] -z-10'></div>
 
-        <div className='p-[2.5px] rounded-2xl w-[80%]'>
+        <div className='p-[2.5px] rounded-2xl w-[100%] lg:w-[80%]'>
           <div className=' landing__section__5__card w-[100%] bg-bg-primary flex justify-center items-center flex-col py-16 gap-10 rounded-xl bg-gradient-to-t backdrop-blur-sm bg-opacity-0 from-[#1F9C9A1A] to-[#F8F8F81A]'>
             
             <div>
               <div 
               ref={(el) => elements.current[4] = el as HTMLDivElement}
-              // ref={section7Ref} 
-              // variants={{
-              //   visible: {opacity: 1, y: 0},
-              //   hidden: {opacity: 0, y: '40%'}
-              // }}
-              // initial='hidden'
-              // animate={section7controls}
-              // transition={{duration: 1}}
               className='w-full text-white font-semibold text-4xl text-center'>
                 <p>Ready to Hire an Alchemyst to act</p>
                 <p>as a Catalyst for your Team ?</p>
@@ -325,13 +285,13 @@ const Product = () => {
       </div>
 
     <div className='bg-bg-primary'>
-      <div className='footer__section__grid__container overflow-hidden flex justify-start gap-6 w-full items-center flex-col border-gray-600 border-t-2 bg-gradient-to-t from-[#1F9C9A4D] to-[#F8F8F84D] backdrop-blur-lg bg-opacity-30 rounded-t-2xl'>
+      <div className='footer__section__grid__container overflow-hidden flex justify-start gap-2 lg:gap-6 w-full items-center flex-col border-gray-600 border-t-2 bg-gradient-to-t from-[#1F9C9A4D] to-[#F8F8F84D] backdrop-blur-lg bg-opacity-30 rounded-t-2xl'>
 
-      <div className='bg-white/10 backdrop-blur-lg w-full py-10 px-20'>
+      <div className='bg-white/10 backdrop-blur-lg w-full py-10 px-5 lg:px-20'>
         <div className='w-full flex justify-start'>
           <Image src={logo} alt='logo' width={200}/>
         </div>
-        <div className='text-white text-xl w-full flex justify-start items-baseline flex-row gap-2'>
+        <div className='text-white text-lg md:text-xl w-full flex justify-start items-baseline flex-row gap-2'>
           <div className=''>
             <p className='my-5'>
             Building Next Gen AI Digital Employees.<br /> Spearheading the next Industrial Revolution in India.
@@ -340,17 +300,17 @@ const Product = () => {
               getalchemystai@gmail.com
             </p>
             <ul className='flex justify-start items-center gap-4 text-white text-2xl mt-4 my-8'>
-              <li className='border-2 flex justify-center items-center border-white rounded-full w-[3rem] h-[3rem]'><TbBrandTwitterFilled /></li>
-              <li className='border-2 flex justify-center items-center border-white rounded-full w-[3rem] h-[3rem]'><TbBrandFacebookFilled /></li>
-              <li className='border-2 flex justify-center items-center border-white rounded-full w-[3rem] h-[3rem]'><TbBrandDiscordFilled /></li>
-              <li className='border-2 flex justify-center items-center border-white rounded-full w-[3rem] h-[3rem]'><TbBrandInstagram /></li>
-              <li className='border-2 flex justify-center items-center border-white rounded-full w-[3rem] h-[3rem]'><TbBrandLinkedin /></li>
+              <li className='border-[1px] flex justify-center items-center border-white rounded-full w-[2rem] h-[2rem] lg:w-[3rem] lg:h-[3rem]'><TbBrandTwitterFilled /></li>
+              <li className='border-[1px] flex justify-center items-center border-white rounded-full w-[2rem] h-[2rem] lg:w-[3rem] lg:h-[3rem]'><TbBrandFacebookFilled /></li>
+              <li className='border-[1px] flex justify-center items-center border-white rounded-full w-[2rem] h-[2rem] lg:w-[3rem] lg:h-[3rem]'><TbBrandDiscordFilled /></li>
+              <li className='border-[1px] flex justify-center items-center border-white rounded-full w-[2rem] h-[2rem] lg:w-[3rem] lg:h-[3rem]'><TbBrandInstagram /></li>
+              <li className='border-[1px] flex justify-center items-center border-white rounded-full w-[2rem] h-[2rem] lg:w-[3rem] lg:h-[3rem]'><TbBrandLinkedin /></li>
             </ul>
           </div>
         </div>
 
-        <div className='w-full flex justify-between items-center gap-6 text-white font-medium text-md mt-10'>
-          <div className='flex justify-center items-center gap-6 text-xl'>
+        <div className='w-full flex flex-col md:flex-row gap-2 justify-between items-center lg:gap-6 text-white font-medium text-md mt-10'>
+          <div className='flex justify-center items-center gap-2 md:gap-6'>
           <p>Terms of use</p>
           <p>Privacy Policy</p>
           </div>
