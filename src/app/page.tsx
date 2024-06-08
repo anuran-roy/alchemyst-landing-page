@@ -131,6 +131,8 @@ const Home = () => {
               <div className="w-full px-5 py-2 mt-8 md:mt-16">
                 <Link
                   href="https://tripetto.app/run/60HWNW0WQN"
+                  target="_blank"
+                  rel="noreferrer"
                   className="py-4 px-6 rounded-md bg-bg-yellow text-black"
                 >
                   Join our waitlist
@@ -221,9 +223,15 @@ const Home = () => {
                     </ul>
 
                     <div className="w-full px-5 py-2 flex justify-center items-center self-end absolute bottom-5 left-0">
-                      <button className="py-2 px-6 rounded-md bg-bg-yellow text-black text-lg font-medium">
-                        {artisan.button_text}
-                      </button>
+                      <Link
+                        href="https://tripetto.app/run/60HWNW0WQN"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        <button className="py-2 px-6 rounded-md bg-bg-yellow text-black text-lg font-medium">
+                          {artisan.button_text}
+                        </button>
+                      </Link>
                     </div>
                   </div>
                 </div>
@@ -398,10 +406,12 @@ const Home = () => {
 
               <div className="w-full py-3 flex justify-center items-center">
                 <Link
-                  href="/contact"
+                  href="https://tripetto.app/run/60HWNW0WQN"
+                  target="_blank"
+                  rel="noreferrer"
                   className="py-2 px-6 rounded-md bg-bg-yellow text-black"
                 >
-                  Hire Maya
+                  Join our waitlist
                 </Link>
               </div>
             </div>
@@ -482,9 +492,15 @@ const Home = () => {
                   </p>
                   <p>getalchemystai@gmail.com</p>
                   <ul className="flex justify-start items-center gap-4 text-white text-2xl mt-4 my-8">
+                    <Link
+                      href="https://twitter.com/getalchemyst"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
                     <li className="border-[1px] flex justify-center items-center border-white rounded-full w-[2rem] h-[2rem] lg:w-[3rem] lg:h-[3rem]">
                       <TbBrandTwitterFilled />
                     </li>
+                    </Link>
                     <li className="border-[1px] flex justify-center items-center border-white rounded-full w-[2rem] h-[2rem] lg:w-[3rem] lg:h-[3rem]">
                       <TbBrandFacebookFilled />
                     </li>
@@ -494,9 +510,15 @@ const Home = () => {
                     <li className="border-[1px] flex justify-center items-center border-white rounded-full w-[2rem] h-[2rem] lg:w-[3rem] lg:h-[3rem]">
                       <TbBrandInstagram />
                     </li>
+                    <Link 
+                    href="https://www.linkedin.com/company/alchemystai/"
+                    target="_blank"
+                    rel="noreferrer"
+                    >
                     <li className="border-[1px] flex justify-center items-center border-white rounded-full w-[2rem] h-[2rem] lg:w-[3rem] lg:h-[3rem]">
                       <TbBrandLinkedin />
                     </li>
+                    </Link>
                   </ul>
                 </div>
               </div>
