@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+* {
+  padding:0;
+  margin:0;
+  box-sizing: border-box;
+  font-family: 'League Spartan', sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 0 0rem rgba(255, 165, 0, 0.7);
+  }
+  50% {
+    box-shadow: 0 0 1rem 2rem rgba(255, 165, 0, 0.7);
+  }
+  100% {
+    box-shadow: 0 0 0 4rem rgba(255, 165, 0, 0);
+  }
+}
+
+.glow-animation {
+  animation: glow 2s infinite ease-in-out;
+}

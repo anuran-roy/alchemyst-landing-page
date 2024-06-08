@@ -1,0 +1,48 @@
+.image__style {
+    /* transition: .5s all ease; */
+    transform: rotateX(40deg);
+    perspective: 1200px;
+    background-color: #24273C;
+    border-radius: 2rem;
+}
+
+.image__style:hover {
+    cursor: pointer;
+    /* transform: rotateX(0deg);
+    transition: 0.9s all ease; */
+    z-index: 400;
+}
+
+.image__container {
+    width: max-content;
+    height: max-content;
+    padding: 0.3rem;
+    /* transition: .5s all ease; */
+    transform: rotateX(70deg);
+    perspective: 1200px;
+    background-color: #F1A334;
+    border-radius: 2.3rem;
+}
+
+.image__container:hover {
+    cursor: pointer;
+    /* transform: rotateX(0deg);
+    transition: 1.6s all ease; */
+    /* z-index: 400; */
+}
+
+.image__wrapper {
+    width: max-content;
+    height: max-content;
+    padding: 1rem;
+    /* transition: .5s all ease; */
+    /* transform: rotateX(40deg); */
+    perspective: 1200px;
+}
+
+.image__wrapper:hover {
+    cursor: pointer;
+    /* transform: rotateX(0deg);
+    transition: 1.5s all ease; */
+    z-index: 400;
+}
