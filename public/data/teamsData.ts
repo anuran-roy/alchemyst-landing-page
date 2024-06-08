@@ -8,6 +8,7 @@ import anuran from "../assets/team/anuran.png";
 import pani from "../assets/team/saptarshi.png";
 import debayan from "../assets/team/debayan.png";
 import mukesh from "../assets/team/mukesh.jpeg";
+import samarth from "../assets/team/samarth.jpeg";
 
 export const teamsData = [
   {
@@ -131,6 +132,31 @@ export const teamsData = [
       {
         id: 5,
         value: "Maintainer of multiple open source projects @clueless",
+      },
+    ],
+  },
+  {
+    id: 6,
+    name: "Samarth Rawat",
+    position: "Backend Engineer",
+    profileimg: samarth,
+    achievements: [
+      {
+        id: 1,
+        value: "Finalist - GEHealthcare Hackathon.",
+      },
+      {
+        id: 2,
+        value: "Regional Finalist - Solving for India Hackathon",
+      },
+      {
+        id: 3,
+        value:
+          "Freelanced with clients from the US and UK, delivering successful projects",
+      },
+      {
+        id: 4,
+        value: "Developed an automated reservation bot with Python and Azure.",
       },
     ],
   },
