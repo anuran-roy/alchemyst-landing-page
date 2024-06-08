@@ -127,7 +127,7 @@ const Home = () => {
             </div>
 
             <div className='w-full px-5 py-2 mt-16'>
-              <Link href='https://getalchemystai.com/' className='py-4 px-6 rounded-md bg-bg-yellow text-black'>
+              <Link href='https://tripetto.app/run/60HWNW0WQN' className='py-4 px-6 rounded-md bg-bg-yellow text-black'>
                 Join our waitlist
               </Link>
             </div>
