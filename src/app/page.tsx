@@ -166,7 +166,7 @@ const Home = () => {
                 // animate={controls}
                 // transition={{duration: 0.8}}
                 // ref={section1TextRef}
-                ref={el => (elements.current[6] = el as HTMLDivElement)}
+                ref={el => (elements.current[6] = el as never)}
                 className="py-2"
               >
                 <p>
@@ -259,7 +259,7 @@ const Home = () => {
             <div className="section__2__text__container flex-1 self-start pt-6 lg:pt-12 lg:ml-8 items-center w-[100%] text-center">
               <div className="overflow-hidden">
                 <div
-                  ref={el => (elements.current[1] = el as HTMLDivElement)}
+                  ref={el => (elements.current[1] = el as never)}
                   className=" text-white text-5xl font-semibold"
                 >
                   <p>
@@ -286,7 +286,7 @@ const Home = () => {
           <div className="absolute top-0 left-0 w-[20rem] h-[20rem] bg-gradient-to-r from-orange-500 to-orange-400 rounded-full blur-[15rem] -z-10"></div>
           <div className="section__3__inner__container w-[80%] flex justify-center items-center gap-2 my-20 flex-col lg:flex-row">
             <div className="section__3__text__container flex-1 self-start pt-4 lg:pt-12">
-              <div ref={el => (elements.current[2] = el as HTMLDivElement)}>
+              <div ref={el => (elements.current[2] = el as never)}>
                 <div className=" text-white text-5xl font-semibold">
                   <p>
                     Empowers{" "}
@@ -362,7 +362,7 @@ const Home = () => {
             <div className="section__4__text__container flex-1 self-start pt-0 lg:pt-12 lg:ml-10 ">
               <div className="overflow-hidden">
                 <div
-                  ref={el => (elements.current[3] = el as HTMLDivElement)}
+                  ref={el => (elements.current[3] = el as never)}
                   className=" text-white text-5xl font-semibold "
                 >
                   <p>
@@ -391,7 +391,7 @@ const Home = () => {
             <div className=" landing__section__5__card w-[100%] bg-bg-primary flex justify-center items-center flex-col py-16 gap-10 rounded-xl bg-gradient-to-t backdrop-blur-sm bg-opacity-0 from-[#1F9C9A1A] to-[#F8F8F81A]">
               <div>
                 <div
-                  ref={el => (elements.current[4] = el as HTMLDivElement)}
+                  ref={el => (elements.current[4] = el as never)}
                   className="w-full text-white font-semibold text-3xl lg:text-4xl text-center"
                 >
                   <p>Ready to Hire an Alchemyst to act</p>
