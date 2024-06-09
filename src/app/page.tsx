@@ -33,12 +33,6 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-export const metadata = {
-  title: "Alchemyst - Powering the future of the workforce",
-  description:
-    "Digital employees to multiply the world's workforce potential, one team at a time.",
-};
-
 const Home = () => {
   const scrollToSection = (sectionId: string) => {
     const targetSection = document.getElementById(sectionId);
