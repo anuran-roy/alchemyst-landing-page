@@ -40,7 +40,11 @@ const Navbar = () => {
             </ul>
 
                 <div className='text-lg flex-1 flex justify-end items-center'>
-                    <Link href='/contact' className='py-1 px-4 lg:py-2 lg:px-6 rounded-md bg-bg-yellow text-black'>
+                    <Link href='https://tripetto.app/run/60HWNW0WQN'
+                    target='_blank'
+                    rel='noreferrer'
+                    
+                    className='py-1 px-4 lg:py-2 lg:px-6 rounded-md bg-bg-yellow text-black'>
                     Hire Maya
                     </Link>
                 </div>
