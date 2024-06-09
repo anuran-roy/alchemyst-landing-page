@@ -55,7 +55,7 @@ export const teamsData = [
       },
       {
         id: 4,
-        value: "Ex- AI Engineering Team, @CloudSEK",
+        value: "GDC Fellow 2022",
       },
       {
         id: 5,
