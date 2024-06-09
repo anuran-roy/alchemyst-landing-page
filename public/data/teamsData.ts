@@ -55,7 +55,11 @@ export const teamsData = [
       },
       {
         id: 4,
-        value: "Full Stack AI Engineer, Memorang",
+        value: "Ex- AI Engineering Team, @CloudSEK",
+      },
+      {
+        id: 5,
+        value: "Ex- Applied AI Engineering Team, @Arakoo AI",
       },
     ],
   },
@@ -75,7 +79,7 @@ export const teamsData = [
       },
       {
         id: 3,
-        value: " 0x National Hackathon Winner",
+        value: "10x National Hackathon Winner",
       },
       {
         id: 4,
