@@ -1,6 +1,7 @@
 import { Inter } from "next/font/google";
 import Navbar from "./_components/Navigation/Navbar";
 import "./globals.css";
+import Head from "next/head";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,6 +18,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <Head>
+        <meta name="robots" content="all" />
+      </Head>
       <body className={inter.className}>
         <Navbar />
         {children}
